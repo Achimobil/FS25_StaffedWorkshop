@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="MyAutomaticCarWash" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_stuffedWorkshop</name>
+        <functions>
+            <function>$l10n_stuffedWorkshopFunction</function>
+        </functions>
+        <image>store/store_workshop.dds</image>
+        <price>30000</price>
+        <dailyUpkeep>10000</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <species>placeable</species>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>tools</tab>
+        </brush>
+        <brand>FARMERTOOLS</brand>
+        <category>placeableMisc</category>
+    </storeData>
+    
+    <base>
+        <filename>$data/placeables/brandless/workshop/workshop.i3d</filename>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" >
+        <testAreas>
+            <testArea startNode="testAreaStart01" endNode="testAreaEnd01" />
+        </testAreas>
+
+        <sounds>
+            <place template="smallImp"/>
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearAreaStart01" widthNode="clearAreaWidth01" heightNode="clearAreaHeight01"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="3" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelAreaStart01" widthNode="levelAreaWidth01" heightNode="levelAreaHeight01" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorAreaStart01" widthNode="indoorAreaWidth01" heightNode="indoorAreaHeight01"/>
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+        </updateAreas>
+    </ai>
+
+    <triggerMarkers>
+        <triggerMarker node="warningStripes"/>
+    </triggerMarkers>
+
+    <hotspots>
+        <hotspot type="SHOP" linkNode="vehicleTrigger" />
+    </hotspots>
+
+    <solarPanels>
+        <solarPanelsConfigurations>
+            <solarPanelsConfiguration name="$l10n_ui_no" isActive="false">
+                <objectChange node="solarPanel" visibilityActive="false"/>
+            </solarPanelsConfiguration>
+
+            <solarPanelsConfiguration name="$l10n_ui_yes" isActive="true" price="12500" incomePerHour="43" />
+        </solarPanelsConfigurations>
+    </solarPanels>
+    
+    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.1"  damageAmount="-0.05"  wearAmount="-0.02" />
+
+    <i3dMappings>
+        <i3dMapping id="clearAreaStart01" node="0>0|0" />
+        <i3dMapping id="clearAreaWidth01" node="0>0|0|0" />
+        <i3dMapping id="clearAreaHeight01" node="0>0|0|1" />
+        <i3dMapping id="levelAreaStart01" node="0>1|0" />
+        <i3dMapping id="levelAreaWidth01" node="0>1|0|0" />
+        <i3dMapping id="levelAreaHeight01" node="0>1|0|1" />
+        <i3dMapping id="indoorAreaStart01" node="0>2|0" />
+        <i3dMapping id="indoorAreaWidth01" node="0>2|0|0" />
+        <i3dMapping id="indoorAreaHeight01" node="0>2|0|1" />
+        <i3dMapping id="testAreaStart01" node="0>3|0" />
+        <i3dMapping id="testAreaEnd01" node="0>3|0|0" />
+        <i3dMapping id="tipOcclusionUpdateAreaStart01" node="0>4|0" />
+        <i3dMapping id="tipOcclusionUpdateAreaEnd01" node="0>4|0|0" />
+        <i3dMapping id="markerWrench" node="0>5|0" />
+        <i3dMapping id="warningStripes" node="0>5|1" />
+        <i3dMapping id="vehicleTrigger" node="0>5|2" />
+        <i3dMapping id="playerTrigger" node="0>5|3" />
+        <i3dMapping id="solarPanel" node="0>6|6" />
+    </i3dMappings>
+</placeable>
