@@ -187,11 +187,12 @@ function AutomaticCarWash:CleanCar()
     
         for _,vehicle in pairs(spec.vehicleInTrigger) do
             local vehicle = g_currentMission.nodeToObject[vehicle];
-            
-            AutomaticCarWash.DebugText("getDirtAmount: " .. vehicle:getDirtAmount());
-            AutomaticCarWash.DebugText("getDamageAmount: " .. vehicle:getDamageAmount());
-            AutomaticCarWash.DebugText("getWearTotalAmount: " .. vehicle:getWearTotalAmount());
+            			
             if vehicle ~= nil then
+				AutomaticCarWash.DebugText("getDirtAmount: " .. vehicle:getDirtAmount());
+				AutomaticCarWash.DebugText("getDamageAmount: " .. vehicle:getDamageAmount());
+				AutomaticCarWash.DebugText("getWearTotalAmount: " .. vehicle:getWearTotalAmount());
+				
                 local hasDoneSomething = self:CleanOneVehicle(vehicle);
                 
                 if hasDoneSomething == true then

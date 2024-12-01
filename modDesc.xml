@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="92">
     <author>Achimobil</author>
-    <version>0.1.0.0</version>
+    <version>0.1.0.1</version>
     
     <title>
         <en>Stuffed Workshop</en>
@@ -20,6 +20,9 @@ Upload auf anderen Seiten außer dem ModHub ist verboten und somit illegal, Verl
 Das Verändern oder erneutes hochladen, ob ganz oder in Teilen, ist nicht gestattet!
 
 Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_StuffedWorkshop">GitHub</a>.
+
+Changelog
+0.1.0.1 - Lua fehler wenn Fahrzeug im Trigger nicht von der Engine geladen werden kann behoben
 ]]></de>
 		<en><![CDATA[Workshop with staff that automatically washes, repairs and paints vehicles.
 
