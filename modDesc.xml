@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="92">
     <author>Achimobil</author>
-    <version>0.1.0.2</version>
+    <version>0.1.0.3</version>
     
     <title>
         <en>Stuffed Workshop</en>
         <de>Werkstatt mit Personal</de>
-		<tr>İşçili Araç Atölyesi</tr>
+        <tr>İşçili Araç Atölyesi</tr>
     </title>
     
     <description>
-		<de><![CDATA[Werkstatt mit Personal das automatisch Fahrzeuge wäscht, repariert und lackiert.
+        <de><![CDATA[Werkstatt mit Personal das automatisch Fahrzeuge wäscht, repariert und lackiert.
 
 Aktionen werden alle paar Sekunden durchgeführt in denen ein oder mehrere Fahrzeuge im Reperatur Bereich stehen.
 Hierbei werden dann 10% gewaschen, 5% repariert und 2% lackiert ohne zusätzliche Kosten.
@@ -25,8 +25,9 @@ Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_Stuff
 Changelog
 0.1.0.1 - Lua fehler wenn Fahrzeug im Trigger nicht von der Engine geladen werden kann behoben
 0.1.0.2 - Turkish translation
+0.1.0.3 - Fehler das kein Einkommen generiert wird, behoben
 ]]></de>
-		<en><![CDATA[Workshop with staff that automatically washes, repairs and paints vehicles.
+        <en><![CDATA[Workshop with staff that automatically washes, repairs and paints vehicles.
 
 Actions are performed every few seconds one or more vehicles are in the repair area.
 10% are washed, 5% repaired and 2% painted at no additional cost.
@@ -59,6 +60,8 @@ Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_Stuff
         
     <placeableTypes>
         <type name="MyAutomaticCarWash" parent="simplePlaceable" filename="$dataS/scripts/placeables/Placeable.lua">
+            <specialization name="solarPanels"/>
+            <specialization name="incomePerHour"/>
             <specialization name="AutomaticCarWash"/>
         </type>
     </placeableTypes>
@@ -67,22 +70,22 @@ Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_Stuff
         <text name="stuffedWorkshop">
             <en>Workshop with staff</en>
             <de>Werkstatt mit Personal</de>
-			<tr>İşçili Araç Atölyesi</tr>
+            <tr>İşçili Araç Atölyesi</tr>
         </text>
         <text name="stuffedWorkshopFunction">
             <en>Workshop with staff that automatically washes, repairs and paints vehicles. This costs $10,000 per month.</en>
             <de>Werkstatt mit Personal das automatisch Fahrzeuge wäscht, repariert und lackiert. Dafür fallen 10.000€ Kosten pro Monat an.</de>
-			<tr>Araçları otomatik olarak yıkayan, tamir eden ve boyayan işçiye sahip araç atölyesi. Bunun aylık maliyeti $10,000.</tr>
+            <tr>Araçları otomatik olarak yıkayan, tamir eden ve boyayan işçiye sahip araç atölyesi. Bunun aylık maliyeti $10,000.</tr>
         </text>
         <text name="stuffedWorkshop-s">
             <en>Workshop with less staff</en>
             <de>Werkstatt mit begrenztem Personal</de>
-			<tr>Daha az İşçili Araç Atölyesi</tr>
+            <tr>Daha az İşçili Araç Atölyesi</tr>
         </text>
         <text name="stuffedWorkshopFunction-s">
             <en>Workshop with less staff that automatically washes and repairs vehicles. This costs $4,000 per month.</en>
             <de>Werkstatt mit begrenztem Personal das automatisch Fahrzeuge wäscht und repariert. Dafür fallen 4.000€ Kosten pro Monat an.</de>
-			<tr>Araçları otomatik olarak yıkayan ve tamir eden daha az işçiye sahip araç atölyesi. Bunun aylık maliyeti $4,000.</tr>
+            <tr>Araçları otomatik olarak yıkayan ve tamir eden daha az işçiye sahip araç atölyesi. Bunun aylık maliyeti $4,000.</tr>
         </text>
     </l10n>
 </modDesc>
