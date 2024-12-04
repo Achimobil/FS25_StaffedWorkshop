@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="92">
     <author>Achimobil</author>
-    <version>0.1.0.1</version>
+    <version>0.1.0.2</version>
     
     <title>
         <en>Stuffed Workshop</en>
@@ -24,6 +24,7 @@ Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_Stuff
 
 Changelog
 0.1.0.1 - Lua fehler wenn Fahrzeug im Trigger nicht von der Engine geladen werden kann behoben
+0.1.0.2 - Turkish translation
 ]]></de>
 		<en><![CDATA[Workshop with staff that automatically washes, repairs and paints vehicles.
 
