@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="93">
     <author>Achimobil</author>
-    <version>0.1.0.5</version>
+    <version>1.0.0.0</version>
     
     <title>
         <en>Staffed Workshop</en>
@@ -30,13 +30,6 @@ Upload auf anderen Seiten außer dem ModHub ist verboten und somit illegal, Verl
 Das Verändern oder erneutes hochladen, ob ganz oder in Teilen, ist nicht gestattet!
 
 Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_StaffedWorkshop">GitHub</a>.
-
-Changelog
-0.1.0.1 - Lua fehler wenn Fahrzeug im Trigger nicht von der Engine geladen werden kann behoben
-0.1.0.2 - Turkish translation
-0.1.0.3 - Fehler das kein Einkommen generiert wird, behoben
-0.1.0.4 - Umbennung und anderes aus ModHub antwort
-0.1.0.5 - Werstatt trigger wieder zugefügt
 ]]></de>
         <en><![CDATA[Workshop with staff that automatically washes, repairs and paints vehicles.
 

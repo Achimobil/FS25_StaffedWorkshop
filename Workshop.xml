@@ -22,6 +22,8 @@
     
     <base>
         <filename>models/workshop.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+        <boughtWithFarmland>true</boughtWithFarmland>
     </base>
 
     <placement useRandomYRotation="false" useManualYRotation="true" >
