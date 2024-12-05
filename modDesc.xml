@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="92">
     <author>Achimobil</author>
-    <version>0.1.0.3</version>
+    <version>0.1.0.4</version>
     
     <title>
-        <en>Stuffed Workshop</en>
-        <de>Werkstatt mit Personal</de>
+        <en>Staffed Workshop</en>
+        <de>Werkstatt Mit Personal</de>
         <tr>İşçili Araç Atölyesi</tr>
     </title>
     
@@ -14,13 +14,22 @@
 
 Aktionen werden alle paar Sekunden durchgeführt in denen ein oder mehrere Fahrzeuge im Reperatur Bereich stehen.
 Hierbei werden dann 10% gewaschen, 5% repariert und 2% lackiert ohne zusätzliche Kosten.
-Dafür fallen 10.000€ Unterhaltskosten pro Monat an.
-Eine Version ohne Lakierer ist verfügbar für 4.000€ pro Monat.
+Dafür fallen enstprechende Unterhaltskosten pro Monat an.
+Eine Version ohne Lakierer ist ebenfalls verfügbar.
+
+Mit Lakierer
+Baukosten: 30.000€
+Monatliche Kosten 10.000€
+
+Ohne Lakierer
+Baukosten: 10.000€
+Monatliche Kosten 4.000€
+
 
 Upload auf anderen Seiten außer dem ModHub ist verboten und somit illegal, Verlinkung nur mit Original-Downloadlink. KEIN Ersatzlink!
 Das Verändern oder erneutes hochladen, ob ganz oder in Teilen, ist nicht gestattet!
 
-Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_StuffedWorkshop">GitHub</a>.
+Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_StaffedWorkshop">GitHub</a>.
 
 Changelog
 0.1.0.1 - Lua fehler wenn Fahrzeug im Trigger nicht von der Engine geladen werden kann behoben
@@ -31,17 +40,25 @@ Changelog
 
 Actions are performed every few seconds one or more vehicles are in the repair area.
 10% are washed, 5% repaired and 2% painted at no additional cost.
-For this, maintenance costs of $10,000 per month are incurred.
-A version without a painter is available for $4,000 per month.
+This incurs corresponding maintenance costs per month.
+A version without a paint sprayer is also available.
+
+With coater
+Construction costs: $30,000
+Monthly costs $10,000
+
+Without coater
+Construction costs: $10,000
+Monthly costs $4,000
 
 Uploading to sites other than ModHub is prohibited and therefore illegal, linking only with original download link. NO substitute link!
 Modifying and re-uploading in whole or in part is not allowed!
 
-Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_StuffedWorkshop">GitHub</a>.
+Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_StaffedWorkshop">GitHub</a>.
 ]]></en>
     </description>
     
-    <iconFilename>icon_StuffedWorkshop.dds</iconFilename>
+    <iconFilename>icon_StaffedWorkshop.dds</iconFilename>
     
     <multiplayer supported="true"/>
     
@@ -51,7 +68,7 @@ Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_Stuff
     </storeItems>
     
     <brands>
-        <brand name="FARMERTOOLS" title="Farmer Tools" image="store/FarmerTools.dds"/>
+        <brand name="FARMERTOOLS" title="Farmer Tools" image="store/brand_FarmerTools.dds"/>
     </brands>
     
     <placeableSpecializations>
@@ -67,22 +84,22 @@ Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_Stuff
     </placeableTypes>
     
     <l10n>
-        <text name="stuffedWorkshop">
+        <text name="staffedWorkshop">
             <en>Workshop with staff</en>
             <de>Werkstatt mit Personal</de>
             <tr>İşçili Araç Atölyesi</tr>
         </text>
-        <text name="stuffedWorkshopFunction">
+        <text name="staffedWorkshopFunction">
             <en>Workshop with staff that automatically washes, repairs and paints vehicles. This costs $10,000 per month.</en>
             <de>Werkstatt mit Personal das automatisch Fahrzeuge wäscht, repariert und lackiert. Dafür fallen 10.000€ Kosten pro Monat an.</de>
             <tr>Araçları otomatik olarak yıkayan, tamir eden ve boyayan işçiye sahip araç atölyesi. Bunun aylık maliyeti $10,000.</tr>
         </text>
-        <text name="stuffedWorkshop-s">
+        <text name="staffedWorkshop-s">
             <en>Workshop with less staff</en>
             <de>Werkstatt mit begrenztem Personal</de>
             <tr>Daha az İşçili Araç Atölyesi</tr>
         </text>
-        <text name="stuffedWorkshopFunction-s">
+        <text name="staffedWorkshopFunction-s">
             <en>Workshop with less staff that automatically washes and repairs vehicles. This costs $4,000 per month.</en>
             <de>Werkstatt mit begrenztem Personal das automatisch Fahrzeuge wäscht und repariert. Dafür fallen 4.000€ Kosten pro Monat an.</de>
             <tr>Araçları otomatik olarak yıkayan ve tamir eden daha az işçiye sahip araç atölyesi. Bunun aylık maliyeti $4,000.</tr>

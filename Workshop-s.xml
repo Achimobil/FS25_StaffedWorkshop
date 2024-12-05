@@ -2,8 +2,8 @@
 <placeable type="MyAutomaticCarWash" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
 	<parentFile xmlFilename="Workshop.xml">
 		<attributes>
-			<set path="placeable.storeData.name" value="$l10n_stuffedWorkshop-s"/>
-			<set path="placeable.storeData.functions.function(0)" value="$l10n_stuffedWorkshopFunction-s"/>
+			<set path="placeable.storeData.name" value="$l10n_staffedWorkshop-s"/>
+			<set path="placeable.storeData.functions.function(0)" value="$l10n_staffedWorkshopFunction-s"/>
 			<set path="placeable.storeData.price" value="10000"/>
 			<set path="placeable.storeData.dailyUpkeep" value="4000"/>
 			

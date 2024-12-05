@@ -1,4 +1,4 @@
-# FS25_StuffedWorkshop
+# FS25_StaffedWorkshop
 
 # ModHub
 comming soon

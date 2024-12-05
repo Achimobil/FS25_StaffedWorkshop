@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <placeable type="MyAutomaticCarWash" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
     <storeData>
-        <name>$l10n_stuffedWorkshop</name>
+        <name>$l10n_staffedWorkshop</name>
         <functions>
-            <function>$l10n_stuffedWorkshopFunction</function>
+            <function>$l10n_staffedWorkshopFunction</function>
         </functions>
-        <image>store/store_workshop.dds</image>
+        <image>$data/placeables/brandless/workshop/store_workshop.dds</image>
         <price>30000</price>
         <dailyUpkeep>10000</dailyUpkeep>
         <lifetime>1000</lifetime>

@@ -5,8 +5,7 @@ Author: Achimobil
 Date: 07.04.2023
 Version: 1.1.0.0
 
-Contact:
-https://www.achimobil.de
+Contact: https://github.com/Achimobil/FS25_StaffedWorkshop
 
 History:
 V 1.0.0.0 @ 29.04.2022 - Release Version.
