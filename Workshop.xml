@@ -21,7 +21,7 @@
     </storeData>
     
     <base>
-        <filename>$data/placeables/brandless/workshop/workshop.i3d</filename>
+        <filename>models/workshop.i3d</filename>
     </base>
 
     <placement useRandomYRotation="false" useManualYRotation="true" >
@@ -59,12 +59,17 @@
     </ai>
 
     <triggerMarkers>
+        <triggerMarker node="markerWrench" filename="$data/shared/assets/marker/markerIconWrench.i3d" />
         <triggerMarker node="warningStripes"/>
     </triggerMarkers>
 
     <hotspots>
         <hotspot type="SHOP" linkNode="vehicleTrigger" />
     </hotspots>
+
+    <workshop>
+        <sellingPoint playerTriggerNode="playerTrigger" iconNode="markerWrench" sellTriggerNode="vehicleTrigger2" ownWorkshop="true" mobileWorkshop="false" />
+    </workshop>
 
     <solarPanels>
         <solarPanelsConfigurations>
@@ -96,6 +101,7 @@
         <i3dMapping id="warningStripes" node="0>5|1" />
         <i3dMapping id="vehicleTrigger" node="0>5|2" />
         <i3dMapping id="playerTrigger" node="0>5|3" />
+        <i3dMapping id="vehicleTrigger2" node="0>5|4" />
         <i3dMapping id="solarPanel" node="0>6|6" />
     </i3dMappings>
 </placeable>

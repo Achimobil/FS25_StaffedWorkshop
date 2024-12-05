@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="workshop.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="$data/maps/textures/shared/snow_diffuse.png"/>
+    <File fileId="6" filename="$data/maps/textures/shared/snow_normal.png"/>
+    <File fileId="7" filename="$data/maps/textures/shared/snow_specular.png"/>
+    <File fileId="17" filename="$data/placeables/brandless/hayLoft/hayLoftDecal_diffuse.png"/>
+    <File fileId="18" filename="$data/placeables/brandless/hayLoft/hayLoftDecal_normal.png"/>
+    <File fileId="19" filename="$data/placeables/brandless/hayLoft/hayLoftDecal_specular.png"/>
+    <File fileId="13" filename="$data/placeables/brandless/workshop/windowsCurtains01_diffuse.png"/>
+    <File fileId="14" filename="$data/placeables/brandless/workshop/windowsCurtains01_normal.png"/>
+    <File fileId="15" filename="$data/placeables/brandless/workshop/windowsCurtains01_specular.png"/>
+    <File fileId="36" filename="$data/placeables/brandless/workshop/workshopDecal_diffuse.png"/>
+    <File fileId="22" filename="$data/placeables/brandless/workshop/workshop_diffuse.png"/>
+    <File fileId="26" filename="$data/placeables/brandless/workshop/workshop_mask.png"/>
+    <File fileId="23" filename="$data/placeables/brandless/workshop/workshop_normal.png"/>
+    <File fileId="24" filename="$data/placeables/brandless/workshop/workshop_specular.png"/>
+    <File fileId="32" filename="$data/placeables/rudolfHormann/garageContractor/garageContractor01_diffuse.png"/>
+    <File fileId="33" filename="$data/placeables/rudolfHormann/garageContractor/garageContractor01_normal.png"/>
+    <File fileId="34" filename="$data/placeables/rudolfHormann/garageContractor/garageContractor01_specular.png"/>
+    <File fileId="35" filename="$data/placeables/rudolfHormann/garageContractor/garageContractor_mask.png"/>
+    <File fileId="29" filename="$data/placeables/rudolfHormann/shared/solarPanels_diffuse.png"/>
+    <File fileId="30" filename="$data/placeables/rudolfHormann/shared/solarPanels_normal.png"/>
+    <File fileId="31" filename="$data/placeables/rudolfHormann/shared/solarPanels_specular.png"/>
+    <File fileId="25" filename="$data/shaders/buildingShader.xml"/>
+    <File fileId="37" filename="$data/shaders/colorShader.xml"/>
+    <File fileId="20" filename="$data/shaders/placeableShader.xml"/>
+    <File fileId="8" filename="$data/shaders/snowHeapShader.xml"/>
+    <File fileId="16" filename="$data/shaders/translucencyShader.xml"/>
+    <File fileId="11" filename="$data/shared/default_normal.png"/>
+    <File fileId="1" filename="$data/shared/warningStripes_diffuse.png"/>
+    <File fileId="2" filename="$data/shared/warningStripes_normal.png"/>
+    <File fileId="3" filename="$data/shared/warningStripes_specular.png"/>
+    <File fileId="10" filename="$data/shared/window02_diffuse.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="garageContractor01_mainColor_mat" materialId="13" customShaderId="25" customShaderVariation="colorScale">
+      <Texture fileId="32"/>
+      <Normalmap fileId="33"/>
+      <Glossmap fileId="34"/>
+      <Custommap name="mMaskMap" fileId="35"/>
+      <CustomParameter name="colorScale0" value="0.0667 0.2588 0.1961 1"/>
+    </Material>
+    <Material name="hayLoftDecal_mat" materialId="8" alphaBlending="true" customShaderId="20">
+      <Texture fileId="17"/>
+      <Normalmap fileId="18"/>
+      <Glossmap fileId="19"/>
+    </Material>
+    <Material name="lambert1" materialId="5" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+    <Material name="snow_mat" materialId="11" customShaderId="8">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6" bumpDepth="0.5"/>
+      <Glossmap fileId="7"/>
+    </Material>
+    <Material name="solarPanels_mat" materialId="12" customShaderId="20">
+      <Texture fileId="29"/>
+      <Normalmap fileId="30"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="warningStripes_mat" materialId="6">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="window02_mat" materialId="9" specularColor="0.74902 1 0.6" alphaBlending="true">
+      <Texture fileId="10"/>
+      <Normalmap fileId="11"/>
+    </Material>
+    <Material name="windowsCurtains01_mat" materialId="10" customShaderId="16">
+      <Texture fileId="13"/>
+      <Normalmap fileId="14"/>
+      <Glossmap fileId="15"/>
+      <CustomParameter name="translucencyAmount" value="1"/>
+      <CustomParameter name="mixAmount" value="0.8"/>
+      <CustomParameter name="col0" value="0.01 0.01 0.01"/>
+    </Material>
+    <Material name="workshop_mat" materialId="7" customShaderId="25">
+      <Texture fileId="22"/>
+      <Normalmap fileId="23"/>
+      <Glossmap fileId="24"/>
+      <Custommap name="mMaskMap" fileId="26"/>
+    </Material>
+    <Material name="workshopDecal_mat" materialId="14" customShaderId="37">
+      <Texture fileId="36"/>
+      <Normalmap fileId="11"/>
+      <CustomParameter name="color" value="0.25 0 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="workshop.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="workshop" nodeId="30">
+      <TransformGroup name="clearAreas" nodeId="31">
+        <TransformGroup name="clearAreaStart01" translation="-9 0 -6" nodeId="32">
+          <TransformGroup name="clearAreaWidth01" translation="0 0 16" nodeId="33"/>
+          <TransformGroup name="clearAreaHeight01" translation="18 0 0" nodeId="34"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="levelAreas" nodeId="35">
+        <TransformGroup name="levelAreaStart01" translation="-10 0 -7" nodeId="36">
+          <TransformGroup name="levelAreaWidth01" translation="0 0 18" nodeId="37"/>
+          <TransformGroup name="levelAreaHeight01" translation="20 0 0" nodeId="38"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="indoorAreas" nodeId="39">
+        <TransformGroup name="indoorAreaStart01" translation="-8 0 -5" nodeId="40">
+          <TransformGroup name="indoorAreaWidth01" translation="0 0 12" nodeId="41"/>
+          <TransformGroup name="indoorAreaHeight01" translation="16 0 0" nodeId="42"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="testAreas" nodeId="43">
+        <TransformGroup name="testAreaStart01" translation="-8 0 -5.5" nodeId="44">
+          <TransformGroup name="testAreaEnd01" translation="16 6.5 15" nodeId="45"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="46">
+        <TransformGroup name="tipOcclusionUpdateAreaStart01" translation="-8 0 -5" nodeId="47">
+          <TransformGroup name="tipOcclusionUpdateAreaEnd01" translation="16 0 15" nodeId="48"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="workshop" nodeId="49">
+        <TransformGroup name="markerWrench" translation="-5.52093 0 6.05486" nodeId="50"/>
+        <Shape name="warningStripes" translation="1.8848 0.03 5.86444" shapeId="1" clipDistance="100" nodeId="51" castsShadows="false" receiveShadows="true" nonRenderable="true" terrainDecal="true" materialIds="6"/>
+        <Shape name="vehicleTrigger" translation="0 0 3.46444" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" clipDistance="300" nodeId="52" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="playerTrigger" translation="-5.57539 0 5.9471" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x110000" clipDistance="300" nodeId="53" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="vehicleTrigger2" translation="0 0 3.46444" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" clipDistance="300" nodeId="73" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+      </TransformGroup>
+      <TransformGroup name="visuals" nodeId="54">
+        <TransformGroup name="winter" nodeId="55" weatherRequiredMask="0x400">
+          <Shape name="snow" shapeId="4" clipDistance="200" nodeId="56" castsShadows="true" receiveShadows="true" materialIds="11"/>
+        </TransformGroup>
+        <Shape name="glass" translation="0 0 3.46444" shapeId="5" clipDistance="150" nodeId="57" castsShadows="true" receiveShadows="true" materialIds="9"/>
+        <Shape name="curtainSet" shapeId="6" clipDistance="100" nodeId="58" castsShadows="true" receiveShadows="true" materialIds="10"/>
+        <Shape name="decal" translation="0 0 3.46444" shapeId="7" clipDistance="100" nodeId="59" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="8"/>
+        <Shape name="workshop_vis" translation="0 0 3.46444" shapeId="8" clipDistance="300" nodeId="60" castsShadows="true" receiveShadows="true" skinBindNodeIds="60 61" materialIds="7"/>
+        <TransformGroup name="interiors" clipDistance="300" nodeId="61"/>
+        <TransformGroup name="solarPanel" translation="-2.85507 4.22961 0.034835" rotation="9.19504 -90 0" clipDistance="300" nodeId="62">
+          <TransformGroup name="visual_lod" translation="-0.009444 0 0.000122" lodDistance="0 50" nodeId="63">
+            <Shape name="LOD0" translation="4e-06 0 -0.002609" shapeId="9" nodeId="64" castsShadows="true" receiveShadows="true" materialIds="12"/>
+            <Shape name="LOD1" translation="0 -0.000726 0.001964" shapeId="10" nodeId="65" castsShadows="true" receiveShadows="true" materialIds="12"/>
+          </TransformGroup>
+          <Shape name="solarPanel_supports" shapeId="11" clipDistance="100" nodeId="66" castsShadows="true" receiveShadows="true" materialIds="13"/>
+        </TransformGroup>
+        <Shape name="decal1" translation="0 0 3.46444" shapeId="12" clipDistance="300" nodeId="67" castsShadows="true" receiveShadows="true" materialIds="14"/>
+      </TransformGroup>
+      <TransformGroup name="collisions" nodeId="68">
+        <Shape name="collision" translation="0 1.10072 0.050559" shapeId="13" static="true" collisionFilterGroup="0x1034" collisionFilterMask="0xfffffbff" nodeId="69" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="tipCollision" translation="-0.11028 0 4.57634" shapeId="14" static="true" collisionFilterGroup="0x8" collisionFilterMask="0x1" nodeId="70" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>
