@@ -1,7 +1,7 @@
 # FS25_StaffedWorkshop
 
 # ModHub
-comming soon
+https://www.farming-simulator.com/mod.php?mod_id=304160&title=fs2025
 
 # General
 ## DE
