@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="93">
     <author>Achimobil</author>
-    <version>1.0.0.0</version>
+    <version>1.0.0.1</version>
     
     <title>
         <en>Staffed Workshop</en>
@@ -15,7 +15,7 @@
 Aktionen werden alle paar Sekunden durchgeführt in denen ein oder mehrere Fahrzeuge im Reperatur Bereich stehen.
 Hierbei werden dann 10% gewaschen, 5% repariert und 2% lackiert ohne zusätzliche Kosten.
 Dafür fallen enstprechende Unterhaltskosten pro Monat an.
-Eine Version ohne Lakierer ist ebenfalls verfügbar.
+Eine Version ohne Lackierer ist ebenfalls verfügbar.
 
 Mit Lakierer
 Baukosten: 30.000€
@@ -30,6 +30,9 @@ Upload auf anderen Seiten außer dem ModHub ist verboten und somit illegal, Verl
 Das Verändern oder erneutes hochladen, ob ganz oder in Teilen, ist nicht gestattet!
 
 Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_StaffedWorkshop">GitHub</a>.
+
+Changelog
+1.0.0.1 - Schreibfehler korrigiert
 ]]></de>
         <en><![CDATA[Workshop with staff that automatically washes, repairs and paints vehicles.
 
