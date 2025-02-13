@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="93">
+<modDesc descVersion="95">
     <author>Achimobil</author>
-    <version>1.0.0.1</version>
-    
+    <version>1.0.0.2</version>
+
     <title>
         <en>Staffed Workshop</en>
         <de>Werkstatt Mit Personal</de>
         <tr>İşçili Araç Atölyesi</tr>
     </title>
-    
+
     <description>
         <de><![CDATA[Werkstatt mit Personal das automatisch Fahrzeuge wäscht, repariert und lackiert.
 
@@ -27,12 +27,13 @@ Monatliche Kosten 4.000€
 
 
 Upload auf anderen Seiten außer dem ModHub ist verboten und somit illegal, Verlinkung nur mit Original-Downloadlink. KEIN Ersatzlink!
-Das Verändern oder erneutes hochladen, ob ganz oder in Teilen, ist nicht gestattet!
+Das Verändern oder erneutes Hochladen, ob ganz oder in Teilen, ist nicht gestattet!
 
 Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_StaffedWorkshop">GitHub</a>.
 
 Changelog
 1.0.0.1 - Schreibfehler korrigiert
+1.0.0.2 - Neue Skript Version mit Fixes für gemeldete Fehler. Zusätzlicher XML parameter für Timer. Trocknung nach Waschen.
 ]]></de>
         <en><![CDATA[Workshop with staff that automatically washes, repairs and paints vehicles.
 
@@ -55,24 +56,24 @@ Modifying and re-uploading in whole or in part is not allowed!
 Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_StaffedWorkshop">GitHub</a>.
 ]]></en>
     </description>
-    
+
     <iconFilename>icon_StaffedWorkshop.dds</iconFilename>
-    
+
     <multiplayer supported="true"/>
-    
+
     <storeItems>
         <storeItem xmlFilename="Workshop.xml"/>
         <storeItem xmlFilename="Workshop-s.xml"/>
     </storeItems>
-    
+
     <brands>
         <brand name="FARMERTOOLS" title="Farmer Tools" image="store/brand_FarmerTools.dds"/>
     </brands>
-    
+
     <placeableSpecializations>
         <specialization name="AutomaticCarWash" className="AutomaticCarWash" filename="scripts/AutomaticCarWash.lua"/>
     </placeableSpecializations>
-        
+
     <placeableTypes>
         <type name="MyAutomaticCarWash" parent="simplePlaceable" filename="$dataS/scripts/placeables/Placeable.lua">
             <specialization name="solarPanels"/>
@@ -81,7 +82,7 @@ Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_Staff
             <specialization name="AutomaticCarWash"/>
         </type>
     </placeableTypes>
-    
+
     <l10n>
         <text name="staffedWorkshop">
             <en>Workshop with staff</en>

@@ -6,3 +6,6 @@
 store\*.png
 images
 SourceModels
+*.gsp
+*.gspu
+*.zip
