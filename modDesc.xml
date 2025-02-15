@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="95">
     <author>Achimobil</author>
-    <version>1.0.0.2</version>
+    <version>1.0.0.3</version>
 
     <title>
         <en>Staffed Workshop</en>
@@ -34,6 +34,7 @@ Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_Staff
 Changelog
 1.0.0.1 - Schreibfehler korrigiert
 1.0.0.2 - Neue Skript Version mit Fixes für gemeldete Fehler. Zusätzlicher XML parameter für Timer. Trocknung nach Waschen.
+1.0.0.3 - Skript erweitert: Fahrzeug wird nur versorgt, wenn es nicht in Bewegung ist.
 ]]></de>
         <en><![CDATA[Workshop with staff that automatically washes, repairs and paints vehicles.
 

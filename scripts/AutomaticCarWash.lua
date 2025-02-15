@@ -2,8 +2,8 @@
 Copyright (C) Achimobil 2023-2025
 
 Author: Achimobil
-Date: 13.02.2025
-Version: 2.0.1.0
+Date: 15.02.2025
+Version: 2.0.2.0
 
 Contact: https://github.com/Achimobil/FS25_StaffedWorkshop
 
@@ -15,6 +15,7 @@ V 2.0.0.0 @ 16.11.2024 - Convert for LS25
 V 2.0.1.0 @ 13.02.2025 - Cleanup and fix some reported lua errors
                          timerLength added for XML
                          Add drying after washing
+V 2.0.2.0 @ 15.02.2025 - No Action when Vehicle is in movement
 
 Important:
 Free for use in other mods - no permission needed, only provide my name.
@@ -25,7 +26,7 @@ An diesem Skript dürfen ohne Genehmigung von Achimobil keine Änderungen vorgen
 ]]
 
 AutomaticCarWash = {};
-AutomaticCarWash.Debug = true;
+AutomaticCarWash.Debug = false;
 
 --- Print the given Table to the log
 -- @param string text parameter Text before the table
@@ -180,6 +181,16 @@ function AutomaticCarWash:CleanOneVehicle(vehicle)
     local actionDone = false;
     if vehicle == nil then
         return false;
+    end
+
+    -- timer soll weiter laufen wenn sich das fahzeug bewegt, aber keine Aktion durchgeführt werden
+    local lastSpeed = 0;
+    if vehicle.getLastSpeed ~= nil then
+        lastSpeed = vehicle:getLastSpeed(true) + vehicle:getLastSpeed();
+    end
+        AutomaticCarWash.DebugText("lastSpeed: " .. tostring(lastSpeed));
+    if lastSpeed > 0.1 then
+        return true;
     end
 
     if vehicle.getDirtAmount ~= nil and vehicle:getDirtAmount() >= 0.0001 and spec.dirtAmount ~= 0 then
