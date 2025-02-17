@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="95">
     <author>Achimobil</author>
-    <version>1.0.0.3</version>
+    <version>1.0.0.4</version>
 
     <title>
         <en>Staffed Workshop</en>
@@ -35,6 +35,7 @@ Changelog
 1.0.0.1 - Schreibfehler korrigiert
 1.0.0.2 - Neue Skript Version mit Fixes für gemeldete Fehler. Zusätzlicher XML parameter für Timer. Trocknung nach Waschen.
 1.0.0.3 - Skript erweitert: Fahrzeug wird nur versorgt, wenn es nicht in Bewegung ist.
+1.0.0.4 - Skript erweitert: Hard Attached Implements werden jetzt speziell erfasst und funktionieren
 ]]></de>
         <en><![CDATA[Workshop with staff that automatically washes, repairs and paints vehicles.
 

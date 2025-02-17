@@ -2,8 +2,8 @@
 Copyright (C) Achimobil 2023-2025
 
 Author: Achimobil
-Date: 15.02.2025
-Version: 2.0.2.0
+Date: 17.02.2025
+Version: 2.0.2.1
 
 Contact: https://github.com/Achimobil/FS25_StaffedWorkshop
 
@@ -16,6 +16,7 @@ V 2.0.1.0 @ 13.02.2025 - Cleanup and fix some reported lua errors
                          timerLength added for XML
                          Add drying after washing
 V 2.0.2.0 @ 15.02.2025 - No Action when Vehicle is in movement
+V 2.0.2.1 @ 17.02.2025 - Special case for hard attached implements added
 
 Important:
 Free for use in other mods - no permission needed, only provide my name.
@@ -153,18 +154,68 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
             end
             if not foundInTable then
                 table.insert(spec.vehiclesInTrigger, vehicle.rootNode);
+                AutomaticCarWash.DebugText("Added rootNode: %s)", vehicle.rootNode);
                 if spec.timerId == nil then
                     self:CleanCar();
                 else
                     self:CleanOneVehicle(vehicle);
                 end
             end
+
+            -- search for hard attached
+            local attacherJointSpec = vehicle.spec_attacherJoints
+            if attacherJointSpec ~= nil then
+                for _, attachedImplement in pairs(attacherJointSpec.attachedImplements) do
+    --                 AutomaticCarWash.DebugTable("attachedImplement", attachedImplement);
+                    if attachedImplement.object.spec_attachable.isHardAttached then
+
+                        local foundAttachedInTable = false;
+
+                        for _,vehicleInTrigger in pairs(spec.vehiclesInTrigger) do
+                            if vehicleInTrigger == attachedImplement.object.rootNode then
+                                foundAttachedInTable = true;
+                            end
+                        end
+                        if not foundAttachedInTable then
+                            table.insert(spec.vehiclesInTrigger, attachedImplement.object.rootNode);
+                            AutomaticCarWash.DebugText("Added hard attached rootNode: %s)", attachedImplement.object.rootNode);
+                            if spec.timerId == nil then
+                                self:CleanCar();
+                            else
+                                self:CleanOneVehicle(attachedImplement.object);
+                            end
+                        end
+
+                    end
+                end
+            end
+
         end
         if onLeave then
             for i = #spec.vehiclesInTrigger, 1, -1 do
                 local vehicleInTrigger = spec.vehiclesInTrigger[i];
                 if vehicleInTrigger ~= nil and vehicleInTrigger == vehicle.rootNode then
                     table.remove(spec.vehiclesInTrigger, i);
+                    AutomaticCarWash.DebugText("Removed rootNode: %s)", vehicle.rootNode);
+                end
+            end
+
+            -- search for hard attached
+            local attacherJointSpec = vehicle.spec_attacherJoints
+            if attacherJointSpec ~= nil then
+                for _, attachedImplement in pairs(attacherJointSpec.attachedImplements) do
+    --                 AutomaticCarWash.DebugTable("attachedImplement", attachedImplement);
+                    if attachedImplement.object.spec_attachable.isHardAttached then
+
+                        for i = #spec.vehiclesInTrigger, 1, -1 do
+                            local vehicleInTrigger = spec.vehiclesInTrigger[i];
+                            if vehicleInTrigger ~= nil and vehicleInTrigger == attachedImplement.object.rootNode then
+                                table.remove(spec.vehiclesInTrigger, i);
+                                AutomaticCarWash.DebugText("Removed hard attached rootNode: %s)", attachedImplement.object.rootNode);
+                            end
+                        end
+
+                    end
                 end
             end
         end
@@ -234,6 +285,9 @@ function AutomaticCarWash:CleanCar()
             local vehicle = g_currentMission.nodeToObject[vehicleInTrigger];
 
             if vehicle ~= nil then
+                if vehicle.getName ~= nil then
+                    AutomaticCarWash.DebugText("getName: " .. vehicle:getName());
+                end
                 if vehicle.getDirtAmount ~= nil then
                     AutomaticCarWash.DebugText("getDirtAmount: " .. vehicle:getDirtAmount());
                 end
