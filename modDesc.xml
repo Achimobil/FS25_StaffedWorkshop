@@ -10,11 +10,11 @@
     </title>
 
     <description>
-        <de><![CDATA[Werkstatt mit Personal das automatisch Fahrzeuge wäscht, repariert und lackiert.
+        <de><![CDATA[Werkstatt mit Personal, welches automatisch Fahrzeuge wäscht, repariert und lackiert.
 
-Aktionen werden alle paar Sekunden durchgeführt in denen ein oder mehrere Fahrzeuge im Reperatur Bereich stehen.
+Aktionen werden alle paar Sekunden durchgeführt in denen ein oder mehrere Fahrzeuge im Reparaturbereich stehen.
 Hierbei werden dann 10% gewaschen, 5% repariert und 2% lackiert ohne zusätzliche Kosten.
-Dafür fallen enstprechende Unterhaltskosten pro Monat an.
+Dafür fallen entsprechende Unterhaltskosten pro Monat an.
 Eine Version ohne Lackierer ist ebenfalls verfügbar.
 
 Mit Lackierer
@@ -33,13 +33,13 @@ Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_Staff
 
 Changelog
 1.0.0.1 - Schreibfehler korrigiert
-1.0.0.2 - Neue Skript Version mit Fixes für gemeldete Fehler. Zusätzlicher XML parameter für Timer. Trocknung nach Waschen.
+1.0.0.2 - Neue Skript Version mit Fixes für gemeldete Fehler. Zusätzlicher XML-Parameter für Timer. Trocknung nach Waschen.
 1.0.0.3 - Skript erweitert: Fahrzeug wird nur versorgt, wenn es nicht in Bewegung ist.
-1.0.0.4 - Skript erweitert: Hard Attached Implements werden jetzt speziell erfasst und funktionieren
+1.0.0.4 - Skript erweitert: Hard Attached Implements werden jetzt speziell erfasst und funktionieren.
 ]]></de>
         <en><![CDATA[Workshop with staff that automatically washes, repairs and paints vehicles.
 
-Actions are performed every few seconds one or more vehicles are in the repair area.
+Actions are performed every few seconds when one or more vehicles are in the repair area.
 10% are washed, 5% repaired and 2% painted at no additional cost.
 This incurs corresponding maintenance costs per month.
 A version without a paint sprayer is also available.
