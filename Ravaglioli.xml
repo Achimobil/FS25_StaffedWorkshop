@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="MyAutomaticCarWash" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_ravaglioliWorkshop</name>
+        <functions>
+            <function>$l10n_staffedWorkshopFunction</function>
+        </functions>
+        <image>$data/placeables/brandless/workshop/store_workshop.dds</image>
+        <price>30000</price>
+        <dailyUpkeep>10000</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <species>placeable</species>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>tools</tab>
+        </brush>
+        <brand>FARMERTOOLS</brand>
+        <category>placeableMisc</category>
+    </storeData>
+    
+    <base>
+        <filename>models/Ravaglioli 835.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+        <boughtWithFarmland>true</boughtWithFarmland>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+
+        <sounds>
+            <place template="smallImp"/>
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="3" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+
+    <triggerMarkers>
+        <triggerMarker node="hotspot" filename="$data/shared/assets/marker/markerIconWrench.i3d" />
+        <!-- <triggerMarker node="warningStripes"/> -->
+    </triggerMarkers>
+
+    <hotspots>
+        <hotspot type="SHOP" linkNode="hotspot" />
+    </hotspots>
+
+    <workshop>
+        <sellingPoint playerTriggerNode="workShopPlayerTrigger" iconNode="hotspot" sellTriggerNode="workShopVehicleTrigger" ownWorkshop="true" mobileWorkshop="false" />
+    </workshop>
+
+    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.1"  damageAmount="-0.05"  wearAmount="-0.02" />
+    
+    
+    <animatedObjects>
+        <animatedObject saveId="hydraulic1" >
+            <animation duration="4.5">
+                <clip rootNode="rollingDoor1Panel1" name="garageSmallSource" filename="$data/placeables/rudolfHormann/garageSmall/garageSmallGate_animation.i3d" />
+                <!-- <part node="occluderMeshDoor1"> -->
+                    <!-- <keyFrame time="0"    visibility="true" /> -->
+                    <!-- <keyFrame time="0.01" visibility="false" /> -->
+                <!-- </part> -->
+            </animation>
+            <controls triggerNode="aminationPlayerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <!-- <sounds> -->
+                <!-- <moving linkNode="rollingDoor1Sound" template="slidingGateMetalLoop" /> -->
+                <!-- <posEnd linkNode="rollingDoor1Sound" template="slidingGateMetalOpen" /> -->
+                <!-- <negEnd linkNode="rollingDoor1Sound" template="slidingGateMetalClose" /> -->
+            <!-- </sounds> -->
+        </animatedObject>
+    </animatedObjects>
+
+    <i3dMappings>
+        <i3dMapping id="hydraulicMainAngle" node="0>0|3|0|2" />
+        <i3dMapping id="clearArea1Start" node="0>1|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>1|0|0|0" />
+        <i3dMapping id="clearArea1Width" node="0>1|0|0|1" />
+        <i3dMapping id="hotspot" node="0>1|1" />
+        <i3dMapping id="indoorArea1Start" node="0>1|2|0" />
+        <i3dMapping id="indoorArea1Height" node="0>1|2|0|0" />
+        <i3dMapping id="indoorArea1Width" node="0>1|2|0|1" />
+        <i3dMapping id="levelArea1Start" node="0>1|3|0" />
+        <i3dMapping id="levelArea1Height" node="0>1|3|0|0" />
+        <i3dMapping id="levelArea1Width" node="0>1|3|0|1" />
+        <i3dMapping id="testArea1Start" node="0>1|4|0" />
+        <i3dMapping id="testArea1End" node="0>1|4|0|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>1|5|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>1|5|0|0" />
+        <i3dMapping id="aminationPlayerTrigger" node="0>2|0" />
+        <i3dMapping id="vehicleTrigger" node="0>2|1" />
+        <i3dMapping id="workShopPlayerTrigger" node="0>2|2" />
+        <i3dMapping id="workShopVehicleTrigger" node="0>2|3" />
+    </i3dMappings>
+</placeable>

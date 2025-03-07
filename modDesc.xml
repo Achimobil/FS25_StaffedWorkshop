@@ -66,6 +66,7 @@ Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_Staff
     <storeItems>
         <storeItem xmlFilename="Workshop.xml"/>
         <storeItem xmlFilename="Workshop-s.xml"/>
+        <storeItem xmlFilename="Ravaglioli.xml"/>
     </storeItems>
 
     <brands>
