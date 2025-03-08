@@ -19,7 +19,7 @@
         <brand>FARMERTOOLS</brand>
         <category>placeableMisc</category>
     </storeData>
-    
+
     <base>
         <filename>models/Ravaglioli 835.i3d</filename>
         <canBeRenamed>true</canBeRenamed>
@@ -74,12 +74,13 @@
     </workshop>
 
     <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.1"  damageAmount="-0.05"  wearAmount="-0.02" />
-    
-    
+
+
     <animatedObjects>
         <animatedObject saveId="hydraulic1" >
             <animation duration="4.5">
-                <clip rootNode="rollingDoor1Panel1" name="garageSmallSource" filename="$data/placeables/rudolfHormann/garageSmall/garageSmallGate_animation.i3d" />
+                <!-- <clip rootNode="hydraulicMainAngle" name="hydraulicMainAngleAction" /> -->
+                <clip rootNode="hydraulicSecondAngle" name="hydraulicSecondAngleAction" />
                 <!-- <part node="occluderMeshDoor1"> -->
                     <!-- <keyFrame time="0"    visibility="true" /> -->
                     <!-- <keyFrame time="0.01" visibility="false" /> -->
@@ -95,7 +96,6 @@
     </animatedObjects>
 
     <i3dMappings>
-        <i3dMapping id="hydraulicMainAngle" node="0>0|3|0|2" />
         <i3dMapping id="clearArea1Start" node="0>1|0|0" />
         <i3dMapping id="clearArea1Height" node="0>1|0|0|0" />
         <i3dMapping id="clearArea1Width" node="0>1|0|0|1" />
@@ -114,5 +114,7 @@
         <i3dMapping id="vehicleTrigger" node="0>2|1" />
         <i3dMapping id="workShopPlayerTrigger" node="0>2|2" />
         <i3dMapping id="workShopVehicleTrigger" node="0>2|3" />
+        <i3dMapping id="hydraulicMainAngle" node="0>3|0" />
+        <i3dMapping id="hydraulicSecondAngle" node="0>3|0|0|3" />
     </i3dMappings>
 </placeable>
