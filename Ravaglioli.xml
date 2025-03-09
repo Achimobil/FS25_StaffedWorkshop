@@ -79,12 +79,40 @@
     <animatedObjects>
         <animatedObject saveId="hydraulic1" >
             <animation duration="4.5">
-                <!-- <clip rootNode="hydraulicMainAngle" name="hydraulicMainAngleAction" /> -->
-                <clip rootNode="hydraulicSecondAngle" name="hydraulicSecondAngleAction" />
-                <!-- <part node="occluderMeshDoor1"> -->
-                    <!-- <keyFrame time="0"    visibility="true" /> -->
-                    <!-- <keyFrame time="0.01" visibility="false" /> -->
-                <!-- </part> -->
+                <part node="hydraulicMainAngle">
+                    <keyFrame time="0" rotation="0 0 0" />
+                    <keyFrame time="100" rotation="45 0 0" />
+                </part>
+                <part node="hydraulicSecondAngle">
+                    <keyFrame time="0" rotation="-22.35 0 0" />
+                    <keyFrame time="100" rotation="-105 0 0" />
+                </part>
+                <part node="CylinderNode">
+                    <keyFrame time="0" rotation="-46.77 0 0" />
+                    <keyFrame time="10" rotation="-59.58 0 0" />
+                    <keyFrame time="20" rotation="-71.62 0 0" />
+                    <keyFrame time="30" rotation="-82.18 0 0" />
+                    <keyFrame time="40" rotation="-91.75 0 0" />
+                    <keyFrame time="50" rotation="-100.5 0 0" />
+                    <keyFrame time="60" rotation="-110.45 0 0" />
+                    <keyFrame time="70" rotation="-117.13 0 0" />
+                    <keyFrame time="80" rotation="-123.96 0 0" />
+                    <keyFrame time="90" rotation="-131.25 0 0" />
+                    <keyFrame time="100" rotation="-137.83 0 0" />
+                </part>
+                <part node="HeadNode">
+                    <keyFrame time="0" rotation="0 0 0" />
+                    <keyFrame time="10" rotation="-4.91 0 0" />
+                    <keyFrame time="20" rotation="-8.41 0 0" />
+                    <keyFrame time="30" rotation="-12 0 0" />
+                    <keyFrame time="40" rotation="-12 0 0" />
+                    <keyFrame time="50" rotation="-12.89 0 0" />
+                    <keyFrame time="60" rotation="-12 0 0" />
+                    <keyFrame time="70" rotation="-12 0 0" />
+                    <keyFrame time="80" rotation="-11.55 0 0" />
+                    <keyFrame time="90" rotation="-10.45 0 0" />
+                    <keyFrame time="100" rotation="-8.89 0 0" />
+                </part>
             </animation>
             <controls triggerNode="aminationPlayerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
             <!-- <sounds> -->
@@ -115,6 +143,8 @@
         <i3dMapping id="workShopPlayerTrigger" node="0>2|2" />
         <i3dMapping id="workShopVehicleTrigger" node="0>2|3" />
         <i3dMapping id="hydraulicMainAngle" node="0>3|0" />
+        <i3dMapping id="CylinderNode" node="0>3|0|0|2" />
         <i3dMapping id="hydraulicSecondAngle" node="0>3|0|0|3" />
+        <i3dMapping id="HeadNode" node="0>3|0|0|3|0|0|1" />
     </i3dMappings>
 </placeable>
