@@ -79,6 +79,21 @@
     <animatedObjects>
         <animatedObject saveId="hydraulic1" >
             <animation duration="4.5">
+                <!-- Steg links -->
+                <part node="MainLane">
+                    <keyFrame time="0" translation="0 0 -6.3" />
+                    <keyFrame time="100" translation="0 1.6 -6.3" />
+                </part>
+                <part node="CoverFrontAngle1">
+                    <keyFrame time="0" rotation="0 0 0" />
+                    <keyFrame time="11" rotation="-45 0 0" />
+                </part>
+                <part node="CoverFrontAngle2">
+                    <keyFrame time="0" rotation="0 0 0" />
+                    <keyFrame time="11" rotation="45 0 0" />
+                </part>
+                
+                <!-- Erste Hydraulik links -->
                 <part node="hydraulicMainAngle">
                     <keyFrame time="0" rotation="0 0 0" />
                     <keyFrame time="100" rotation="45 0 0" />
@@ -113,6 +128,128 @@
                     <keyFrame time="90" rotation="-10.45 0 0" />
                     <keyFrame time="100" rotation="-8.89 0 0" />
                 </part>
+                
+                <!-- Zweite Hydraulik links -->
+                <part node="hydraulicMainAngle.001">
+                    <keyFrame time="0" rotation="0 -180 0" />
+                    <keyFrame time="100" rotation="45 -180 0" />
+                </part>
+                <part node="hydraulicSecondAngle.001">
+                    <keyFrame time="0" rotation="-22.35 0 0" />
+                    <keyFrame time="100" rotation="-105 0 0" />
+                </part>
+                <part node="CylinderNode.001">
+                    <keyFrame time="0" rotation="-46.77 0 0" />
+                    <keyFrame time="10" rotation="-59.58 0 0" />
+                    <keyFrame time="20" rotation="-71.62 0 0" />
+                    <keyFrame time="30" rotation="-82.18 0 0" />
+                    <keyFrame time="40" rotation="-91.75 0 0" />
+                    <keyFrame time="50" rotation="-100.5 0 0" />
+                    <keyFrame time="60" rotation="-110.45 0 0" />
+                    <keyFrame time="70" rotation="-117.13 0 0" />
+                    <keyFrame time="80" rotation="-123.96 0 0" />
+                    <keyFrame time="90" rotation="-131.25 0 0" />
+                    <keyFrame time="100" rotation="-137.83 0 0" />
+                </part>
+                <part node="HeadNode.001">
+                    <keyFrame time="0" rotation="0 0 0" />
+                    <keyFrame time="10" rotation="-4.91 0 0" />
+                    <keyFrame time="20" rotation="-8.41 0 0" />
+                    <keyFrame time="30" rotation="-12 0 0" />
+                    <keyFrame time="40" rotation="-12 0 0" />
+                    <keyFrame time="50" rotation="-12.89 0 0" />
+                    <keyFrame time="60" rotation="-12 0 0" />
+                    <keyFrame time="70" rotation="-12 0 0" />
+                    <keyFrame time="80" rotation="-11.55 0 0" />
+                    <keyFrame time="90" rotation="-10.45 0 0" />
+                    <keyFrame time="100" rotation="-8.89 0 0" />
+                </part>
+                
+                <!-- Steg rechts -->
+                <part node="MainLane.001">
+                    <keyFrame time="0" translation="-1.9 0 -6.3" />
+                    <keyFrame time="100" translation="-1.9 1.6 -6.3" />
+                </part>
+                <part node="CoverFrontAngle1.001">
+                    <keyFrame time="0" rotation="0 0 0" />
+                    <keyFrame time="11" rotation="-45 0 0" />
+                </part>
+                <part node="CoverFrontAngle2.001">
+                    <keyFrame time="0" rotation="0 0 0" />
+                    <keyFrame time="11" rotation="45 0 0" />
+                </part>
+                
+                <!-- Erste Hydraulik rechts -->
+                <part node="hydraulicMainAngle.002">
+                    <keyFrame time="0" rotation="0 0 0" />
+                    <keyFrame time="100" rotation="45 0 0" />
+                </part>
+                <part node="hydraulicSecondAngle.002">
+                    <keyFrame time="0" rotation="-22.35 0 0" />
+                    <keyFrame time="100" rotation="-105 0 0" />
+                </part>
+                <part node="CylinderNode.002">
+                    <keyFrame time="0" rotation="-46.77 0 0" />
+                    <keyFrame time="10" rotation="-59.58 0 0" />
+                    <keyFrame time="20" rotation="-71.62 0 0" />
+                    <keyFrame time="30" rotation="-82.18 0 0" />
+                    <keyFrame time="40" rotation="-91.75 0 0" />
+                    <keyFrame time="50" rotation="-100.5 0 0" />
+                    <keyFrame time="60" rotation="-110.45 0 0" />
+                    <keyFrame time="70" rotation="-117.13 0 0" />
+                    <keyFrame time="80" rotation="-123.96 0 0" />
+                    <keyFrame time="90" rotation="-131.25 0 0" />
+                    <keyFrame time="100" rotation="-137.83 0 0" />
+                </part>
+                <part node="HeadNode.002">
+                    <keyFrame time="0" rotation="0 0 0" />
+                    <keyFrame time="10" rotation="-4.91 0 0" />
+                    <keyFrame time="20" rotation="-8.41 0 0" />
+                    <keyFrame time="30" rotation="-12 0 0" />
+                    <keyFrame time="40" rotation="-12 0 0" />
+                    <keyFrame time="50" rotation="-12.89 0 0" />
+                    <keyFrame time="60" rotation="-12 0 0" />
+                    <keyFrame time="70" rotation="-12 0 0" />
+                    <keyFrame time="80" rotation="-11.55 0 0" />
+                    <keyFrame time="90" rotation="-10.45 0 0" />
+                    <keyFrame time="100" rotation="-8.89 0 0" />
+                </part>
+                
+                <!-- Zweite Hydraulik rechts -->
+                <part node="hydraulicMainAngle.003">
+                    <keyFrame time="0" rotation="0 -180 0" />
+                    <keyFrame time="100" rotation="45 -180 0" />
+                </part>
+                <part node="hydraulicSecondAngle.003">
+                    <keyFrame time="0" rotation="-22.35 0 0" />
+                    <keyFrame time="100" rotation="-105 0 0" />
+                </part>
+                <part node="CylinderNode.003">
+                    <keyFrame time="0" rotation="-46.77 0 0" />
+                    <keyFrame time="10" rotation="-59.58 0 0" />
+                    <keyFrame time="20" rotation="-71.62 0 0" />
+                    <keyFrame time="30" rotation="-82.18 0 0" />
+                    <keyFrame time="40" rotation="-91.75 0 0" />
+                    <keyFrame time="50" rotation="-100.5 0 0" />
+                    <keyFrame time="60" rotation="-110.45 0 0" />
+                    <keyFrame time="70" rotation="-117.13 0 0" />
+                    <keyFrame time="80" rotation="-123.96 0 0" />
+                    <keyFrame time="90" rotation="-131.25 0 0" />
+                    <keyFrame time="100" rotation="-137.83 0 0" />
+                </part>
+                <part node="HeadNode.003">
+                    <keyFrame time="0" rotation="0 0 0" />
+                    <keyFrame time="10" rotation="-4.91 0 0" />
+                    <keyFrame time="20" rotation="-8.41 0 0" />
+                    <keyFrame time="30" rotation="-12 0 0" />
+                    <keyFrame time="40" rotation="-12 0 0" />
+                    <keyFrame time="50" rotation="-12.89 0 0" />
+                    <keyFrame time="60" rotation="-12 0 0" />
+                    <keyFrame time="70" rotation="-12 0 0" />
+                    <keyFrame time="80" rotation="-11.55 0 0" />
+                    <keyFrame time="90" rotation="-10.45 0 0" />
+                    <keyFrame time="100" rotation="-8.89 0 0" />
+                </part>
             </animation>
             <controls triggerNode="aminationPlayerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
             <!-- <sounds> -->
@@ -124,27 +261,45 @@
     </animatedObjects>
 
     <i3dMappings>
-        <i3dMapping id="clearArea1Start" node="0>1|0|0" />
-        <i3dMapping id="clearArea1Height" node="0>1|0|0|0" />
-        <i3dMapping id="clearArea1Width" node="0>1|0|0|1" />
-        <i3dMapping id="hotspot" node="0>1|1" />
-        <i3dMapping id="indoorArea1Start" node="0>1|2|0" />
-        <i3dMapping id="indoorArea1Height" node="0>1|2|0|0" />
-        <i3dMapping id="indoorArea1Width" node="0>1|2|0|1" />
-        <i3dMapping id="levelArea1Start" node="0>1|3|0" />
-        <i3dMapping id="levelArea1Height" node="0>1|3|0|0" />
-        <i3dMapping id="levelArea1Width" node="0>1|3|0|1" />
-        <i3dMapping id="testArea1Start" node="0>1|4|0" />
-        <i3dMapping id="testArea1End" node="0>1|4|0|0" />
-        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>1|5|0" />
-        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>1|5|0|0" />
-        <i3dMapping id="aminationPlayerTrigger" node="0>2|0" />
-        <i3dMapping id="vehicleTrigger" node="0>2|1" />
-        <i3dMapping id="workShopPlayerTrigger" node="0>2|2" />
-        <i3dMapping id="workShopVehicleTrigger" node="0>2|3" />
-        <i3dMapping id="hydraulicMainAngle" node="0>3|0" />
-        <i3dMapping id="CylinderNode" node="0>3|0|0|2" />
-        <i3dMapping id="hydraulicSecondAngle" node="0>3|0|0|3" />
-        <i3dMapping id="HeadNode" node="0>3|0|0|3|0|0|1" />
+        <i3dMapping id="clearArea1Start" node="0>0|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>0|0|0|0" />
+        <i3dMapping id="clearArea1Width" node="0>0|0|0|1" />
+        <i3dMapping id="hotspot" node="0>0|1" />
+        <i3dMapping id="indoorArea1Start" node="0>0|2|0" />
+        <i3dMapping id="indoorArea1Height" node="0>0|2|0|0" />
+        <i3dMapping id="indoorArea1Width" node="0>0|2|0|1" />
+        <i3dMapping id="levelArea1Start" node="0>0|3|0" />
+        <i3dMapping id="levelArea1Height" node="0>0|3|0|0" />
+        <i3dMapping id="levelArea1Width" node="0>0|3|0|1" />
+        <i3dMapping id="testArea1Start" node="0>0|4|0" />
+        <i3dMapping id="testArea1End" node="0>0|4|0|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>0|5|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>0|5|0|0" />
+        <i3dMapping id="aminationPlayerTrigger" node="0>1|0" />
+        <i3dMapping id="vehicleTrigger" node="0>1|1" />
+        <i3dMapping id="workShopPlayerTrigger" node="0>1|2" />
+        <i3dMapping id="workShopVehicleTrigger" node="0>1|3" />
+        <i3dMapping id="MainLane" node="0>2|0" />
+        <i3dMapping id="CoverFrontAngle1" node="0>2|0|0" />
+        <i3dMapping id="CoverFrontAngle2" node="0>2|0|1" />
+        <i3dMapping id="MainLane.001" node="0>2|1" />
+        <i3dMapping id="CoverFrontAngle1.001" node="0>2|1|0" />
+        <i3dMapping id="CoverFrontAngle2.001" node="0>2|1|1" />
+        <i3dMapping id="hydraulicMainAngle" node="0>2|2" />
+        <i3dMapping id="CylinderNode" node="0>2|2|0|2" />
+        <i3dMapping id="hydraulicSecondAngle" node="0>2|2|0|3" />
+        <i3dMapping id="HeadNode" node="0>2|2|0|3|0|0|1" />
+        <i3dMapping id="hydraulicMainAngle.001" node="0>2|3" />
+        <i3dMapping id="CylinderNode.001" node="0>2|3|0|2" />
+        <i3dMapping id="hydraulicSecondAngle.001" node="0>2|3|0|3" />
+        <i3dMapping id="HeadNode.001" node="0>2|3|0|3|0|0|1" />
+        <i3dMapping id="hydraulicMainAngle.002" node="0>2|4" />
+        <i3dMapping id="CylinderNode.002" node="0>2|4|0|2" />
+        <i3dMapping id="hydraulicSecondAngle.002" node="0>2|4|0|3" />
+        <i3dMapping id="HeadNode.002" node="0>2|4|0|3|0|0|1" />
+        <i3dMapping id="hydraulicMainAngle.003" node="0>2|5" />
+        <i3dMapping id="CylinderNode.003" node="0>2|5|0|2" />
+        <i3dMapping id="hydraulicSecondAngle.003" node="0>2|5|0|3" />
+        <i3dMapping id="HeadNode.003" node="0>2|5|0|3|0|0|1" />
     </i3dMappings>
 </placeable>
