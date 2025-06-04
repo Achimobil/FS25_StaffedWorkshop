@@ -27,7 +27,7 @@ An diesem Skript dürfen ohne Genehmigung von Achimobil keine Änderungen vorgen
 ]]
 
 AutomaticCarWash = {};
-AutomaticCarWash.Debug = false;
+AutomaticCarWash.Debug = true;
 
 --- Print the given Table to the log
 -- @param string text parameter Text before the table
@@ -233,6 +233,19 @@ function AutomaticCarWash:CleanOneVehicle(vehicle)
     if vehicle == nil then
         return false;
     end
+
+--     if vehicle.setMassDirty ~= nil then
+--          AutomaticCarWash.DebugText("vehicle:setMassDirty();");
+--         vehicle:setMassDirty();
+--     end
+
+--     if vehicle.resetPositionToTerrainHeight ~= nil then
+--          AutomaticCarWash.DebugText("vehicle:resetPositionToTerrainHeight();");
+--         vehicle:resetPositionToTerrainHeight();
+--     end
+
+    local x, y, z = getTranslation(vehicle.rootNode);
+    setTranslation(vehicle.rootNode, x, y+0.001, z);
 
     -- timer soll weiter laufen wenn sich das fahzeug bewegt, aber keine Aktion durchgeführt werden
     local lastSpeed = 0;

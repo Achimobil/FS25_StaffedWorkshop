@@ -73,7 +73,7 @@
         <sellingPoint playerTriggerNode="workShopPlayerTrigger" iconNode="hotspot" sellTriggerNode="workShopVehicleTrigger" ownWorkshop="true" mobileWorkshop="false" />
     </workshop>
 
-    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.1"  damageAmount="-0.05"  wearAmount="-0.02" />
+    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.001"  damageAmount="-0.001"  wearAmount="-0.001" timerLength="3000" />
 
 
     <animatedObjects>
@@ -92,7 +92,7 @@
                     <keyFrame time="0" rotation="0 0 0" />
                     <keyFrame time="11" rotation="45 0 0" />
                 </part>
-                
+
                 <!-- Erste Hydraulik links -->
                 <part node="hydraulicMainAngle">
                     <keyFrame time="0" rotation="0 0 0" />
@@ -128,7 +128,7 @@
                     <keyFrame time="90" rotation="-10.45 0 0" />
                     <keyFrame time="100" rotation="-8.89 0 0" />
                 </part>
-                
+
                 <!-- Zweite Hydraulik links -->
                 <part node="hydraulicMainAngle.001">
                     <keyFrame time="0" rotation="0 -180 0" />
@@ -164,7 +164,7 @@
                     <keyFrame time="90" rotation="-10.45 0 0" />
                     <keyFrame time="100" rotation="-8.89 0 0" />
                 </part>
-                
+
                 <!-- Steg rechts -->
                 <part node="MainLane.001">
                     <keyFrame time="0" translation="-1.9 0 -6.3" />
@@ -178,7 +178,7 @@
                     <keyFrame time="0" rotation="0 0 0" />
                     <keyFrame time="11" rotation="45 0 0" />
                 </part>
-                
+
                 <!-- Erste Hydraulik rechts -->
                 <part node="hydraulicMainAngle.002">
                     <keyFrame time="0" rotation="0 0 0" />
@@ -214,7 +214,7 @@
                     <keyFrame time="90" rotation="-10.45 0 0" />
                     <keyFrame time="100" rotation="-8.89 0 0" />
                 </part>
-                
+
                 <!-- Zweite Hydraulik rechts -->
                 <part node="hydraulicMainAngle.003">
                     <keyFrame time="0" rotation="0 -180 0" />
