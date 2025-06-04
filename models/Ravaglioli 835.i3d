@@ -6,6 +6,9 @@
   </Asset>
 
   <Files>
+    <File fileId="2" filename="../textures/PaintedMetal007_2K_Color.dds"/>
+    <File fileId="3" filename="../textures/PaintedMetal007_2K_NormalDX.dds"/>
+    <File fileId="4" filename="../textures/PaintedMetal007_2K_specular.dds"/>
     <File fileId="7" filename="$data/shaders/vehicleShader.xml"/>
     <File fileId="9" filename="$data/shared/detailLibrary/flat_normal.png"/>
     <File fileId="17" filename="$data/shared/detailLibrary/metallic/clear_diffuse.png"/>
@@ -13,9 +16,9 @@
     <File fileId="16" filename="$data/shared/detailLibrary/metallic/rough_specular.png"/>
     <File fileId="10" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png"/>
     <File fileId="8" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png"/>
-    <File fileId="2" filename="../models/textures/PaintedMetal007_2K_Color.dds"/>
-    <File fileId="3" filename="../models/textures/PaintedMetal007_2K_NormalDX.dds"/>
-    <File fileId="4" filename="../models/textures/PaintedMetal007_2K_specular.dds"/>
+    <File fileId="22" filename="$data/shared/detailLibrary/metallic/steelTreadPlate_diffuse.png"/>
+    <File fileId="21" filename="$data/shared/detailLibrary/metallic/steelTreadPlate_normal.png"/>
+    <File fileId="20" filename="$data/shared/detailLibrary/metallic/steelTreadPlate_specular.png"/>
   </Files>
 
 
@@ -46,10 +49,9 @@
     <Material name="Schraube_mat" materialId="4" diffuseColor="0.121569 0.121569 0.121569 1" specularColor="0.501961 1 0">
     </Material>
     <Material name="silverGrip" materialId="7" diffuseColor="1 1 1 1" specularColor="0.501961 1 0" customShaderId="7">
-      <Custommap name="detailSpecular" fileId="8"/>
-      <Custommap name="detailNormal" fileId="9"/>
-      <Custommap name="detailDiffuse" fileId="10"/>
-      <CustomParameter name="colorScale" value="0.0564 0.0564 0.0564"/>
+      <Custommap name="detailSpecular" fileId="20"/>
+      <Custommap name="detailNormal" fileId="21"/>
+      <Custommap name="detailDiffuse" fileId="22"/>
     </Material>
   </Materials>
 
@@ -245,7 +247,7 @@
             </Shape>
           </TransformGroup>
         </Shape>
-        <Shape name="LaneConnector.001" translation="0.95 0.18 -7.945" rotation="-5.00896e-06 -5.00896e-06 180" shapeId="18" static="true" collisionFilterGroup="0x601c" collisionFilterMask="0xfffffbff" nodeId="198" castsShadows="true" receiveShadows="true" materialIds="7">
+        <Shape name="LaneConnector.001" translation="0.95 0.18 -7.945" rotation="-5.00896e-06 -5.00896e-06 180" shapeId="21" static="true" collisionFilterGroup="0x601c" collisionFilterMask="0xfffffbff" nodeId="198" castsShadows="true" receiveShadows="true" materialIds="7">
           <TransformGroup name="Stempel.001" translation="0 0.180001 1.645" rotation="180 -0 0" nodeId="199">
             <Shape name="Cube.020" translation="0 0.01 0" rotation="-1.62898e-13 -0 -90" shapeId="19" nodeId="200" castsShadows="true" receiveShadows="true" materialIds="3">
               <Shape name="Cube.019" translation="-0.11 0.3 0" rotation="0 -7.27971e-20 90" shapeId="20" nodeId="201" castsShadows="true" receiveShadows="true" materialIds="3"/>
@@ -253,7 +255,7 @@
             </Shape>
           </TransformGroup>
         </Shape>
-        <Shape name="LaneConnector.002" translation="-0.95 0.18 7.945" rotation="-180 -0 0" shapeId="18" static="true" collisionFilterGroup="0x601c" collisionFilterMask="0xfffffbff" nodeId="203" castsShadows="true" receiveShadows="true" materialIds="7">
+        <Shape name="LaneConnector.002" translation="-0.95 0.18 7.945" rotation="-180 -0 0" shapeId="21" static="true" collisionFilterGroup="0x601c" collisionFilterMask="0xfffffbff" nodeId="203" castsShadows="true" receiveShadows="true" materialIds="7">
           <TransformGroup name="Stempel.002" translation="0 0.180001 1.645" rotation="180 -0 0" nodeId="204">
             <Shape name="Cube.023" translation="0 0.01 0" rotation="0 -0 -90" shapeId="19" nodeId="205" castsShadows="true" receiveShadows="true" materialIds="3">
               <Shape name="Cube.022" translation="-0.11 0.3 0" rotation="0 -0 90" shapeId="20" nodeId="206" castsShadows="true" receiveShadows="true" materialIds="3"/>
@@ -261,7 +263,7 @@
             </Shape>
           </TransformGroup>
         </Shape>
-        <Shape name="LaneConnector.003" translation="-0.95 0.18 -7.945" rotation="3.59722e-05 -5.00896e-06 180" shapeId="18" static="true" collisionFilterGroup="0x601c" collisionFilterMask="0xfffffbff" nodeId="208" castsShadows="true" receiveShadows="true" materialIds="7">
+        <Shape name="LaneConnector.003" translation="-0.95 0.18 -7.945" rotation="3.59722e-05 -5.00896e-06 180" shapeId="21" static="true" collisionFilterGroup="0x601c" collisionFilterMask="0xfffffbff" nodeId="208" castsShadows="true" receiveShadows="true" materialIds="7">
           <TransformGroup name="Stempel.003" translation="0 0.180001 1.645" rotation="180 -0 0" nodeId="209">
             <Shape name="Cube.026" translation="0 0.01 0" rotation="7.41826e-34 -1.6971e-26 -90" shapeId="19" nodeId="210" castsShadows="true" receiveShadows="true" materialIds="3">
               <Shape name="Cube.025" translation="-0.11 0.3 0" rotation="0 -0 90" shapeId="20" nodeId="211" castsShadows="true" receiveShadows="true" materialIds="3"/>
