@@ -73,7 +73,7 @@
         <sellingPoint playerTriggerNode="workShopPlayerTrigger" iconNode="hotspot" sellTriggerNode="workShopVehicleTrigger" ownWorkshop="true" mobileWorkshop="false" />
     </workshop>
 
-    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.001"  damageAmount="-0.001"  wearAmount="-0.001" timerLength="3000" />
+    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.1" damageAmount="-0.05" wearAmount="-0.02" timerLength="1000" />
 
 
     <animatedObjects>
