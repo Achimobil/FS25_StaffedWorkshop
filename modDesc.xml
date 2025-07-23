@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="95">
+<modDesc descVersion="99">
     <author>Achimobil</author>
     <version>1.0.0.5</version>
 
@@ -66,6 +66,7 @@ Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_Staff
     <storeItems>
         <storeItem xmlFilename="Workshop.xml"/>
         <storeItem xmlFilename="Workshop-s.xml"/>
+        <storeItem xmlFilename="Ravaglioli.xml"/>
     </storeItems>
 
     <brands>
@@ -77,10 +78,13 @@ Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_Staff
     </placeableSpecializations>
 
     <placeableTypes>
-        <type name="MyAutomaticCarWash" parent="simplePlaceable" filename="$dataS/scripts/placeables/Placeable.lua">
+        <type name="MyAutomaticCarWashWithWorkshop" parent="simplePlaceable" filename="$dataS/scripts/placeables/Placeable.lua">
             <specialization name="solarPanels"/>
             <specialization name="incomePerHour"/>
             <specialization name="workshop"/>
+            <specialization name="AutomaticCarWash"/>
+        </type>
+        <type name="MyAutomaticCarWash" parent="simplePlaceable" filename="$dataS/scripts/placeables/Placeable.lua">
             <specialization name="AutomaticCarWash"/>
         </type>
     </placeableTypes>

@@ -234,13 +234,19 @@ function AutomaticCarWash:CleanOneVehicle(vehicle)
         return false;
     end
 
+
     -- timer soll weiter laufen wenn sich das fahzeug bewegt, aber keine Aktion durchgeführt werden
     local lastSpeed = 0;
     if vehicle.getLastSpeed ~= nil then
         lastSpeed = vehicle:getLastSpeed(true) + vehicle:getLastSpeed();
     end
         AutomaticCarWash.DebugText("lastSpeed: " .. tostring(lastSpeed));
-    if lastSpeed > 0.1 then
+    if lastSpeed < 5 then
+        -- Fahrzeug leicht anheben, damit es bei beweglichen triggern auch wieder runter fährt
+        local x, y, z = getTranslation(vehicle.rootNode);
+        setTranslation(vehicle.rootNode, x, y+0.000001, z);
+    end
+    if lastSpeed > 1 then
         return true;
     end
 
@@ -309,20 +315,20 @@ function AutomaticCarWash:CleanCar()
             end
         end;
 
-        if not actionDone then
-            -- clean, remove timer
-            spec.timerId = nil;
+        -- trigger not empty
+        if spec.timerId ~= nil then
+            -- return true so existing trigger runs again
+            AutomaticCarWash.DebugText("restart timer");
+            return true;
         else
-            -- not clean, use timer
-            if spec.timerId ~= nil then
-                return true;
-            else
-                -- set intervall length here in miliseconds
-                spec.timerId = addTimer(spec.timerLength, "CleanCar", self);return;
-            end
+            -- set intervall length here in miliseconds
+            AutomaticCarWash.DebugText("create timer");
+            spec.timerId = addTimer(spec.timerLength, "CleanCar", self);
+            return;
         end
     else
         -- no vehicle, remove timer
+        AutomaticCarWash.DebugText("remove timer");
         spec.timerId = nil;
     end
 

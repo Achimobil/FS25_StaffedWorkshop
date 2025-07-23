@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<placeable type="MyAutomaticCarWash" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+<placeable type="MyAutomaticCarWashWithWorkshop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
     <storeData>
         <name>$l10n_staffedWorkshop</name>
         <functions>
@@ -19,7 +19,7 @@
         <brand>FARMERTOOLS</brand>
         <category>placeableMisc</category>
     </storeData>
-    
+
     <base>
         <filename>models/workshop.i3d</filename>
         <canBeRenamed>true</canBeRenamed>
@@ -82,7 +82,7 @@
             <solarPanelsConfiguration name="$l10n_ui_yes" isActive="true" price="12500" incomePerHour="43" />
         </solarPanelsConfigurations>
     </solarPanels>
-    
+
     <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.1"  damageAmount="-0.05"  wearAmount="-0.02" />
 
     <i3dMappings>

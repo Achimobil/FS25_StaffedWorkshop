@@ -3,7 +3,7 @@
     <projectName>StaffedWorkshop</projectName>
     <projectSources>
         <source path="D:/Achim/source/repos/FS25_StaffedWorkshop/" />
-        <source path="E:/Modding/Giants/GiantsStudioOwnReferences/" />
+        <source path="D:/Achim/source/repos/FS25_GiantsStudioReferences/" />
     </projectSources>
     <excludePaths></excludePaths>
     <gameUserProfileAppDirectory>%gameuserprofile%/FarmingSimulator2025/</gameUserProfileAppDirectory>
