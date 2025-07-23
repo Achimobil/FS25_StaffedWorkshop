@@ -6,8 +6,8 @@
             <function>$l10n_staffedWorkshopFunction</function>
         </functions>
         <image>$data/placeables/brandless/workshop/store_workshop.dds</image>
-        <price>30000</price>
-        <dailyUpkeep>10000</dailyUpkeep>
+        <price>20000</price>
+        <dailyUpkeep>4000</dailyUpkeep>
         <lifetime>1000</lifetime>
         <rotation>0</rotation>
         <species>placeable</species>
