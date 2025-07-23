@@ -27,7 +27,7 @@ An diesem Skript dürfen ohne Genehmigung von Achimobil keine Änderungen vorgen
 ]]
 
 AutomaticCarWash = {};
-AutomaticCarWash.Debug = true;
+AutomaticCarWash.Debug = false;
 
 --- Print the given Table to the log
 -- @param string text parameter Text before the table

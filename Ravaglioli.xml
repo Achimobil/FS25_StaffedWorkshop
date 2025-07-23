@@ -69,12 +69,7 @@
         <hotspot type="SHOP" linkNode="hotspot" />
     </hotspots>
 
-    <workshop>
-        <sellingPoint playerTriggerNode="workShopPlayerTrigger" iconNode="hotspot" sellTriggerNode="workShopVehicleTrigger" ownWorkshop="true" mobileWorkshop="false" />
-    </workshop>
-
     <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.1" damageAmount="-0.05" wearAmount="-0.02" timerLength="1000" />
-
 
     <animatedObjects>
         <animatedObject saveId="hydraulic1" >
@@ -277,8 +272,6 @@
         <i3dMapping id="tipOcclusionUpdateArea1End" node="0>0|5|0|0" />
         <i3dMapping id="aminationPlayerTrigger" node="0>1|0" />
         <i3dMapping id="vehicleTrigger" node="0>1|1" />
-        <i3dMapping id="workShopPlayerTrigger" node="0>1|2" />
-        <i3dMapping id="workShopVehicleTrigger" node="0>1|3" />
         <i3dMapping id="MainLane" node="0>2|0" />
         <i3dMapping id="CoverFrontAngle1" node="0>2|0|0" />
         <i3dMapping id="CoverFrontAngle2" node="0>2|0|1" />

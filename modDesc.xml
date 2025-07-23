@@ -78,10 +78,13 @@ Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_Staff
     </placeableSpecializations>
 
     <placeableTypes>
-        <type name="MyAutomaticCarWash" parent="simplePlaceable" filename="$dataS/scripts/placeables/Placeable.lua">
+        <type name="MyAutomaticCarWashWithWorkshop" parent="simplePlaceable" filename="$dataS/scripts/placeables/Placeable.lua">
             <specialization name="solarPanels"/>
             <specialization name="incomePerHour"/>
             <specialization name="workshop"/>
+            <specialization name="AutomaticCarWash"/>
+        </type>
+        <type name="MyAutomaticCarWash" parent="simplePlaceable" filename="$dataS/scripts/placeables/Placeable.lua">
             <specialization name="AutomaticCarWash"/>
         </type>
     </placeableTypes>

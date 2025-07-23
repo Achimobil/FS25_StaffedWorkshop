@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<placeable type="MyAutomaticCarWash" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
-	<parentFile xmlFilename="Workshop.xml">
-		<attributes>
-			<set path="placeable.storeData.name" value="$l10n_staffedWorkshop-s"/>
-			<set path="placeable.storeData.functions.function(0)" value="$l10n_staffedWorkshopFunction-s"/>
-			<set path="placeable.storeData.price" value="10000"/>
-			<set path="placeable.storeData.dailyUpkeep" value="4000"/>
-			
-			<set path="placeable.automaticCarWash#wearAmount" value="0"/>
-		</attributes>
-	</parentFile>
-	<storeData>
-		<species>placeable</species>
-		<category>misc</category>
-	</storeData>
+<placeable type="MyAutomaticCarWashWithWorkshop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <parentFile xmlFilename="Workshop.xml">
+        <attributes>
+            <set path="placeable.storeData.name" value="$l10n_staffedWorkshop-s"/>
+            <set path="placeable.storeData.functions.function(0)" value="$l10n_staffedWorkshopFunction-s"/>
+            <set path="placeable.storeData.price" value="10000"/>
+            <set path="placeable.storeData.dailyUpkeep" value="4000"/>
+
+            <set path="placeable.automaticCarWash#wearAmount" value="0"/>
+        </attributes>
+    </parentFile>
+    <storeData>
+        <species>placeable</species>
+        <category>misc</category>
+    </storeData>
 </placeable>
