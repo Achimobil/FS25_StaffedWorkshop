@@ -62,7 +62,6 @@
 
     <triggerMarkers>
         <triggerMarker node="hotspot" filename="$data/shared/assets/marker/markerIconWrench.i3d" />
-        <!-- <triggerMarker node="warningStripes"/> -->
     </triggerMarkers>
 
     <hotspots>
@@ -247,11 +246,14 @@
                 </part>
             </animation>
             <controls triggerNode="aminationPlayerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
-            <!-- <sounds> -->
-                <!-- <moving linkNode="rollingDoor1Sound" template="slidingGateMetalLoop" /> -->
-                <!-- <posEnd linkNode="rollingDoor1Sound" template="slidingGateMetalOpen" /> -->
-                <!-- <negEnd linkNode="rollingDoor1Sound" template="slidingGateMetalClose" /> -->
-            <!-- </sounds> -->
+            <sounds>
+                <moving linkNode="hydraulicMainAngle" template="hydraulicOpen07" loops="2"/>
+                <posEnd linkNode="hydraulicMainAngle" template="slidingGateMetalOpen" />
+                <negEnd linkNode="hydraulicMainAngle" template="slidingGateMetalClose" />
+                <moving linkNode="hydraulicMainAngle.001" template="hydraulicOpen07" loops="2"/>
+                <posEnd linkNode="hydraulicMainAngle.001" template="slidingGateMetalOpen" />
+                <negEnd linkNode="hydraulicMainAngle.001" template="slidingGateMetalClose" />
+            </sounds>
         </animatedObject>
     </animatedObjects>
 
