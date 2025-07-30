@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="100">
     <author>Achimobil</author>
-    <version>1.0.0.6</version>
+    <version>1.0.0.7</version>
 
     <title>
         <en>Staffed Workshop</en>
@@ -35,12 +35,12 @@ Das Verändern oder erneutes Hochladen, ob ganz oder in Teilen, ist nicht gestat
 Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_StaffedWorkshop">GitHub</a>.
 
 Changelog
-1.0.0.1 - Schreibfehler korrigiert
-1.0.0.2 - Neue Skript Version mit Fixes für gemeldete Fehler. Zusätzlicher XML-Parameter für Timer. Trocknung nach Waschen.
-1.0.0.3 - Skript erweitert: Fahrzeug wird nur versorgt, wenn es nicht in Bewegung ist.
-1.0.0.4 - Skript erweitert: Hard Attached Implements werden jetzt speziell erfasst und funktionieren.
-1.0.0.5 - Verbesserte Beschreibung
-1.0.0.6 - Hebebühnenversion hinzugefügt
+1.1.0.0
+- Schreibfehler korrigiert und Beschreibung verbessert
+- Neue Skript Version mit Fixes für gemeldete Fehler. Zusätzlicher XML-Parameter für Timer. Trocknung nach Waschen.
+- Fahrzeug wird nur versorgt, wenn es nicht in Bewegung ist.
+- Hard Attached Implements werden jetzt speziell erfasst und funktionieren.
+- Hebebühnenversion hinzugefügt
 ]]></de>
         <en><![CDATA[Workshop with staff that automatically washes, repairs and paints vehicles.
 
@@ -65,6 +65,14 @@ Uploading to sites other than ModHub is prohibited and therefore illegal, linkin
 Modifying and re-uploading in whole or in part is not allowed!
 
 Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_StaffedWorkshop">GitHub</a>.
+
+Changelog
+1.1.0.0
+- Spelling errors corrected and description improved
+- New script version with fixes for reported bugs. Additional XML parameter for timer. Drying after washing.
+- Vehicle is only serviced when it is not in motion.
+- Hard Attached Implements are now specially recorded and work.
+- Lift version added
 ]]></en>
     </description>
 
@@ -118,6 +126,16 @@ Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_Staff
             <en>Workshop with less staff that automatically washes and repairs vehicles. This costs $4,000 per month.</en>
             <de>Werkstatt mit begrenztem Personal das automatisch Fahrzeuge wäscht und repariert. Dafür fallen 4.000€ Kosten pro Monat an.</de>
             <tr>Araçları otomatik olarak yıkayan ve tamir eden daha az işçiye sahip araç atölyesi. Bunun aylık maliyeti $4,000.</tr>
+        </text>
+        <text name="ravaglioliWorkshop">
+            <en>Lifting platform with staff</en>
+            <de>Hebebühne mit Personal</de>
+            <tr>Personel ile kaldırma platformu</tr>
+        </text>
+        <text name="ravaglioliWorkshopFunction">
+            <en>Lifting platform to be placed in other buildings with staff that automatically wash and repair vehicles. This costs €4,000 per month.</en>
+            <de>Hebebühne zum Platzieren in andere Gebäude mit Personal das automatisch Fahrzeuge wäscht und repariert. Dafür fallen 4.000€ Kosten pro Monat an.</de>
+            <tr>Araçları otomatik olarak yıkayan ve tamir eden personel ile diğer binalara yerleştirilecek kaldırma platformu. Bunun aylık maliyeti 4.000 €'dur.</tr>
         </text>
     </l10n>
 </modDesc>

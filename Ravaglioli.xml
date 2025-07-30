@@ -3,9 +3,9 @@
     <storeData>
         <name>$l10n_ravaglioliWorkshop</name>
         <functions>
-            <function>$l10n_staffedWorkshopFunction</function>
+            <function>$l10n_ravaglioliWorkshopFunction</function>
         </functions>
-        <image>$data/placeables/brandless/workshop/store_workshop.dds</image>
+        <image>store/store_ravaglioli.dds</image>
         <price>20000</price>
         <dailyUpkeep>4000</dailyUpkeep>
         <lifetime>1000</lifetime>
