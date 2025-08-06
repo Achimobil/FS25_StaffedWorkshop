@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="100">
     <author>Achimobil</author>
-    <version>1.1.0.3</version>
+    <version>1.1.0.4</version>
 
     <title>
         <en>Staffed Workshop</en>
@@ -35,7 +35,7 @@ Das Verändern oder erneutes Hochladen, ob ganz oder in Teilen, ist nicht gestat
 Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_StaffedWorkshop">GitHub</a>.
 
 Changelog
-1.1.0.0
+1.1.0.4
 - Schreibfehler korrigiert und Beschreibung verbessert
 - Neue Skript Version mit Fixes für gemeldete Fehler. Zusätzlicher XML-Parameter für Timer. Trocknung nach Waschen.
 - Fahrzeug wird nur versorgt, wenn es nicht in Bewegung ist.
