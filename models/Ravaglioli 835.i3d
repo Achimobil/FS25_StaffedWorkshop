@@ -9,19 +9,19 @@
     <File fileId="2" filename="../textures/PaintedMetal007_2K_Color.dds"/>
     <File fileId="3" filename="../textures/PaintedMetal007_2K_NormalDX.dds"/>
     <File fileId="4" filename="../textures/PaintedMetal007_2K_specular.dds"/>
-    <File fileId="23" filename="$data/placeables/brandless/productionPointsSmall/dairy/dairy_diffuse.dds"/>
-    <File fileId="24" filename="$data/placeables/brandless/productionPointsSmall/dairy/dairy_normal.dds"/>
-    <File fileId="25" filename="$data/placeables/brandless/productionPointsSmall/dairy/dairy_specular.dds"/>
-    <File fileId="7" filename="$data/shaders/vehicleShader.xml"/>
-    <File fileId="9" filename="$data/shared/detailLibrary/flat_normal.png"/>
-    <File fileId="17" filename="$data/shared/detailLibrary/metallic/clear_diffuse.png"/>
-    <File fileId="19" filename="$data/shared/detailLibrary/metallic/clear_specular.png"/>
-    <File fileId="16" filename="$data/shared/detailLibrary/metallic/rough_specular.png"/>
-    <File fileId="10" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png"/>
-    <File fileId="8" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png"/>
-    <File fileId="20" filename="$data/shared/detailLibrary/metallic/steelTreadPlate_diffuse.dds"/>
-    <File fileId="21" filename="$data/shared/detailLibrary/metallic/steelTreadPlate_normal.dds"/>
-    <File fileId="22" filename="$data/shared/detailLibrary/metallic/steelTreadPlate_specular.dds"/>
+    <File fileId="18" filename="$data/placeables/brandless/productionPointsSmall/dairy/dairy_diffuse.dds"/>
+    <File fileId="19" filename="$data/placeables/brandless/productionPointsSmall/dairy/dairy_normal.dds"/>
+    <File fileId="20" filename="$data/placeables/brandless/productionPointsSmall/dairy/dairy_specular.dds"/>
+    <File fileId="11" filename="$data/shared/detailLibrary/flat_normal.dds"/>
+    <File fileId="13" filename="$data/shared/detailLibrary/metallic/clear_diffuse.dds"/>
+    <File fileId="14" filename="$data/shared/detailLibrary/metallic/clear_specular.dds"/>
+    <File fileId="12" filename="$data/shared/detailLibrary/metallic/rough_specular.dds"/>
+    <File fileId="5" filename="$data/shared/detailLibrary/metallic/scratched_diffuse.dds"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/metallic/silverCircularBrushed_normal.dds"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.dds"/>
+    <File fileId="15" filename="$data/shared/detailLibrary/metallic/steelTreadPlate_diffuse.dds"/>
+    <File fileId="16" filename="$data/shared/detailLibrary/metallic/steelTreadPlate_normal.dds"/>
+    <File fileId="17" filename="$data/shared/detailLibrary/metallic/steelTreadPlate_specular.dds"/>
   </Files>
 
 
@@ -31,35 +31,33 @@
       <Normalmap fileId="3"/>
       <Glossmap fileId="4"/>
     </Material>
-    <Material name="Crome_mat" materialId="6" diffuseColor="1 1 1 1" specularColor="0.501961 1 1" customShaderId="7">
-      <Custommap name="detailSpecular" fileId="19"/>
-      <Custommap name="detailNormal" fileId="9"/>
-      <Custommap name="detailDiffuse" fileId="17"/>
+    <Material name="Crome_mat" materialId="6">
+      <Texture fileId="13"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="14"/>
     </Material>
     <Material name="dairy_mat" materialId="8">
-      <Texture fileId="23"/>
-      <Normalmap fileId="24"/>
-      <Glossmap fileId="25"/>
+      <Texture fileId="18"/>
+      <Normalmap fileId="19"/>
+      <Glossmap fileId="20"/>
     </Material>
     <Material name="default" materialId="1" diffuseColor="0.501961 0.501961 0.501961 1">
     </Material>
-    <Material name="GreyMetal_mat" materialId="3" diffuseColor="1 1 1 1" specularColor="0.501961 1 0" customShaderId="7">
-      <Custommap name="detailSpecular" fileId="8"/>
-      <Custommap name="detailNormal" fileId="9"/>
-      <Custommap name="detailDiffuse" fileId="10"/>
+    <Material name="GreyMetal_mat" materialId="3">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
     </Material>
-    <Material name="Hydraulik_mat" materialId="5" specularColor="0.501961 1 0" customShaderId="7">
-      <Custommap name="detailSpecular" fileId="16"/>
-      <Custommap name="detailNormal" fileId="9"/>
-      <Custommap name="detailDiffuse" fileId="17"/>
-      <CustomParameter name="colorScale" value="0 0 0"/>
+    <Material name="Hydraulik_mat" materialId="5" diffuseColor="0.00784314 0.00784314 0.00784314 1">
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
     </Material>
     <Material name="Schraube_mat" materialId="4" diffuseColor="0.121569 0.121569 0.121569 1" specularColor="0.501961 1 0">
     </Material>
     <Material name="silverGrip" materialId="7">
-      <Texture fileId="20"/>
-      <Normalmap fileId="21"/>
-      <Glossmap fileId="22"/>
+      <Texture fileId="15"/>
+      <Normalmap fileId="16"/>
+      <Glossmap fileId="17"/>
     </Material>
   </Materials>
 
