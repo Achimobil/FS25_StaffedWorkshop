@@ -277,7 +277,7 @@
             </Shape>
           </TransformGroup>
         </Shape>
-        <Shape name="controller" translation="3.0046 1.12513 5.30412" rotation="90 90 0" scale="0.01 0.01 0.01" shapeId="22" static="true" collisionFilterGroup="0xffffffff" collisionFilterMask="0xffffffff" nodeId="211" castsShadows="true" receiveShadows="true" materialIds="8"/>
+        <Shape name="controller" translation="3.0046 1.12513 5.30412" rotation="90 90 0" scale="0.01 0.01 0.01" shapeId="22" static="true" collisionFilterGroup="0x3e" collisionFilterMask="0xffffffff" nodeId="211" castsShadows="true" receiveShadows="true" materialIds="8"/>
       </TransformGroup>
     </TransformGroup>
   </Scene>
