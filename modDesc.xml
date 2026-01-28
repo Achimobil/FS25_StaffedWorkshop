@@ -87,6 +87,7 @@ Changelog
         <storeItem xmlFilename="Workshop.xml"/>
         <storeItem xmlFilename="Workshop-s.xml"/>
         <storeItem xmlFilename="Ravaglioli.xml"/>
+        <storeItem xmlFilename="PitStop.xml"/>
     </storeItems>
 
     <brands>

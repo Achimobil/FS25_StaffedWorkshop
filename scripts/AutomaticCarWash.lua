@@ -27,7 +27,7 @@ An diesem Skript dürfen ohne Genehmigung von Achimobil keine Änderungen vorgen
 ]]
 
 AutomaticCarWash = {};
-AutomaticCarWash.Debug = false;
+AutomaticCarWash.Debug = true;
 
 --- Print the given Table to the log
 -- @param string text parameter Text before the table
@@ -97,10 +97,10 @@ function AutomaticCarWash:onLoad(savegame)
     spec.activated = false;
 
     spec.triggerNode = self.xmlFile:getValue(baseXmlPath.."#triggerNode", nil, self.components, self.i3dMappings);
-    spec.dirtAmount = self.xmlFile:getValue(baseXmlPath .. "#dirtAmount", -0.1)
-    spec.damageAmount = self.xmlFile:getValue(baseXmlPath .. "#damageAmount", -0.05)
-    spec.wearAmount = self.xmlFile:getValue(baseXmlPath .. "#wearAmount", -0.02)
-    spec.timerLength = self.xmlFile:getValue(baseXmlPath .. "#timerLength", 3000)
+    spec.dirtAmount = self.xmlFile:getValue(baseXmlPath .. "#dirtAmount", -0.1);
+    spec.damageAmount = self.xmlFile:getValue(baseXmlPath .. "#damageAmount", -0.05);
+    spec.wearAmount = self.xmlFile:getValue(baseXmlPath .. "#wearAmount", -0.02);
+    spec.timerLength = self.xmlFile:getValue(baseXmlPath .. "#timerLength", 3000);
 
     spec.initialized = true;
 
@@ -314,6 +314,26 @@ function AutomaticCarWash:CleanCar()
                 end
             end
         end;
+
+        if actionDone then
+            if #self.spec_animatedObjects.animatedObjects == 2 then
+                AutomaticCarWash.DebugTable("self.spec_animatedObjects.animatedObjects", self.spec_animatedObjects.animatedObjects)
+--                 for _,animation in pairs(self.spec_animatedObjects.animatedObjects[2].animation) do
+                    self.spec_animatedObjects.animatedObjects[2]:setDirection(1)
+--                 end
+            end
+
+--local animatedObjects = self.spec_animatedObjects.animatedObjects;
+--             local direction = self.animatedObject.animation.direction * -1
+--             self.animatedObject:setDirection(direction)
+        else
+            if #self.spec_animatedObjects.animatedObjects == 2 then
+                AutomaticCarWash.DebugTable("self.spec_animatedObjects.animatedObjects", self.spec_animatedObjects.animatedObjects)
+--                 for _,animation in pairs(self.spec_animatedObjects.animatedObjects[2].animation) do
+                    self.spec_animatedObjects.animatedObjects[2]:setDirection(0)
+--                 end
+            end
+        end
 
         -- trigger not empty
         if spec.timerId ~= nil then

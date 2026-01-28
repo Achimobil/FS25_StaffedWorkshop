@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<placeable type="MyAutomaticCarWashWithWorkshop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+<placeable type="MyAutomaticCarWashWithWorkshop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/placeable.xsd">
     <parentFile xmlFilename="Workshop.xml">
         <attributes>
             <set path="placeable.storeData.name" value="$l10n_staffedWorkshop-s"/>
@@ -11,7 +11,7 @@
         </attributes>
     </parentFile>
     <storeData>
-        <species>placeable</species>
+        <species>PLACEABLE</species>
         <category>misc</category>
     </storeData>
 </placeable>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="MyAutomaticCarWash" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/placeable.xsd">
+    <storeData>
+        <name>$l10n_pitStop</name>
+        <functions>
+            <function>$l10n_staffedWorkshopFunction</function>
+        </functions>
+        <image>$data/placeables/brandless/workshop/store_workshop.dds</image>
+        <price>30000</price>
+        <dailyUpkeep>10000</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <species>PLACEABLE</species>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>tools</tab>
+        </brush>
+        <brand>FARMERTOOLS</brand>
+        <category>placeableMisc</category>
+    </storeData>
+
+    <base>
+        <filename>models/pitStop.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+        <boughtWithFarmland>true</boughtWithFarmland>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" >
+        <testAreas>
+            <testArea startNode="testAreaStart01" endNode="testAreaEnd01" />
+        </testAreas>
+
+        <sounds>
+            <place template="smallImp"/>
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearAreaStart01" widthNode="clearAreaWidth01" heightNode="clearAreaHeight01"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="3" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelAreaStart01" widthNode="levelAreaWidth01" heightNode="levelAreaHeight01" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorAreaStart01" widthNode="indoorAreaWidth01" heightNode="indoorAreaHeight01"/>
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+        </updateAreas>
+    </ai>
+
+    <triggerMarkers>
+        <triggerMarker node="warningStripes"/>
+    </triggerMarkers>
+
+    <hotspots>
+        <hotspot type="SHOP" linkNode="vehicleTrigger" />
+    </hotspots>
+
+    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.1"  damageAmount="-0.05"  wearAmount="-0.02" animationNode="0>6|0|1"/>
+
+    <animatedObjects>
+        <animatedObject saveId="westeel3607FlatBottomBinCover" >
+            <animation duration="1.5">
+                <part node="0>6|0|1">
+                    <keyFrame time="0.0" translation="0 1.025 0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" translation="0 1.025 0" rotation="90 0 0"/>
+                </part>
+            </animation>
+            <!-- <controls triggerNode="coverTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openCover" negText="action_closeCover" /> -->
+            <!-- <sounds> -->
+                <!-- <moving template="hingeMedium" linkNode="westeel3607FlatBottomBinCover" pitchScale="0.7"/> -->
+                <!-- <moving file="$data/placeables/agi/flatBottomBin3605/sounds/rotatedLifting.wav" linkNode="westeel3607FlatBottomBinCoverHandle" pitchScale="1" volumeScale="0.7" innerRadius="1" outerRadius="15"/> -->
+                <!-- <posEnd template="clackVar6" linkNode="westeel3607FlatBottomBinCover" pitchScale="0.8"/> -->
+                <!-- <negEnd file="$data/placeables/agi/commBin48/sounds/foldFlap.wav" linkNode="westeel3607FlatBottomBinCover" pitchScale="0.7" volumeScale="1.5" innerRadius="8" outerRadius="20"/> -->
+            <!-- </sounds> -->
+        </animatedObject>
+        <animatedObject saveId="westeel3607FlatBottomBinCover2" >
+            <animation duration="1.5">
+                <part node="0>6|0|1">
+                    <keyFrame time="0.0" translation="0 1.025 0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" translation="0 1.025 0" rotation="90 0 0"/>
+                </part>
+            </animation>
+            <!-- <controls triggerNode="coverTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openCover" negText="action_closeCover" /> -->
+            <!-- <sounds> -->
+                <!-- <moving template="hingeMedium" linkNode="westeel3607FlatBottomBinCover" pitchScale="0.7"/> -->
+                <!-- <moving file="$data/placeables/agi/flatBottomBin3605/sounds/rotatedLifting.wav" linkNode="westeel3607FlatBottomBinCoverHandle" pitchScale="1" volumeScale="0.7" innerRadius="1" outerRadius="15"/> -->
+                <!-- <posEnd template="clackVar6" linkNode="westeel3607FlatBottomBinCover" pitchScale="0.8"/> -->
+                <!-- <negEnd file="$data/placeables/agi/commBin48/sounds/foldFlap.wav" linkNode="westeel3607FlatBottomBinCover" pitchScale="0.7" volumeScale="1.5" innerRadius="8" outerRadius="20"/> -->
+            <!-- </sounds> -->
+        </animatedObject>
+    </animatedObjects>
+
+    <i3dMappings>
+        <i3dMapping id="clearAreaStart01" node="0>0|0" />
+        <i3dMapping id="clearAreaWidth01" node="0>0|0|0" />
+        <i3dMapping id="clearAreaHeight01" node="0>0|0|1" />
+        <i3dMapping id="levelAreaStart01" node="0>1|0" />
+        <i3dMapping id="levelAreaWidth01" node="0>1|0|0" />
+        <i3dMapping id="levelAreaHeight01" node="0>1|0|1" />
+        <i3dMapping id="indoorAreaStart01" node="0>2|0" />
+        <i3dMapping id="indoorAreaWidth01" node="0>2|0|0" />
+        <i3dMapping id="indoorAreaHeight01" node="0>2|0|1" />
+        <i3dMapping id="testAreaStart01" node="0>3|0" />
+        <i3dMapping id="testAreaEnd01" node="0>3|0|0" />
+        <i3dMapping id="tipOcclusionUpdateAreaStart01" node="0>4|0" />
+        <i3dMapping id="tipOcclusionUpdateAreaEnd01" node="0>4|0|0" />
+        <i3dMapping id="warningStripes" node="0>5|0" />
+        <i3dMapping id="vehicleTrigger" node="0>5|1" />
+    </i3dMappings>
+</placeable>

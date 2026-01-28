@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="pitStop.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="$data/maps/mapEU/textures/props/railroads/railroadProps_diffuse.png"/>
+    <File fileId="6" filename="$data/maps/mapEU/textures/props/railroads/railroadProps_normal.png"/>
+    <File fileId="7" filename="$data/maps/mapEU/textures/props/railroads/railroadProps_specular.png"/>
+    <File fileId="12" filename="$data/shaders/glowShader.xml"/>
+    <File fileId="8" filename="$data/shaders/placeableShader.xml"/>
+    <File fileId="1" filename="$data/shared/warningStripes_diffuse.png"/>
+    <File fileId="2" filename="$data/shared/warningStripes_normal.png"/>
+    <File fileId="3" filename="$data/shared/warningStripes_specular.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert1" materialId="73" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="lambert1" materialId="7" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+    <Material name="railroadProps_mat" materialId="133" customShaderId="8">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+    <Material name="railRoadSignalsEmissive01_mat" materialId="134" customShaderId="12" customShaderVariation="baseMap_colorScale_blink">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+      <CustomParameter name="lightControl" value="8"/>
+      <CustomParameter name="colorScale" value="1 0 0"/>
+    </Material>
+    <Material name="warningStripes_mat" materialId="10">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="pitStop.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="workshop" nodeId="30">
+      <TransformGroup name="clearAreas" nodeId="31">
+        <TransformGroup name="clearAreaStart01" translation="-9 0 -6" nodeId="32">
+          <TransformGroup name="clearAreaWidth01" translation="0 0 16" nodeId="33"/>
+          <TransformGroup name="clearAreaHeight01" translation="18 0 0" nodeId="34"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="levelAreas" nodeId="35">
+        <TransformGroup name="levelAreaStart01" translation="-10 0 -7" nodeId="36">
+          <TransformGroup name="levelAreaWidth01" translation="0 0 18" nodeId="37"/>
+          <TransformGroup name="levelAreaHeight01" translation="20 0 0" nodeId="38"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="indoorAreas" nodeId="39">
+        <TransformGroup name="indoorAreaStart01" translation="-8 0 -5" nodeId="40">
+          <TransformGroup name="indoorAreaWidth01" translation="0 0 12" nodeId="41"/>
+          <TransformGroup name="indoorAreaHeight01" translation="16 0 0" nodeId="42"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="testAreas" nodeId="43">
+        <TransformGroup name="testAreaStart01" translation="-8 0 -5.5" nodeId="44">
+          <TransformGroup name="testAreaEnd01" translation="16 6.5 15" nodeId="45"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="46">
+        <TransformGroup name="tipOcclusionUpdateAreaStart01" translation="-8 0 -5" nodeId="47">
+          <TransformGroup name="tipOcclusionUpdateAreaEnd01" translation="16 0 15" nodeId="48"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="workshop" nodeId="49">
+        <Shape name="warningStripes" translation="0.75229 0 0" shapeId="1" clipDistance="100" nodeId="51" castsShadows="false" receiveShadows="true" terrainDecal="true" materialIds="10"/>
+        <Shape name="vehicleTrigger" translation="-1.07522 0 -1.35896" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" clipDistance="300" nodeId="52" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="7"/>
+      </TransformGroup>
+      <TransformGroup name="visuals" nodeId="55">
+        <TransformGroup name="railroadCrossing" lockedgroup="true" translation="-5.55241 0 0" clipDistance="300" nodeId="143">
+          <TransformGroup name="railroadCrossing" lodDistance="0 30" clipDistance="300" nodeId="144">
+            <Shape name="LOD0" shapeId="3" nodeId="145" castsShadows="true" receiveShadows="true" materialIds="133"/>
+            <Shape name="LOD1" shapeId="4" nodeId="146" castsShadows="true" receiveShadows="true" materialIds="133"/>
+            <Shape name="col" shapeId="5" static="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" nodeId="147" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="73"/>
+          </TransformGroup>
+          <Shape name="barrier" translation="0 1.025 0" shapeId="6" kinematic="true" collisionFilterGroup="0x26" collisionFilterMask="0xfffffbff" nodeId="148" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="73">
+            <Shape name="barrier_vis" shapeId="7" nodeId="149" castsShadows="true" receiveShadows="true" materialIds="133"/>
+          </Shape>
+          <TransformGroup name="trafficBlockingPosition" translation="0.98 -0.1 5.4" rotation="0 -90 0" nodeId="150"/>
+          <TransformGroup name="signals" nodeId="151">
+            <TransformGroup name="signal" nodeId="152">
+              <TransformGroup name="railroadCrossingLight01" translation="1.10816 2.0668 -0.26285" nodeId="153">
+                <Light name="pointLight" translation="0.173376 0 -0" nodeId="154" type="point" color="1 0 0" emitDiffuse="true" emitSpecular="true" range="3"/>
+              </TransformGroup>
+              <Shape name="railroadCrossingLight02" translation="1.10357 2.0668 0.267493" shapeId="8" clipDistance="300" nodeId="155" castsShadows="true" receiveShadows="true" materialIds="134">
+                <Light name="pointLight" translation="0.177962 0 0" nodeId="156" type="point" color="1 0 0" emitDiffuse="true" emitSpecular="true" range="3"/>
+                <Shape name="railroadCrossingLight01" translation="0 0 -0.530343" shapeId="9" clipDistance="300" nodeId="157" castsShadows="true" receiveShadows="true" materialIds="134"/>
+              </Shape>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>
