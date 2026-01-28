@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
-<i3D name="Ravaglioli 835.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+<i3D name="Ravaglioli 835" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
   <Asset>
-    <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+    <Export program="i3dConverter" version="1.0"/>
   </Asset>
 
   <Files>
@@ -26,35 +26,35 @@
 
 
   <Materials>
-    <Material name="blueMetal_mat" materialId="687">
+    <Material name="blueMetal_mat" materialId="2">
       <Texture fileId="2"/>
       <Normalmap fileId="3"/>
       <Glossmap fileId="4"/>
     </Material>
-    <Material name="Crome_mat" materialId="688">
+    <Material name="Crome_mat" materialId="6">
       <Texture fileId="13"/>
       <Normalmap fileId="11"/>
       <Glossmap fileId="14"/>
     </Material>
-    <Material name="dairy_mat" materialId="689">
+    <Material name="dairy_mat" materialId="8">
       <Texture fileId="18"/>
       <Normalmap fileId="19"/>
       <Glossmap fileId="20"/>
     </Material>
-    <Material name="default" materialId="690" diffuseColor="0.501961 0.501961 0.501961 1">
+    <Material name="default" materialId="1" diffuseColor="0.501961 0.501961 0.501961 1">
     </Material>
-    <Material name="GreyMetal_mat" materialId="691">
+    <Material name="GreyMetal_mat" materialId="3">
       <Texture fileId="5"/>
       <Normalmap fileId="6"/>
       <Glossmap fileId="7"/>
     </Material>
-    <Material name="Hydraulik_mat" materialId="692" diffuseColor="0.00784314 0.00784314 0.00784314 1">
+    <Material name="Hydraulik_mat" materialId="5" diffuseColor="0.00784314 0.00784314 0.00784314 1">
       <Normalmap fileId="11"/>
       <Glossmap fileId="12"/>
     </Material>
-    <Material name="Schraube_mat" materialId="693" diffuseColor="0.121569 0.121569 0.121569 1" specularColor="0.501961 1 0">
+    <Material name="Schraube_mat" materialId="4" diffuseColor="0.121569 0.121569 0.121569 1" specularColor="0.501961 1 0">
     </Material>
-    <Material name="silverGrip" materialId="694">
+    <Material name="silverGrip" materialId="7">
       <Texture fileId="15"/>
       <Normalmap fileId="16"/>
       <Glossmap fileId="17"/>
@@ -66,216 +66,216 @@
   </Shapes>
 
   <Scene>
-    <TransformGroup name="Ravaglioli 835" clipDistance="300" nodeId="717">
-      <TransformGroup name="areas" clipDistance="300" nodeId="718">
-        <TransformGroup name="clearAreas" clipDistance="300" nodeId="719">
-          <TransformGroup name="clearArea1Start" translation="-4 0 11" clipDistance="300" nodeId="720">
-            <TransformGroup name="clearArea1Height" translation="0 0 -22" clipDistance="300" nodeId="721"/>
-            <TransformGroup name="clearArea1Width" translation="7 0 0" clipDistance="300" nodeId="722"/>
+    <TransformGroup name="Ravaglioli 835" clipDistance="300" nodeId="77">
+      <TransformGroup name="areas" clipDistance="300" nodeId="78">
+        <TransformGroup name="clearAreas" clipDistance="300" nodeId="79">
+          <TransformGroup name="clearArea1Start" translation="-4 0 11" clipDistance="300" nodeId="80">
+            <TransformGroup name="clearArea1Height" translation="0 0 -22" clipDistance="300" nodeId="81"/>
+            <TransformGroup name="clearArea1Width" translation="7 0 0" clipDistance="300" nodeId="82"/>
           </TransformGroup>
         </TransformGroup>
-        <TransformGroup name="hotspot" translation="5 0 7" clipDistance="300" nodeId="723"/>
-        <TransformGroup name="indoorAreas" clipDistance="300" nodeId="724">
-          <TransformGroup name="indoorArea1Start" translation="-3 0 7" clipDistance="300" nodeId="725">
-            <TransformGroup name="indoorArea1Height" translation="0 0 -14" clipDistance="300" nodeId="726"/>
-            <TransformGroup name="indoorArea1Width" translation="6 0 0" clipDistance="300" nodeId="727"/>
+        <TransformGroup name="hotspot" translation="5 0 7" clipDistance="300" nodeId="83"/>
+        <TransformGroup name="indoorAreas" clipDistance="300" nodeId="84">
+          <TransformGroup name="indoorArea1Start" translation="-3 0 7" clipDistance="300" nodeId="85">
+            <TransformGroup name="indoorArea1Height" translation="0 0 -14" clipDistance="300" nodeId="86"/>
+            <TransformGroup name="indoorArea1Width" translation="6 0 0" clipDistance="300" nodeId="87"/>
           </TransformGroup>
         </TransformGroup>
-        <TransformGroup name="levelAreas" clipDistance="300" nodeId="728">
-          <TransformGroup name="levelArea1Start" translation="-4 0 11" clipDistance="300" nodeId="729">
-            <TransformGroup name="levelArea1Height" translation="0 0 -22" clipDistance="300" nodeId="730"/>
-            <TransformGroup name="levelArea1Width" translation="7 0 0" clipDistance="300" nodeId="731"/>
+        <TransformGroup name="levelAreas" clipDistance="300" nodeId="88">
+          <TransformGroup name="levelArea1Start" translation="-4 0 11" clipDistance="300" nodeId="89">
+            <TransformGroup name="levelArea1Height" translation="0 0 -22" clipDistance="300" nodeId="90"/>
+            <TransformGroup name="levelArea1Width" translation="7 0 0" clipDistance="300" nodeId="91"/>
           </TransformGroup>
         </TransformGroup>
-        <TransformGroup name="testAreas" clipDistance="300" nodeId="732">
-          <TransformGroup name="testArea1Start" translation="-4 0 11" clipDistance="300" nodeId="733">
-            <TransformGroup name="testArea1End" translation="7 4 -22" clipDistance="300" nodeId="734"/>
+        <TransformGroup name="testAreas" clipDistance="300" nodeId="92">
+          <TransformGroup name="testArea1Start" translation="-4 0 11" clipDistance="300" nodeId="93">
+            <TransformGroup name="testArea1End" translation="7 4 -22" clipDistance="300" nodeId="94"/>
           </TransformGroup>
         </TransformGroup>
-        <TransformGroup name="tipOcclusionUpdateAreas" clipDistance="300" nodeId="735">
-          <TransformGroup name="tipOcclusionUpdateArea1Start" translation="-4 0 11" clipDistance="300" nodeId="736">
-            <TransformGroup name="tipOcclusionUpdateArea1End" translation="6 4 -18" clipDistance="300" nodeId="737"/>
+        <TransformGroup name="tipOcclusionUpdateAreas" clipDistance="300" nodeId="95">
+          <TransformGroup name="tipOcclusionUpdateArea1Start" translation="-4 0 11" clipDistance="300" nodeId="96">
+            <TransformGroup name="tipOcclusionUpdateArea1End" translation="6 4 -18" clipDistance="300" nodeId="97"/>
           </TransformGroup>
-        </TransformGroup>
-      </TransformGroup>
-      <TransformGroup name="function" clipDistance="300" nodeId="738">
-        <Shape name="aminationPlayerTrigger" translation="3.41977 1 5.29275" shapeId="1" visibility="false" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="739" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="690"/>
-        <Shape name="vehicleTrigger" translation="0 2.5 0" shapeId="2" visibility="false" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" nodeId="740" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="690"/>
-      </TransformGroup>
-      <TransformGroup name="movingParts" translation="0.95 0.18 6.3" clipDistance="300" nodeId="741">
-        <Shape name="MainLane" translation="0 1.6 -6.3" shapeId="3" clipDistance="300" nodeId="742" castsShadows="true" receiveShadows="true" materialIds="687">
-          <TransformGroup name="CoverFrontAngle1" translation="0 0.129998 -6.5325" clipDistance="300" nodeId="743">
-            <Shape name="CoverFront" translation="0 0.0575 -0.0675001" rotation="-180 -0 0" shapeId="4" clipDistance="300" nodeId="744" castsShadows="true" receiveShadows="true" materialIds="691">
-              <Shape name="Schraube" translation="-0.3565 0.0575 -0.0675006" rotation="180 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="745" castsShadows="true" receiveShadows="true" materialIds="693"/>
-              <Shape name="Schraube.001" translation="0.3565 0.0575 -0.0675006" rotation="-8.65142e-06 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="746" castsShadows="true" receiveShadows="true" materialIds="693"/>
-            </Shape>
-          </TransformGroup>
-          <TransformGroup name="CoverFrontAngle2" translation="0 0.129998 6.5325" clipDistance="300" nodeId="747">
-            <Shape name="CoverFront.001" translation="0 0.0575 0.0675001" rotation="1.86693e-05 -8.65142e-06 180" shapeId="4" clipDistance="300" nodeId="748" castsShadows="true" receiveShadows="true" materialIds="691">
-              <Shape name="Schraube.002" translation="-0.3565 0.0575 -0.0675006" rotation="180 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="749" castsShadows="true" receiveShadows="true" materialIds="693"/>
-              <Shape name="Schraube.003" translation="0.3565 0.0575 -0.0675006" rotation="-8.65142e-06 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="750" castsShadows="true" receiveShadows="true" materialIds="693"/>
-            </Shape>
-          </TransformGroup>
-          <Shape name="MainLaneCollision" shapeId="6" visibility="false" kinematic="true" collisionFilterGroup="0x601c" collisionFilterMask="0xfffffbff" nodeId="751" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="690"/>
-        </Shape>
-        <Shape name="MainLane.001" translation="-1.9 1.6 -6.3" shapeId="7" clipDistance="300" nodeId="752" castsShadows="true" receiveShadows="true" materialIds="687">
-          <TransformGroup name="CoverFrontAngle1.001" translation="0 0.129998 -6.5325" clipDistance="300" nodeId="753">
-            <Shape name="CoverFront.002" translation="0 0.0575 -0.0675001" rotation="-180 -0 0" shapeId="4" clipDistance="300" nodeId="754" castsShadows="true" receiveShadows="true" materialIds="691">
-              <Shape name="Schraube.004" translation="-0.3565 0.0575 -0.0675006" rotation="180 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="755" castsShadows="true" receiveShadows="true" materialIds="693"/>
-              <Shape name="Schraube.005" translation="0.3565 0.0575 -0.0675006" rotation="-8.65142e-06 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="756" castsShadows="true" receiveShadows="true" materialIds="693"/>
-            </Shape>
-          </TransformGroup>
-          <TransformGroup name="CoverFrontAngle2.001" translation="0 0.129998 6.5325" clipDistance="300" nodeId="757">
-            <Shape name="CoverFront.003" translation="0 0.0575 0.0675001" rotation="1.86693e-05 -8.65142e-06 180" shapeId="4" clipDistance="300" nodeId="758" castsShadows="true" receiveShadows="true" materialIds="691">
-              <Shape name="Schraube.006" translation="-0.3565 0.0575 -0.0675006" rotation="180 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="759" castsShadows="true" receiveShadows="true" materialIds="693"/>
-              <Shape name="Schraube.007" translation="0.3565 0.0575 -0.0675006" rotation="-8.65142e-06 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="760" castsShadows="true" receiveShadows="true" materialIds="693"/>
-            </Shape>
-          </TransformGroup>
-          <Shape name="MainLaneCollision.001" shapeId="6" visibility="false" kinematic="true" collisionFilterGroup="0x601c" collisionFilterMask="0xfffffbff" nodeId="761" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="690"/>
-        </Shape>
-        <TransformGroup name="hydraulicMainAngle" clipDistance="300" nodeId="762">
-          <Shape name="Cylinder.004" translation="5.96046e-08 5.96046e-08 0" rotation="22.3508 1.88154e-07 -9.52393e-07" shapeId="8" clipDistance="300" nodeId="763" castsShadows="true" receiveShadows="true" materialIds="691">
-            <Shape name="Cube" translation="0.26862 -0.447915 -0.913721" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="764" castsShadows="true" receiveShadows="true" materialIds="691">
-              <Shape name="Cylinder.006" translation="-0.28 0.0943453 -1.23245" rotation="5.98934e-06 -1.42296e-07 -90" scale="1.5 1 1.5" shapeId="10" clipDistance="300" nodeId="765" castsShadows="true" receiveShadows="true" materialIds="691"/>
-            </Shape>
-            <Shape name="Cube.001" translation="-0.291343 -0.443957 -0.908675" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="766" castsShadows="true" receiveShadows="true" materialIds="691"/>
-            <TransformGroup name="CylinderNode" translation="-0.00959206 -0.413828 -0.740018" rotation="-46.7736 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="767">
-              <Shape name="Cylinder" translation="5.96046e-08 0 0" rotation="24.4228 4.63353e-14 2.10409e-14" shapeId="11" clipDistance="300" nodeId="768" castsShadows="true" receiveShadows="true" materialIds="691">
-                <Shape name="Cylinder.002" translation="-1.78814e-07 0.0972948 0.3387" rotation="0.480577 -1.63847e-13 4.99136e-13" shapeId="12" clipDistance="300" nodeId="769" castsShadows="true" receiveShadows="true" materialIds="692"/>
-                <TransformGroup name="HeadNoteTarget" translation="-1.19209e-07 2.30968e-07 -9.53674e-07" rotation="-21.6576 -1.64307e-13 5.01549e-13" clipDistance="300" nodeId="770"/>
-              </Shape>
-            </TransformGroup>
-            <TransformGroup name="hydraulicSecondAngle" translation="-0.012374 -0.471896 -1.18483" rotation="-22.3508 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="771">
-              <Shape name="Cylinder.003" translation="0 1.66556e-15 -9.53674e-07" rotation="0 -9.15725e-15 1.01778e-13" shapeId="13" clipDistance="300" nodeId="772" castsShadows="true" receiveShadows="true" materialIds="691">
-                <Shape name="Cube.002" translation="0.26 0.0258569 0.434581" rotation="9.03968e-29 -5.08889e-14 0" shapeId="14" clipDistance="300" nodeId="773" castsShadows="true" receiveShadows="true" materialIds="691">
-                  <TransformGroup name="CylinderNodeTarget" translation="-0.257218 0.0421965 0.614769" rotation="21.6704 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="774"/>
-                  <TransformGroup name="HeadNode" translation="-0.257218 0.0421959 0.614769" rotation="1.06722e-07 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="775">
-                    <Shape name="Cylinder.005" translation="0 -5.1266e-09 0" rotation="1.30364e-05 106.161 90" shapeId="15" clipDistance="300" nodeId="776" castsShadows="true" receiveShadows="true" materialIds="691">
-                      <Shape name="Cylinder.001" translation="0.40496 -5.96046e-08 0" rotation="-8.39666e-13 1.70755e-06 -2.29e-13" shapeId="16" clipDistance="300" nodeId="777" castsShadows="true" receiveShadows="true" materialIds="688"/>
-                    </Shape>
-                  </TransformGroup>
-                </Shape>
-                <Shape name="Cube.003" translation="-0.259996 0.0258569 0.434581" rotation="9.03968e-29 -5.08889e-14 0" shapeId="14" clipDistance="300" nodeId="778" castsShadows="true" receiveShadows="true" materialIds="691"/>
-              </Shape>
-            </TransformGroup>
-          </Shape>
-        </TransformGroup>
-        <TransformGroup name="hydraulicMainAngle.001" translation="0 0 -12.6" rotation="-0 -180 -0" clipDistance="300" nodeId="779">
-          <Shape name="Cylinder.011" translation="1.19209e-07 5.96046e-08 0" rotation="22.3508 1.88154e-07 -9.52393e-07" shapeId="8" clipDistance="300" nodeId="780" castsShadows="true" receiveShadows="true" materialIds="691">
-            <Shape name="Cube.007" translation="0.26862 -0.447915 -0.913721" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="781" castsShadows="true" receiveShadows="true" materialIds="691">
-              <Shape name="Cylinder.013" translation="-0.28 0.0943453 -1.23245" rotation="5.98934e-06 -7.11478e-08 -90" scale="1.5 1 1.5" shapeId="10" clipDistance="300" nodeId="782" castsShadows="true" receiveShadows="true" materialIds="691"/>
-            </Shape>
-            <Shape name="Cube.008" translation="-0.291343 -0.443957 -0.908675" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="783" castsShadows="true" receiveShadows="true" materialIds="691"/>
-            <TransformGroup name="CylinderNode.001" translation="-0.00959212 -0.413828 -0.740018" rotation="-46.7736 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="784">
-              <Shape name="Cylinder.007" translation="5.96046e-08 0 0" rotation="24.4228 -0 -2.03555e-13" shapeId="11" clipDistance="300" nodeId="785" castsShadows="true" receiveShadows="true" materialIds="691">
-                <Shape name="Cylinder.009" translation="0 0.0972948 0.3387" rotation="0.480577 -1.55026e-34 4.99136e-13" shapeId="12" clipDistance="300" nodeId="786" castsShadows="true" receiveShadows="true" materialIds="692"/>
-                <TransformGroup name="HeadNoteTarget.001" translation="5.96046e-08 2.30968e-07 -9.53674e-07" rotation="-21.6576 -1.55775e-34 5.01549e-13" clipDistance="300" nodeId="787"/>
-              </Shape>
-            </TransformGroup>
-            <TransformGroup name="hydraulicSecondAngle.001" translation="-0.0123742 -0.471896 -1.18483" rotation="-22.3508 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="788">
-              <Shape name="Cylinder.010" translation="0 -1.70952e-15 -9.53674e-07" rotation="0 -0 1.01778e-13" shapeId="13" clipDistance="300" nodeId="789" castsShadows="true" receiveShadows="true" materialIds="691">
-                <Shape name="Cube.009" translation="0.26 0.0258569 0.434581" rotation="7.23174e-28 -4.07111e-13 0" shapeId="14" clipDistance="300" nodeId="790" castsShadows="true" receiveShadows="true" materialIds="691">
-                  <TransformGroup name="CylinderNodeTarget.001" translation="-0.257218 0.0421965 0.614769" rotation="21.6704 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="791"/>
-                  <TransformGroup name="HeadNode.001" translation="-0.257218 0.0421959 0.614769" rotation="1.06722e-07 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="792">
-                    <Shape name="Cylinder.012" translation="0 -2.92858e-09 0" rotation="1.30364e-05 106.161 90" shapeId="15" clipDistance="300" nodeId="793" castsShadows="true" receiveShadows="true" materialIds="691">
-                      <Shape name="Cylinder.008" translation="0.40496 -5.96046e-08 0" rotation="-7.88778e-13 1.70755e-06 -5.97944e-13" shapeId="17" clipDistance="300" nodeId="794" castsShadows="true" receiveShadows="true" materialIds="688"/>
-                    </Shape>
-                  </TransformGroup>
-                </Shape>
-                <Shape name="Cube.010" translation="-0.259996 0.0258569 0.434581" rotation="7.23174e-28 -4.07111e-13 0" shapeId="14" clipDistance="300" nodeId="795" castsShadows="true" receiveShadows="true" materialIds="691"/>
-              </Shape>
-            </TransformGroup>
-          </Shape>
-        </TransformGroup>
-        <TransformGroup name="hydraulicMainAngle.002" translation="-1.9 0 0" clipDistance="300" nodeId="796">
-          <Shape name="Cylinder.018" translation="5.96046e-08 5.96046e-08 0" rotation="22.3508 1.88154e-07 -9.52393e-07" shapeId="8" clipDistance="300" nodeId="797" castsShadows="true" receiveShadows="true" materialIds="691">
-            <Shape name="Cube.011" translation="0.26862 -0.447915 -0.913721" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="798" castsShadows="true" receiveShadows="true" materialIds="691">
-              <Shape name="Cylinder.020" translation="-0.28 0.0943453 -1.23245" rotation="5.98934e-06 -1.42296e-07 -90" scale="1.5 1 1.5" shapeId="10" clipDistance="300" nodeId="799" castsShadows="true" receiveShadows="true" materialIds="691"/>
-            </Shape>
-            <Shape name="Cube.012" translation="-0.291343 -0.443957 -0.908675" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="800" castsShadows="true" receiveShadows="true" materialIds="691"/>
-            <TransformGroup name="CylinderNode.002" translation="-0.00959206 -0.413828 -0.740018" rotation="-46.7736 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="801">
-              <Shape name="Cylinder.014" rotation="24.4228 4.63353e-14 2.10409e-14" shapeId="11" clipDistance="300" nodeId="802" castsShadows="true" receiveShadows="true" materialIds="691">
-                <Shape name="Cylinder.016" translation="0 0.0972948 0.3387" rotation="0.480577 -1.63847e-13 4.99136e-13" shapeId="12" clipDistance="300" nodeId="803" castsShadows="true" receiveShadows="true" materialIds="692"/>
-                <TransformGroup name="HeadNoteTarget.002" translation="5.96046e-08 2.30968e-07 -9.53674e-07" rotation="-21.6576 -1.64307e-13 5.01549e-13" clipDistance="300" nodeId="804"/>
-              </Shape>
-            </TransformGroup>
-            <TransformGroup name="hydraulicSecondAngle.002" translation="-0.0123741 -0.471896 -1.18483" rotation="-22.3508 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="805">
-              <Shape name="Cylinder.017" translation="0 -1.70952e-15 -9.53674e-07" rotation="0 -9.15725e-15 1.01778e-13" shapeId="13" clipDistance="300" nodeId="806" castsShadows="true" receiveShadows="true" materialIds="691">
-                <Shape name="Cube.013" translation="0.26 0.0258569 0.434581" rotation="9.03968e-29 -5.08889e-14 0" shapeId="14" clipDistance="300" nodeId="807" castsShadows="true" receiveShadows="true" materialIds="691">
-                  <TransformGroup name="CylinderNodeTarget.002" translation="-0.257218 0.0421965 0.614769" rotation="21.6704 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="808"/>
-                  <TransformGroup name="HeadNode.002" translation="-0.257218 0.0421959 0.614769" rotation="1.06722e-07 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="809">
-                    <Shape name="Cylinder.019" translation="0 -2.92856e-09 0" rotation="1.30364e-05 106.161 90" shapeId="15" clipDistance="300" nodeId="810" castsShadows="true" receiveShadows="true" materialIds="691">
-                      <Shape name="Cylinder.015" translation="0.40496 -5.96046e-08 0" rotation="-8.39666e-13 1.70755e-06 -2.29e-13" shapeId="17" clipDistance="300" nodeId="811" castsShadows="true" receiveShadows="true" materialIds="688"/>
-                    </Shape>
-                  </TransformGroup>
-                </Shape>
-                <Shape name="Cube.014" translation="-0.259996 0.0258569 0.434581" rotation="9.03968e-29 -5.08889e-14 0" shapeId="14" clipDistance="300" nodeId="812" castsShadows="true" receiveShadows="true" materialIds="691"/>
-              </Shape>
-            </TransformGroup>
-          </Shape>
-        </TransformGroup>
-        <TransformGroup name="hydraulicMainAngle.003" translation="-1.9 0 -12.6" rotation="-0 -180 -0" clipDistance="300" nodeId="813">
-          <Shape name="Cylinder.025" translation="5.96046e-08 5.96046e-08 0" rotation="22.3508 1.88154e-07 -9.52393e-07" shapeId="8" clipDistance="300" nodeId="814" castsShadows="true" receiveShadows="true" materialIds="691">
-            <Shape name="Cube.015" translation="0.26862 -0.447915 -0.913721" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="815" castsShadows="true" receiveShadows="true" materialIds="691">
-              <Shape name="Cylinder.027" translation="-0.28 0.0943453 -1.23245" rotation="5.98934e-06 -7.11478e-08 -90" scale="1.5 1 1.5" shapeId="10" clipDistance="300" nodeId="816" castsShadows="true" receiveShadows="true" materialIds="691"/>
-            </Shape>
-            <Shape name="Cube.016" translation="-0.291343 -0.443957 -0.908675" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="817" castsShadows="true" receiveShadows="true" materialIds="691"/>
-            <TransformGroup name="CylinderNode.003" translation="-0.00959206 -0.413828 -0.740018" rotation="-46.7736 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="818">
-              <Shape name="Cylinder.021" translation="1.19209e-07 0 0" rotation="24.4228 -0 -2.03555e-13" shapeId="11" clipDistance="300" nodeId="819" castsShadows="true" receiveShadows="true" materialIds="691">
-                <Shape name="Cylinder.023" translation="-1.78814e-07 0.0972948 0.3387" rotation="0.480577 -1.55026e-34 4.99136e-13" shapeId="12" clipDistance="300" nodeId="820" castsShadows="true" receiveShadows="true" materialIds="692"/>
-                <TransformGroup name="HeadNoteTarget.003" translation="-1.19209e-07 2.30968e-07 -9.53674e-07" rotation="-21.6576 -1.55775e-34 5.01549e-13" clipDistance="300" nodeId="821"/>
-              </Shape>
-            </TransformGroup>
-            <TransformGroup name="hydraulicSecondAngle.003" translation="-0.012374 -0.471896 -1.18483" rotation="-22.3508 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="822">
-              <Shape name="Cylinder.024" translation="0 1.66556e-15 -9.53674e-07" rotation="0 -0 1.01778e-13" shapeId="13" clipDistance="300" nodeId="823" castsShadows="true" receiveShadows="true" materialIds="691">
-                <Shape name="Cube.017" translation="0.26 0.0258569 0.434581" rotation="7.23174e-28 -4.07111e-13 0" shapeId="14" clipDistance="300" nodeId="824" castsShadows="true" receiveShadows="true" materialIds="691">
-                  <TransformGroup name="CylinderNodeTarget.003" translation="-0.257218 0.0421965 0.614769" rotation="21.6704 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="825"/>
-                  <TransformGroup name="HeadNode.003" translation="-0.257218 0.0421959 0.614769" rotation="1.06722e-07 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="826">
-                    <Shape name="Cylinder.026" translation="0 -5.12662e-09 0" rotation="1.30364e-05 106.161 90" shapeId="15" clipDistance="300" nodeId="827" castsShadows="true" receiveShadows="true" materialIds="691">
-                      <Shape name="Cylinder.022" translation="0.40496 -5.96046e-08 0" rotation="-7.88778e-13 1.70755e-06 -5.97944e-13" shapeId="17" clipDistance="300" nodeId="828" castsShadows="true" receiveShadows="true" materialIds="688"/>
-                    </Shape>
-                  </TransformGroup>
-                </Shape>
-                <Shape name="Cube.018" translation="-0.259996 0.0258569 0.434581" rotation="7.23174e-28 -4.07111e-13 0" shapeId="14" clipDistance="300" nodeId="829" castsShadows="true" receiveShadows="true" materialIds="691"/>
-              </Shape>
-            </TransformGroup>
-          </Shape>
         </TransformGroup>
       </TransformGroup>
-      <TransformGroup name="objects" clipDistance="300" nodeId="830">
-        <Shape name="LaneConnector" translation="0.95 0.18 7.945" rotation="-180 -0 0" shapeId="18" static="true" collisionFilterGroup="0x207c" collisionFilterMask="0xfffffbff" nodeId="831" castsShadows="true" receiveShadows="true" materialIds="694">
-          <TransformGroup name="Stempel" translation="0 0.180001 1.645" rotation="180 -0 0" clipDistance="300" nodeId="832">
-            <Shape name="Cube.006" translation="0 0.01 0" rotation="0 -0 -90" shapeId="19" clipDistance="300" nodeId="833" castsShadows="true" receiveShadows="true" materialIds="691">
-              <Shape name="Cube.004" translation="-0.11 -0.3 0" rotation="0 -0 90" shapeId="20" clipDistance="300" nodeId="834" castsShadows="true" receiveShadows="true" materialIds="691"/>
-              <Shape name="Cube.005" translation="-0.11 0.3 0" rotation="0 -0 90" shapeId="20" clipDistance="300" nodeId="835" castsShadows="true" receiveShadows="true" materialIds="691"/>
+      <TransformGroup name="function" clipDistance="300" nodeId="98">
+        <Shape name="aminationPlayerTrigger" translation="3.41977 1 5.29275" shapeId="1" visibility="false" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="99" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1"/>
+        <Shape name="vehicleTrigger" translation="0 2.5 0" shapeId="2" visibility="false" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" nodeId="100" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1"/>
+      </TransformGroup>
+      <TransformGroup name="movingParts" translation="0.95 0.18 6.3" clipDistance="300" nodeId="101">
+        <Shape name="MainLane" translation="0 1.6 -6.3" shapeId="3" clipDistance="300" nodeId="102" castsShadows="true" receiveShadows="true" materialIds="2">
+          <TransformGroup name="CoverFrontAngle1" translation="0 0.129998 -6.5325" clipDistance="300" nodeId="103">
+            <Shape name="CoverFront" translation="0 0.0575 -0.0675001" rotation="-180 -0 0" shapeId="4" clipDistance="300" nodeId="104" castsShadows="true" receiveShadows="true" materialIds="3">
+              <Shape name="Schraube" translation="-0.3565 0.0575 -0.0675006" rotation="180 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="105" castsShadows="true" receiveShadows="true" materialIds="4"/>
+              <Shape name="Schraube.001" translation="0.3565 0.0575 -0.0675006" rotation="-8.65142e-06 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="106" castsShadows="true" receiveShadows="true" materialIds="4"/>
+            </Shape>
+          </TransformGroup>
+          <TransformGroup name="CoverFrontAngle2" translation="0 0.129998 6.5325" clipDistance="300" nodeId="107">
+            <Shape name="CoverFront.001" translation="0 0.0575 0.0675001" rotation="1.86693e-05 -8.65142e-06 180" shapeId="4" clipDistance="300" nodeId="108" castsShadows="true" receiveShadows="true" materialIds="3">
+              <Shape name="Schraube.002" translation="-0.3565 0.0575 -0.0675006" rotation="180 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="109" castsShadows="true" receiveShadows="true" materialIds="4"/>
+              <Shape name="Schraube.003" translation="0.3565 0.0575 -0.0675006" rotation="-8.65142e-06 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="110" castsShadows="true" receiveShadows="true" materialIds="4"/>
+            </Shape>
+          </TransformGroup>
+          <Shape name="MainLaneCollision" shapeId="6" visibility="false" kinematic="true" collisionFilterGroup="0x601c" collisionFilterMask="0xfffffbff" nodeId="111" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1"/>
+        </Shape>
+        <Shape name="MainLane.001" translation="-1.9 1.6 -6.3" shapeId="7" clipDistance="300" nodeId="112" castsShadows="true" receiveShadows="true" materialIds="2">
+          <TransformGroup name="CoverFrontAngle1.001" translation="0 0.129998 -6.5325" clipDistance="300" nodeId="113">
+            <Shape name="CoverFront.002" translation="0 0.0575 -0.0675001" rotation="-180 -0 0" shapeId="4" clipDistance="300" nodeId="114" castsShadows="true" receiveShadows="true" materialIds="3">
+              <Shape name="Schraube.004" translation="-0.3565 0.0575 -0.0675006" rotation="180 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="115" castsShadows="true" receiveShadows="true" materialIds="4"/>
+              <Shape name="Schraube.005" translation="0.3565 0.0575 -0.0675006" rotation="-8.65142e-06 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="116" castsShadows="true" receiveShadows="true" materialIds="4"/>
+            </Shape>
+          </TransformGroup>
+          <TransformGroup name="CoverFrontAngle2.001" translation="0 0.129998 6.5325" clipDistance="300" nodeId="117">
+            <Shape name="CoverFront.003" translation="0 0.0575 0.0675001" rotation="1.86693e-05 -8.65142e-06 180" shapeId="4" clipDistance="300" nodeId="118" castsShadows="true" receiveShadows="true" materialIds="3">
+              <Shape name="Schraube.006" translation="-0.3565 0.0575 -0.0675006" rotation="180 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="119" castsShadows="true" receiveShadows="true" materialIds="4"/>
+              <Shape name="Schraube.007" translation="0.3565 0.0575 -0.0675006" rotation="-8.65142e-06 5.00896e-06 90" shapeId="5" clipDistance="300" nodeId="120" castsShadows="true" receiveShadows="true" materialIds="4"/>
+            </Shape>
+          </TransformGroup>
+          <Shape name="MainLaneCollision.001" shapeId="6" visibility="false" kinematic="true" collisionFilterGroup="0x601c" collisionFilterMask="0xfffffbff" nodeId="121" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1"/>
+        </Shape>
+        <TransformGroup name="hydraulicMainAngle" clipDistance="300" nodeId="122">
+          <Shape name="Cylinder.004" translation="5.96046e-08 5.96046e-08 0" rotation="22.3508 1.88154e-07 -9.52393e-07" shapeId="8" clipDistance="300" nodeId="123" castsShadows="true" receiveShadows="true" materialIds="3">
+            <Shape name="Cube" translation="0.26862 -0.447915 -0.913721" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="124" castsShadows="true" receiveShadows="true" materialIds="3">
+              <Shape name="Cylinder.006" translation="-0.28 0.0943453 -1.23245" rotation="5.98934e-06 -1.42296e-07 -90" scale="1.5 1 1.5" shapeId="10" clipDistance="300" nodeId="125" castsShadows="true" receiveShadows="true" materialIds="3"/>
+            </Shape>
+            <Shape name="Cube.001" translation="-0.291343 -0.443957 -0.908675" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="126" castsShadows="true" receiveShadows="true" materialIds="3"/>
+            <TransformGroup name="CylinderNode" translation="-0.00959206 -0.413828 -0.740018" rotation="-46.7736 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="127">
+              <Shape name="Cylinder" translation="5.96046e-08 0 0" rotation="24.4228 4.63353e-14 2.10409e-14" shapeId="11" clipDistance="300" nodeId="128" castsShadows="true" receiveShadows="true" materialIds="3">
+                <Shape name="Cylinder.002" translation="-1.78814e-07 0.0972948 0.3387" rotation="0.480577 -1.63847e-13 4.99136e-13" shapeId="12" clipDistance="300" nodeId="129" castsShadows="true" receiveShadows="true" materialIds="5"/>
+                <TransformGroup name="HeadNoteTarget" translation="-1.19209e-07 2.30968e-07 -9.53674e-07" rotation="-21.6576 -1.64307e-13 5.01549e-13" clipDistance="300" nodeId="130"/>
+              </Shape>
+            </TransformGroup>
+            <TransformGroup name="hydraulicSecondAngle" translation="-0.012374 -0.471896 -1.18483" rotation="-22.3508 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="131">
+              <Shape name="Cylinder.003" translation="0 1.66556e-15 -9.53674e-07" rotation="0 -9.15725e-15 1.01778e-13" shapeId="13" clipDistance="300" nodeId="132" castsShadows="true" receiveShadows="true" materialIds="3">
+                <Shape name="Cube.002" translation="0.26 0.0258569 0.434581" rotation="9.03968e-29 -5.08889e-14 0" shapeId="14" clipDistance="300" nodeId="133" castsShadows="true" receiveShadows="true" materialIds="3">
+                  <TransformGroup name="CylinderNodeTarget" translation="-0.257218 0.0421965 0.614769" rotation="21.6704 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="134"/>
+                  <TransformGroup name="HeadNode" translation="-0.257218 0.0421959 0.614769" rotation="1.06722e-07 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="135">
+                    <Shape name="Cylinder.005" translation="0 -5.1266e-09 0" rotation="1.30364e-05 106.161 90" shapeId="15" clipDistance="300" nodeId="136" castsShadows="true" receiveShadows="true" materialIds="3">
+                      <Shape name="Cylinder.001" translation="0.40496 -5.96046e-08 0" rotation="-8.39666e-13 1.70755e-06 -2.29e-13" shapeId="16" clipDistance="300" nodeId="137" castsShadows="true" receiveShadows="true" materialIds="6"/>
+                    </Shape>
+                  </TransformGroup>
+                </Shape>
+                <Shape name="Cube.003" translation="-0.259996 0.0258569 0.434581" rotation="9.03968e-29 -5.08889e-14 0" shapeId="14" clipDistance="300" nodeId="138" castsShadows="true" receiveShadows="true" materialIds="3"/>
+              </Shape>
+            </TransformGroup>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="hydraulicMainAngle.001" translation="0 0 -12.6" rotation="-0 -180 -0" clipDistance="300" nodeId="139">
+          <Shape name="Cylinder.011" translation="1.19209e-07 5.96046e-08 0" rotation="22.3508 1.88154e-07 -9.52393e-07" shapeId="8" clipDistance="300" nodeId="140" castsShadows="true" receiveShadows="true" materialIds="3">
+            <Shape name="Cube.007" translation="0.26862 -0.447915 -0.913721" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="141" castsShadows="true" receiveShadows="true" materialIds="3">
+              <Shape name="Cylinder.013" translation="-0.28 0.0943453 -1.23245" rotation="5.98934e-06 -7.11478e-08 -90" scale="1.5 1 1.5" shapeId="10" clipDistance="300" nodeId="142" castsShadows="true" receiveShadows="true" materialIds="3"/>
+            </Shape>
+            <Shape name="Cube.008" translation="-0.291343 -0.443957 -0.908675" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="143" castsShadows="true" receiveShadows="true" materialIds="3"/>
+            <TransformGroup name="CylinderNode.001" translation="-0.00959212 -0.413828 -0.740018" rotation="-46.7736 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="144">
+              <Shape name="Cylinder.007" translation="5.96046e-08 0 0" rotation="24.4228 -0 -2.03555e-13" shapeId="11" clipDistance="300" nodeId="145" castsShadows="true" receiveShadows="true" materialIds="3">
+                <Shape name="Cylinder.009" translation="0 0.0972948 0.3387" rotation="0.480577 -1.55026e-34 4.99136e-13" shapeId="12" clipDistance="300" nodeId="146" castsShadows="true" receiveShadows="true" materialIds="5"/>
+                <TransformGroup name="HeadNoteTarget.001" translation="5.96046e-08 2.30968e-07 -9.53674e-07" rotation="-21.6576 -1.55775e-34 5.01549e-13" clipDistance="300" nodeId="147"/>
+              </Shape>
+            </TransformGroup>
+            <TransformGroup name="hydraulicSecondAngle.001" translation="-0.0123742 -0.471896 -1.18483" rotation="-22.3508 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="148">
+              <Shape name="Cylinder.010" translation="0 -1.70952e-15 -9.53674e-07" rotation="0 -0 1.01778e-13" shapeId="13" clipDistance="300" nodeId="149" castsShadows="true" receiveShadows="true" materialIds="3">
+                <Shape name="Cube.009" translation="0.26 0.0258569 0.434581" rotation="7.23174e-28 -4.07111e-13 0" shapeId="14" clipDistance="300" nodeId="150" castsShadows="true" receiveShadows="true" materialIds="3">
+                  <TransformGroup name="CylinderNodeTarget.001" translation="-0.257218 0.0421965 0.614769" rotation="21.6704 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="151"/>
+                  <TransformGroup name="HeadNode.001" translation="-0.257218 0.0421959 0.614769" rotation="1.06722e-07 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="152">
+                    <Shape name="Cylinder.012" translation="0 -2.92858e-09 0" rotation="1.30364e-05 106.161 90" shapeId="15" clipDistance="300" nodeId="153" castsShadows="true" receiveShadows="true" materialIds="3">
+                      <Shape name="Cylinder.008" translation="0.40496 -5.96046e-08 0" rotation="-7.88778e-13 1.70755e-06 -5.97944e-13" shapeId="17" clipDistance="300" nodeId="154" castsShadows="true" receiveShadows="true" materialIds="6"/>
+                    </Shape>
+                  </TransformGroup>
+                </Shape>
+                <Shape name="Cube.010" translation="-0.259996 0.0258569 0.434581" rotation="7.23174e-28 -4.07111e-13 0" shapeId="14" clipDistance="300" nodeId="155" castsShadows="true" receiveShadows="true" materialIds="3"/>
+              </Shape>
+            </TransformGroup>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="hydraulicMainAngle.002" translation="-1.9 0 0" clipDistance="300" nodeId="156">
+          <Shape name="Cylinder.018" translation="5.96046e-08 5.96046e-08 0" rotation="22.3508 1.88154e-07 -9.52393e-07" shapeId="8" clipDistance="300" nodeId="157" castsShadows="true" receiveShadows="true" materialIds="3">
+            <Shape name="Cube.011" translation="0.26862 -0.447915 -0.913721" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="158" castsShadows="true" receiveShadows="true" materialIds="3">
+              <Shape name="Cylinder.020" translation="-0.28 0.0943453 -1.23245" rotation="5.98934e-06 -1.42296e-07 -90" scale="1.5 1 1.5" shapeId="10" clipDistance="300" nodeId="159" castsShadows="true" receiveShadows="true" materialIds="3"/>
+            </Shape>
+            <Shape name="Cube.012" translation="-0.291343 -0.443957 -0.908675" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="160" castsShadows="true" receiveShadows="true" materialIds="3"/>
+            <TransformGroup name="CylinderNode.002" translation="-0.00959206 -0.413828 -0.740018" rotation="-46.7736 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="161">
+              <Shape name="Cylinder.014" rotation="24.4228 4.63353e-14 2.10409e-14" shapeId="11" clipDistance="300" nodeId="162" castsShadows="true" receiveShadows="true" materialIds="3">
+                <Shape name="Cylinder.016" translation="0 0.0972948 0.3387" rotation="0.480577 -1.63847e-13 4.99136e-13" shapeId="12" clipDistance="300" nodeId="163" castsShadows="true" receiveShadows="true" materialIds="5"/>
+                <TransformGroup name="HeadNoteTarget.002" translation="5.96046e-08 2.30968e-07 -9.53674e-07" rotation="-21.6576 -1.64307e-13 5.01549e-13" clipDistance="300" nodeId="164"/>
+              </Shape>
+            </TransformGroup>
+            <TransformGroup name="hydraulicSecondAngle.002" translation="-0.0123741 -0.471896 -1.18483" rotation="-22.3508 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="165">
+              <Shape name="Cylinder.017" translation="0 -1.70952e-15 -9.53674e-07" rotation="0 -9.15725e-15 1.01778e-13" shapeId="13" clipDistance="300" nodeId="166" castsShadows="true" receiveShadows="true" materialIds="3">
+                <Shape name="Cube.013" translation="0.26 0.0258569 0.434581" rotation="9.03968e-29 -5.08889e-14 0" shapeId="14" clipDistance="300" nodeId="167" castsShadows="true" receiveShadows="true" materialIds="3">
+                  <TransformGroup name="CylinderNodeTarget.002" translation="-0.257218 0.0421965 0.614769" rotation="21.6704 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="168"/>
+                  <TransformGroup name="HeadNode.002" translation="-0.257218 0.0421959 0.614769" rotation="1.06722e-07 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="169">
+                    <Shape name="Cylinder.019" translation="0 -2.92856e-09 0" rotation="1.30364e-05 106.161 90" shapeId="15" clipDistance="300" nodeId="170" castsShadows="true" receiveShadows="true" materialIds="3">
+                      <Shape name="Cylinder.015" translation="0.40496 -5.96046e-08 0" rotation="-8.39666e-13 1.70755e-06 -2.29e-13" shapeId="17" clipDistance="300" nodeId="171" castsShadows="true" receiveShadows="true" materialIds="6"/>
+                    </Shape>
+                  </TransformGroup>
+                </Shape>
+                <Shape name="Cube.014" translation="-0.259996 0.0258569 0.434581" rotation="9.03968e-29 -5.08889e-14 0" shapeId="14" clipDistance="300" nodeId="172" castsShadows="true" receiveShadows="true" materialIds="3"/>
+              </Shape>
+            </TransformGroup>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="hydraulicMainAngle.003" translation="-1.9 0 -12.6" rotation="-0 -180 -0" clipDistance="300" nodeId="173">
+          <Shape name="Cylinder.025" translation="5.96046e-08 5.96046e-08 0" rotation="22.3508 1.88154e-07 -9.52393e-07" shapeId="8" clipDistance="300" nodeId="174" castsShadows="true" receiveShadows="true" materialIds="3">
+            <Shape name="Cube.015" translation="0.26862 -0.447915 -0.913721" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="175" castsShadows="true" receiveShadows="true" materialIds="3">
+              <Shape name="Cylinder.027" translation="-0.28 0.0943453 -1.23245" rotation="5.98934e-06 -7.11478e-08 -90" scale="1.5 1 1.5" shapeId="10" clipDistance="300" nodeId="176" castsShadows="true" receiveShadows="true" materialIds="3"/>
+            </Shape>
+            <Shape name="Cube.016" translation="-0.291343 -0.443957 -0.908675" rotation="-21.3462 0.516209 -0.404914" shapeId="9" clipDistance="300" nodeId="177" castsShadows="true" receiveShadows="true" materialIds="3"/>
+            <TransformGroup name="CylinderNode.003" translation="-0.00959206 -0.413828 -0.740018" rotation="-46.7736 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="178">
+              <Shape name="Cylinder.021" translation="1.19209e-07 0 0" rotation="24.4228 -0 -2.03555e-13" shapeId="11" clipDistance="300" nodeId="179" castsShadows="true" receiveShadows="true" materialIds="3">
+                <Shape name="Cylinder.023" translation="-1.78814e-07 0.0972948 0.3387" rotation="0.480577 -1.55026e-34 4.99136e-13" shapeId="12" clipDistance="300" nodeId="180" castsShadows="true" receiveShadows="true" materialIds="5"/>
+                <TransformGroup name="HeadNoteTarget.003" translation="-1.19209e-07 2.30968e-07 -9.53674e-07" rotation="-21.6576 -1.55775e-34 5.01549e-13" clipDistance="300" nodeId="181"/>
+              </Shape>
+            </TransformGroup>
+            <TransformGroup name="hydraulicSecondAngle.003" translation="-0.012374 -0.471896 -1.18483" rotation="-22.3508 1.88154e-07 9.52393e-07" clipDistance="300" nodeId="182">
+              <Shape name="Cylinder.024" translation="0 1.66556e-15 -9.53674e-07" rotation="0 -0 1.01778e-13" shapeId="13" clipDistance="300" nodeId="183" castsShadows="true" receiveShadows="true" materialIds="3">
+                <Shape name="Cube.017" translation="0.26 0.0258569 0.434581" rotation="7.23174e-28 -4.07111e-13 0" shapeId="14" clipDistance="300" nodeId="184" castsShadows="true" receiveShadows="true" materialIds="3">
+                  <TransformGroup name="CylinderNodeTarget.003" translation="-0.257218 0.0421965 0.614769" rotation="21.6704 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="185"/>
+                  <TransformGroup name="HeadNode.003" translation="-0.257218 0.0421959 0.614769" rotation="1.06722e-07 4.87698e-06 -2.62984e-06" clipDistance="300" nodeId="186">
+                    <Shape name="Cylinder.026" translation="0 -5.12662e-09 0" rotation="1.30364e-05 106.161 90" shapeId="15" clipDistance="300" nodeId="187" castsShadows="true" receiveShadows="true" materialIds="3">
+                      <Shape name="Cylinder.022" translation="0.40496 -5.96046e-08 0" rotation="-7.88778e-13 1.70755e-06 -5.97944e-13" shapeId="17" clipDistance="300" nodeId="188" castsShadows="true" receiveShadows="true" materialIds="6"/>
+                    </Shape>
+                  </TransformGroup>
+                </Shape>
+                <Shape name="Cube.018" translation="-0.259996 0.0258569 0.434581" rotation="7.23174e-28 -4.07111e-13 0" shapeId="14" clipDistance="300" nodeId="189" castsShadows="true" receiveShadows="true" materialIds="3"/>
+              </Shape>
+            </TransformGroup>
+          </Shape>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="objects" clipDistance="300" nodeId="190">
+        <Shape name="LaneConnector" translation="0.95 0.18 7.945" rotation="-180 -0 0" shapeId="18" static="true" collisionFilterGroup="0x207c" collisionFilterMask="0xfffffbff" nodeId="191" castsShadows="true" receiveShadows="true" materialIds="7">
+          <TransformGroup name="Stempel" translation="0 0.180001 1.645" rotation="180 -0 0" clipDistance="300" nodeId="192">
+            <Shape name="Cube.006" translation="0 0.01 0" rotation="0 -0 -90" shapeId="19" clipDistance="300" nodeId="193" castsShadows="true" receiveShadows="true" materialIds="3">
+              <Shape name="Cube.004" translation="-0.11 -0.3 0" rotation="0 -0 90" shapeId="20" clipDistance="300" nodeId="194" castsShadows="true" receiveShadows="true" materialIds="3"/>
+              <Shape name="Cube.005" translation="-0.11 0.3 0" rotation="0 -0 90" shapeId="20" clipDistance="300" nodeId="195" castsShadows="true" receiveShadows="true" materialIds="3"/>
             </Shape>
           </TransformGroup>
         </Shape>
-        <Shape name="LaneConnector.001" translation="0.95 0.18 -7.945" rotation="-5.00896e-06 -5.00896e-06 180" shapeId="18" static="true" collisionFilterGroup="0x207c" collisionFilterMask="0xfffffbff" nodeId="836" castsShadows="true" receiveShadows="true" materialIds="694">
-          <TransformGroup name="Stempel.001" translation="0 0.180001 1.645" rotation="180 -0 0" clipDistance="300" nodeId="837">
-            <Shape name="Cube.020" translation="0 0.01 0" rotation="-1.62898e-13 -0 -90" shapeId="19" clipDistance="300" nodeId="838" castsShadows="true" receiveShadows="true" materialIds="691">
-              <Shape name="Cube.019" translation="-0.11 0.3 0" rotation="0 -7.27971e-20 90" shapeId="20" clipDistance="300" nodeId="839" castsShadows="true" receiveShadows="true" materialIds="691"/>
-              <Shape name="Cube.021" translation="-0.11 -0.3 0" rotation="0 -7.27971e-20 90" shapeId="20" clipDistance="300" nodeId="840" castsShadows="true" receiveShadows="true" materialIds="691"/>
+        <Shape name="LaneConnector.001" translation="0.95 0.18 -7.945" rotation="-5.00896e-06 -5.00896e-06 180" shapeId="18" static="true" collisionFilterGroup="0x207c" collisionFilterMask="0xfffffbff" nodeId="196" castsShadows="true" receiveShadows="true" materialIds="7">
+          <TransformGroup name="Stempel.001" translation="0 0.180001 1.645" rotation="180 -0 0" clipDistance="300" nodeId="197">
+            <Shape name="Cube.020" translation="0 0.01 0" rotation="-1.62898e-13 -0 -90" shapeId="19" clipDistance="300" nodeId="198" castsShadows="true" receiveShadows="true" materialIds="3">
+              <Shape name="Cube.019" translation="-0.11 0.3 0" rotation="0 -7.27971e-20 90" shapeId="20" clipDistance="300" nodeId="199" castsShadows="true" receiveShadows="true" materialIds="3"/>
+              <Shape name="Cube.021" translation="-0.11 -0.3 0" rotation="0 -7.27971e-20 90" shapeId="20" clipDistance="300" nodeId="200" castsShadows="true" receiveShadows="true" materialIds="3"/>
             </Shape>
           </TransformGroup>
         </Shape>
-        <Shape name="LaneConnector.002" translation="-0.95 0.18 7.945" rotation="-180 -0 0" shapeId="18" static="true" collisionFilterGroup="0x207c" collisionFilterMask="0xfffffbff" nodeId="841" castsShadows="true" receiveShadows="true" materialIds="694">
-          <TransformGroup name="Stempel.002" translation="-5.96046e-08 0.180001 1.645" rotation="180 -0 0" clipDistance="300" nodeId="842">
-            <Shape name="Cube.023" translation="0 0.01 0" rotation="0 -0 -90" shapeId="19" clipDistance="300" nodeId="843" castsShadows="true" receiveShadows="true" materialIds="691">
-              <Shape name="Cube.022" translation="-0.11 0.3 0" rotation="0 -0 90" shapeId="20" clipDistance="300" nodeId="844" castsShadows="true" receiveShadows="true" materialIds="691"/>
-              <Shape name="Cube.024" translation="-0.11 -0.3 0" rotation="0 -0 90" shapeId="20" clipDistance="300" nodeId="845" castsShadows="true" receiveShadows="true" materialIds="691"/>
+        <Shape name="LaneConnector.002" translation="-0.95 0.18 7.945" rotation="-180 -0 0" shapeId="18" static="true" collisionFilterGroup="0x207c" collisionFilterMask="0xfffffbff" nodeId="201" castsShadows="true" receiveShadows="true" materialIds="7">
+          <TransformGroup name="Stempel.002" translation="-5.96046e-08 0.180001 1.645" rotation="180 -0 0" clipDistance="300" nodeId="202">
+            <Shape name="Cube.023" translation="0 0.01 0" rotation="0 -0 -90" shapeId="19" clipDistance="300" nodeId="203" castsShadows="true" receiveShadows="true" materialIds="3">
+              <Shape name="Cube.022" translation="-0.11 0.3 0" rotation="0 -0 90" shapeId="20" clipDistance="300" nodeId="204" castsShadows="true" receiveShadows="true" materialIds="3"/>
+              <Shape name="Cube.024" translation="-0.11 -0.3 0" rotation="0 -0 90" shapeId="20" clipDistance="300" nodeId="205" castsShadows="true" receiveShadows="true" materialIds="3"/>
             </Shape>
           </TransformGroup>
         </Shape>
-        <Shape name="LaneConnector.003" translation="-0.95 0.18 -7.945" rotation="3.59722e-05 -5.00896e-06 180" shapeId="18" static="true" collisionFilterGroup="0x207c" collisionFilterMask="0xfffffbff" nodeId="846" castsShadows="true" receiveShadows="true" materialIds="694">
-          <TransformGroup name="Stempel.003" translation="0 0.180001 1.645" rotation="180 -0 0" clipDistance="300" nodeId="847">
-            <Shape name="Cube.026" translation="0 0.01 0" rotation="7.41826e-34 -1.6971e-26 -90" shapeId="19" clipDistance="300" nodeId="848" castsShadows="true" receiveShadows="true" materialIds="691">
-              <Shape name="Cube.025" translation="-0.11 0.3 0" rotation="0 -0 90" shapeId="20" clipDistance="300" nodeId="849" castsShadows="true" receiveShadows="true" materialIds="691"/>
-              <Shape name="Cube.027" translation="-0.11 -0.3 0" rotation="0 -0 90" shapeId="20" clipDistance="300" nodeId="850" castsShadows="true" receiveShadows="true" materialIds="691"/>
+        <Shape name="LaneConnector.003" translation="-0.95 0.18 -7.945" rotation="3.59722e-05 -5.00896e-06 180" shapeId="18" static="true" collisionFilterGroup="0x207c" collisionFilterMask="0xfffffbff" nodeId="206" castsShadows="true" receiveShadows="true" materialIds="7">
+          <TransformGroup name="Stempel.003" translation="0 0.180001 1.645" rotation="180 -0 0" clipDistance="300" nodeId="207">
+            <Shape name="Cube.026" translation="0 0.01 0" rotation="7.41826e-34 -1.6971e-26 -90" shapeId="19" clipDistance="300" nodeId="208" castsShadows="true" receiveShadows="true" materialIds="3">
+              <Shape name="Cube.025" translation="-0.11 0.3 0" rotation="0 -0 90" shapeId="20" clipDistance="300" nodeId="209" castsShadows="true" receiveShadows="true" materialIds="3"/>
+              <Shape name="Cube.027" translation="-0.11 -0.3 0" rotation="0 -0 90" shapeId="20" clipDistance="300" nodeId="210" castsShadows="true" receiveShadows="true" materialIds="3"/>
             </Shape>
           </TransformGroup>
         </Shape>
-        <Shape name="controller" translation="3.0046 1.12513 5.30412" rotation="90 90 0" scale="0.01 0.01 0.01" shapeId="21" clipDistance="300" nodeId="851" castsShadows="true" receiveShadows="true" materialIds="689"/>
+        <Shape name="controller" translation="3.0046 1.12513 5.30412" rotation="90 90 0" scale="0.01 0.01 0.01" shapeId="21" clipDistance="300" nodeId="211" castsShadows="true" receiveShadows="true" materialIds="8"/>
       </TransformGroup>
     </TransformGroup>
   </Scene>
