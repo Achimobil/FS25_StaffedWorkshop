@@ -60,9 +60,9 @@
         </updateAreas>
     </ai>
 
-    <triggerMarkers>
-        <triggerMarker node="hotspot" filename="$data/shared/assets/marker/markerIconWrench.i3d" />
-    </triggerMarkers>
+    <!-- <triggerMarkers> -->
+        <!-- <triggerMarker node="hotspot" filename="$data/shared/assets/marker/markerIconWrench.i3d" /> -->
+    <!-- </triggerMarkers> -->
 
     <hotspots>
         <hotspot type="SHOP" linkNode="hotspot" />

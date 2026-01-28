@@ -5,7 +5,8 @@
 *.png
 store\*.png
 images
-SourceModels
+models\*.blend
+models\*.blend1
 *.gsp
 *.gspu
 *.zip
