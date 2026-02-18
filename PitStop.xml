@@ -68,38 +68,42 @@
         <hotspot type="SHOP" linkNode="vehicleTrigger" />
     </hotspots>
 
-    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.1"  damageAmount="-0.05"  wearAmount="-0.02" animationNode="0>6|0|1"/>
+    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.2"  damageAmount="-0.1"  wearAmount="-0.1">
+        <animatedObjects>
+            <animatedObject type="LastVehicleLeftTrigger" index="1" direction="0" />
+            <animatedObject type="AllVehiclesInTriggerDone" index="1" direction="1" />
+        </animatedObjects>
+    </automaticCarWash>
 
     <animatedObjects>
-        <animatedObject saveId="westeel3607FlatBottomBinCover" >
-            <animation duration="1.5">
+        <animatedObject saveId="barrier1" >
+            <animation duration="5">
                 <part node="0>6|0|1">
-                    <keyFrame time="0.0" translation="0 1.025 0" rotation="0 0 0"/>
-                    <keyFrame time="1.0" translation="0 1.025 0" rotation="90 0 0"/>
+                    <keyFrame time="0.0" translation="0 1.025 0" rotation="90 0 0"/>
+                    <keyFrame time="0.2" translation="0 1.025 0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" translation="0 1.025 0" rotation="0 0 0"/>
+                </part>
+                <part node="0>6|0|3|0">
+                    <keyFrame time="0.0" visibility="true"/>
+                    <keyFrame time="1.0" visibility="false"/>
+                </part>
+                <part node="0>6|0|3|0|1">
+                    <keyFrame time="0.0" visibility="true"/>
+                    <keyFrame time="1.0" visibility="false"/>
+                </part>
+                <part node="0>6|0|3|0|1|1">
+                    <keyFrame time="0.0" visibility="true"/>
+                    <keyFrame time="1.0" visibility="false"/>
+                </part>
+                <part node="0>6|0|3|0|0|0">
+                    <keyFrame time="0.0" visibility="true"/>
+                    <keyFrame time="1.0" visibility="false"/>
+                </part>
+                <part node="0>6|0|3|0|1|0">
+                    <keyFrame time="0.0" visibility="true"/>
+                    <keyFrame time="1.0" visibility="false"/>
                 </part>
             </animation>
-            <!-- <controls triggerNode="coverTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openCover" negText="action_closeCover" /> -->
-            <!-- <sounds> -->
-                <!-- <moving template="hingeMedium" linkNode="westeel3607FlatBottomBinCover" pitchScale="0.7"/> -->
-                <!-- <moving file="$data/placeables/agi/flatBottomBin3605/sounds/rotatedLifting.wav" linkNode="westeel3607FlatBottomBinCoverHandle" pitchScale="1" volumeScale="0.7" innerRadius="1" outerRadius="15"/> -->
-                <!-- <posEnd template="clackVar6" linkNode="westeel3607FlatBottomBinCover" pitchScale="0.8"/> -->
-                <!-- <negEnd file="$data/placeables/agi/commBin48/sounds/foldFlap.wav" linkNode="westeel3607FlatBottomBinCover" pitchScale="0.7" volumeScale="1.5" innerRadius="8" outerRadius="20"/> -->
-            <!-- </sounds> -->
-        </animatedObject>
-        <animatedObject saveId="westeel3607FlatBottomBinCover2" >
-            <animation duration="1.5">
-                <part node="0>6|0|1">
-                    <keyFrame time="0.0" translation="0 1.025 0" rotation="0 0 0"/>
-                    <keyFrame time="1.0" translation="0 1.025 0" rotation="90 0 0"/>
-                </part>
-            </animation>
-            <!-- <controls triggerNode="coverTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openCover" negText="action_closeCover" /> -->
-            <!-- <sounds> -->
-                <!-- <moving template="hingeMedium" linkNode="westeel3607FlatBottomBinCover" pitchScale="0.7"/> -->
-                <!-- <moving file="$data/placeables/agi/flatBottomBin3605/sounds/rotatedLifting.wav" linkNode="westeel3607FlatBottomBinCoverHandle" pitchScale="1" volumeScale="0.7" innerRadius="1" outerRadius="15"/> -->
-                <!-- <posEnd template="clackVar6" linkNode="westeel3607FlatBottomBinCover" pitchScale="0.8"/> -->
-                <!-- <negEnd file="$data/placeables/agi/commBin48/sounds/foldFlap.wav" linkNode="westeel3607FlatBottomBinCover" pitchScale="0.7" volumeScale="1.5" innerRadius="8" outerRadius="20"/> -->
-            <!-- </sounds> -->
         </animatedObject>
     </animatedObjects>
 
