@@ -65,9 +65,12 @@ function AutomaticCarWash.initSpecialization()
 
     schema:register(XMLValueType.NODE_INDEX, baseXmlPath .. "#triggerNode", "Trigger node for automatic")
     schema:register(XMLValueType.FLOAT, baseXmlPath .. "#dirtAmount", "dirt change per interval", -0.1)
-    schema:register(XMLValueType.FLOAT, baseXmlPath .. "#damageAmount", "damage change per interval", -0,05)
-    schema:register(XMLValueType.FLOAT, baseXmlPath .. "#wearAmount", "wear change per interval", -0,02)
+    schema:register(XMLValueType.FLOAT, baseXmlPath .. "#damageAmount", "damage change per interval", -0.05)
+    schema:register(XMLValueType.FLOAT, baseXmlPath .. "#wearAmount", "wear change per interval", -0.02)
     schema:register(XMLValueType.INT, baseXmlPath .. "#timerLength", "time for timer (miliseconds", 3000)
+    schema:register(XMLValueType.STRING, baseXmlPath .. ".animatedObjects.animatedObject(?)#type", "LastVehicleLeftTrigger, AllVehiclesInTriggerDone")
+    schema:register(XMLValueType.INT, baseXmlPath .. ".animatedObjects.animatedObject(?)#index", "Dependent animated object index")
+    schema:register(XMLValueType.INT, baseXmlPath .. ".animatedObjects.animatedObject(?)#direction", "Dependent animated object direction")
 
     schema:setXMLSpecializationType()
 end
@@ -76,6 +79,7 @@ function AutomaticCarWash.registerFunctions(placeableType)
     SpecializationUtil.registerFunction(placeableType, "onTriggerCallback", AutomaticCarWash.onTriggerCallback)
     SpecializationUtil.registerFunction(placeableType, "CleanCar", AutomaticCarWash.CleanCar)
     SpecializationUtil.registerFunction(placeableType, "CleanOneVehicle", AutomaticCarWash.CleanOneVehicle)
+    SpecializationUtil.registerFunction(placeableType, "TriggerAnimation", AutomaticCarWash.TriggerAnimation)
 end
 
 function AutomaticCarWash.registerEventListeners(placeableType)
@@ -97,10 +101,19 @@ function AutomaticCarWash:onLoad(savegame)
     spec.activated = false;
 
     spec.triggerNode = self.xmlFile:getValue(baseXmlPath.."#triggerNode", nil, self.components, self.i3dMappings);
-    spec.dirtAmount = self.xmlFile:getValue(baseXmlPath .. "#dirtAmount", -0.1)
-    spec.damageAmount = self.xmlFile:getValue(baseXmlPath .. "#damageAmount", -0.05)
-    spec.wearAmount = self.xmlFile:getValue(baseXmlPath .. "#wearAmount", -0.02)
-    spec.timerLength = self.xmlFile:getValue(baseXmlPath .. "#timerLength", 3000)
+    spec.dirtAmount = self.xmlFile:getValue(baseXmlPath .. "#dirtAmount", -0.1);
+    spec.damageAmount = self.xmlFile:getValue(baseXmlPath .. "#damageAmount", -0.05);
+    spec.wearAmount = self.xmlFile:getValue(baseXmlPath .. "#wearAmount", -0.02);
+    spec.timerLength = self.xmlFile:getValue(baseXmlPath .. "#timerLength", 3000);
+
+    spec.dependedAnimatedObjects = {}
+    self.xmlFile:iterate("placeable.automaticCarWash.animatedObjects.animatedObject", function(index, animationObjectKey)
+        local animatedObjectIndex = self.xmlFile:getInt(animationObjectKey.."#index");
+        local direction = self.xmlFile:getInt(animationObjectKey.."#direction", 1);
+        local animationType = self.xmlFile:getString(animationObjectKey.."#type", nil);
+
+        table.insert(spec.dependedAnimatedObjects, {animatedObjectIndex=animatedObjectIndex, direction=direction, animationType=animationType})
+    end)
 
     spec.initialized = true;
 
@@ -218,6 +231,21 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
                     end
                 end
             end
+
+            -- todo Kein Fahrzeug mehr im trigger, schranke schließen
+            if #spec.vehiclesInTrigger == 0 then
+                self:TriggerAnimation("LastVehicleLeftTrigger");
+            end
+        end
+    end
+end
+
+function AutomaticCarWash:TriggerAnimation(animationType)
+    local spec = self.spec_automaticCarWash;
+    AutomaticCarWash.DebugText("TriggerAnimation type: %s", animationType);
+    for _,dependedAnimatedObject in pairs(spec.dependedAnimatedObjects) do
+        if dependedAnimatedObject.animationType == animationType then
+            self.spec_animatedObjects.animatedObjects[dependedAnimatedObject.animatedObjectIndex]:setDirection(dependedAnimatedObject.direction);
         end
     end
 end
@@ -250,7 +278,7 @@ function AutomaticCarWash:CleanOneVehicle(vehicle)
         return true;
     end
 
-    if vehicle.getDirtAmount ~= nil and vehicle:getDirtAmount() >= 0.0001 and spec.dirtAmount ~= 0 then
+    if vehicle.getDirtAmount ~= nil and vehicle:getDirtAmount() >= 0.005 and spec.dirtAmount ~= 0 then
         -- set amount of wash per interval here. It is in percentage where 1 is 100%
         vehicle:cleanVehicle(spec.dirtAmount * -1);
         AutomaticCarWash.DebugText("cleanVehicle(%s)", spec.dirtAmount * -1)
@@ -262,14 +290,14 @@ function AutomaticCarWash:CleanOneVehicle(vehicle)
     end
 
     -- uncomment complete if when no repear should be done
-    if vehicle.getDamageAmount ~= nil and vehicle:getDamageAmount() >= 0.0001 and spec.damageAmount ~= 0 then
+    if vehicle.getDamageAmount ~= nil and vehicle:getDamageAmount() >= 0.005 and spec.damageAmount ~= 0 then
         -- set amount of repair per interval here. It is in percentage where 1 is 100%
         vehicle:addDamageAmount(spec.damageAmount, true);
         actionDone = true;
     end
 
     -- uncomment complete if when no painting should be done
-    if vehicle.getWearTotalAmount ~= nil and vehicle:getWearTotalAmount() >= 0.0001 and spec.wearAmount ~= 0 then
+    if vehicle.getWearTotalAmount ~= nil and vehicle:getWearTotalAmount() >= 0.005 and spec.wearAmount ~= 0 then
         -- set amount of painting per interval here. It is in percentage where 1 is 100%
         vehicle:addWearAmount(spec.wearAmount, true);
         actionDone = true;
@@ -314,6 +342,14 @@ function AutomaticCarWash:CleanCar()
                 end
             end
         end;
+
+        AutomaticCarWash.DebugText("total actionDone: " .. tostring(actionDone));
+        if actionDone then
+            -- nix machen
+        else
+            -- todo Alle fahrzeuge im trigger fertig, schlagbau hoch
+            self:TriggerAnimation("AllVehiclesInTriggerDone");
+        end
 
         -- trigger not empty
         if spec.timerId ~= nil then

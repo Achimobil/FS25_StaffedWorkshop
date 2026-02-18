@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<placeable type="MyAutomaticCarWashWithWorkshop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/placeable.xsd">
+<placeable type="MyAutomaticCarWash" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/placeable.xsd">
     <storeData>
-        <name>$l10n_staffedWorkshop</name>
+        <name>$l10n_pitStop</name>
         <functions>
             <function>$l10n_staffedWorkshopFunction</function>
         </functions>
@@ -21,7 +21,7 @@
     </storeData>
 
     <base>
-        <filename>models/workshop.i3d</filename>
+        <filename>models/pitStop.i3d</filename>
         <canBeRenamed>true</canBeRenamed>
         <boughtWithFarmland>true</boughtWithFarmland>
     </base>
@@ -61,7 +61,6 @@
     </ai>
 
     <triggerMarkers>
-        <triggerMarker node="markerWrench" filename="$data/shared/assets/marker/markerIconWrench.i3d" />
         <triggerMarker node="warningStripes"/>
     </triggerMarkers>
 
@@ -69,21 +68,44 @@
         <hotspot type="SHOP" linkNode="vehicleTrigger" />
     </hotspots>
 
-    <workshop>
-        <sellingPoint playerTriggerNode="playerTrigger" iconNode="markerWrench" sellTriggerNode="vehicleTrigger2" ownWorkshop="true" mobileWorkshop="false" />
-    </workshop>
+    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.2"  damageAmount="-0.1"  wearAmount="-0.1">
+        <animatedObjects>
+            <animatedObject type="LastVehicleLeftTrigger" index="1" direction="0" />
+            <animatedObject type="AllVehiclesInTriggerDone" index="1" direction="1" />
+        </animatedObjects>
+    </automaticCarWash>
 
-    <solarPanels>
-        <solarPanelsConfigurations>
-            <solarPanelsConfiguration name="$l10n_ui_no" isActive="false">
-                <objectChange node="solarPanel" visibilityActive="false"/>
-            </solarPanelsConfiguration>
-
-            <solarPanelsConfiguration name="$l10n_ui_yes" isActive="true" price="12500" incomePerHour="43" />
-        </solarPanelsConfigurations>
-    </solarPanels>
-
-    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.1"  damageAmount="-0.05"  wearAmount="-0.02" />
+    <animatedObjects>
+        <animatedObject saveId="barrier1" >
+            <animation duration="5">
+                <part node="0>6|0|1">
+                    <keyFrame time="0.0" translation="0 1.025 0" rotation="90 0 0"/>
+                    <keyFrame time="0.2" translation="0 1.025 0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" translation="0 1.025 0" rotation="0 0 0"/>
+                </part>
+                <part node="0>6|0|3|0">
+                    <keyFrame time="0.0" visibility="true"/>
+                    <keyFrame time="1.0" visibility="false"/>
+                </part>
+                <part node="0>6|0|3|0|1">
+                    <keyFrame time="0.0" visibility="true"/>
+                    <keyFrame time="1.0" visibility="false"/>
+                </part>
+                <part node="0>6|0|3|0|1|1">
+                    <keyFrame time="0.0" visibility="true"/>
+                    <keyFrame time="1.0" visibility="false"/>
+                </part>
+                <part node="0>6|0|3|0|0|0">
+                    <keyFrame time="0.0" visibility="true"/>
+                    <keyFrame time="1.0" visibility="false"/>
+                </part>
+                <part node="0>6|0|3|0|1|0">
+                    <keyFrame time="0.0" visibility="true"/>
+                    <keyFrame time="1.0" visibility="false"/>
+                </part>
+            </animation>
+        </animatedObject>
+    </animatedObjects>
 
     <i3dMappings>
         <i3dMapping id="clearAreaStart01" node="0>0|0" />
@@ -99,11 +121,7 @@
         <i3dMapping id="testAreaEnd01" node="0>3|0|0" />
         <i3dMapping id="tipOcclusionUpdateAreaStart01" node="0>4|0" />
         <i3dMapping id="tipOcclusionUpdateAreaEnd01" node="0>4|0|0" />
-        <i3dMapping id="markerWrench" node="0>5|0" />
-        <i3dMapping id="warningStripes" node="0>5|1" />
-        <i3dMapping id="vehicleTrigger" node="0>5|2" />
-        <i3dMapping id="playerTrigger" node="0>5|3" />
-        <i3dMapping id="vehicleTrigger2" node="0>5|4" />
-        <i3dMapping id="solarPanel" node="0>6|6" />
+        <i3dMapping id="warningStripes" node="0>5|0" />
+        <i3dMapping id="vehicleTrigger" node="0>5|1" />
     </i3dMappings>
 </placeable>
