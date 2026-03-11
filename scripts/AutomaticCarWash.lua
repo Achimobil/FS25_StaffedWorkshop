@@ -1,9 +1,9 @@
 --[[
-Copyright (C) Achimobil 2023-2025
+Copyright (C) Achimobil 2023-2026
 
 Author: Achimobil
-Date: 17.02.2025
-Version: 2.0.2.1
+Date: 11.03.2026
+Version: 2.1.0.0
 
 Contact: https://github.com/Achimobil/FS25_StaffedWorkshop
 
@@ -17,6 +17,7 @@ V 2.0.1.0 @ 13.02.2025 - Cleanup and fix some reported lua errors
                          Add drying after washing
 V 2.0.2.0 @ 15.02.2025 - No Action when Vehicle is in movement
 V 2.0.2.1 @ 17.02.2025 - Special case for hard attached implements added
+V 2.1.0.0 @ 11.03.2026 - Added Animations with 3 trigger types
 
 Important:
 Free for use in other mods - no permission needed, only provide my name.
@@ -68,7 +69,7 @@ function AutomaticCarWash.initSpecialization()
     schema:register(XMLValueType.FLOAT, baseXmlPath .. "#damageAmount", "damage change per interval", -0.05)
     schema:register(XMLValueType.FLOAT, baseXmlPath .. "#wearAmount", "wear change per interval", -0.02)
     schema:register(XMLValueType.INT, baseXmlPath .. "#timerLength", "time for timer (miliseconds", 3000)
-    schema:register(XMLValueType.STRING, baseXmlPath .. ".animatedObjects.animatedObject(?)#type", "LastVehicleLeftTrigger, AllVehiclesInTriggerDone")
+    schema:register(XMLValueType.STRING, baseXmlPath .. ".animatedObjects.animatedObject(?)#type", "LastVehicleLeftTrigger, AllVehiclesInTriggerDone, VehicleEnterTrigger")
     schema:register(XMLValueType.INT, baseXmlPath .. ".animatedObjects.animatedObject(?)#index", "Dependent animated object index")
     schema:register(XMLValueType.INT, baseXmlPath .. ".animatedObjects.animatedObject(?)#direction", "Dependent animated object direction")
 
@@ -166,6 +167,9 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
                 end
             end
             if not foundInTable then
+                if #spec.vehiclesInTrigger == 0 then
+                    self:TriggerAnimation("VehicleEnterTrigger");
+                end
                 table.insert(spec.vehiclesInTrigger, vehicle.rootNode);
                 AutomaticCarWash.DebugText("Added rootNode: %s)", vehicle.rootNode);
                 if spec.timerId == nil then
@@ -190,6 +194,9 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
                             end
                         end
                         if not foundAttachedInTable then
+                            if #spec.vehiclesInTrigger == 0 then
+                                self:TriggerAnimation("VehicleEnterTrigger");
+                            end
                             table.insert(spec.vehiclesInTrigger, attachedImplement.object.rootNode);
                             AutomaticCarWash.DebugText("Added hard attached rootNode: %s)", attachedImplement.object.rootNode);
                             if spec.timerId == nil then
@@ -203,12 +210,17 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
                 end
             end
 
+
         end
         if onLeave then
             for i = #spec.vehiclesInTrigger, 1, -1 do
                 local vehicleInTrigger = spec.vehiclesInTrigger[i];
                 if vehicleInTrigger ~= nil and vehicleInTrigger == vehicle.rootNode then
                     table.remove(spec.vehiclesInTrigger, i);
+                    -- todo Kein Fahrzeug mehr im trigger, schranke schließen
+                    if #spec.vehiclesInTrigger == 0 then
+                        self:TriggerAnimation("LastVehicleLeftTrigger");
+                    end
                     AutomaticCarWash.DebugText("Removed rootNode: %s)", vehicle.rootNode);
                 end
             end
@@ -224,6 +236,10 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
                             local vehicleInTrigger = spec.vehiclesInTrigger[i];
                             if vehicleInTrigger ~= nil and vehicleInTrigger == attachedImplement.object.rootNode then
                                 table.remove(spec.vehiclesInTrigger, i);
+                                -- todo Kein Fahrzeug mehr im trigger, schranke schließen
+                                if #spec.vehiclesInTrigger == 0 then
+                                    self:TriggerAnimation("LastVehicleLeftTrigger");
+                                end
                                 AutomaticCarWash.DebugText("Removed hard attached rootNode: %s)", attachedImplement.object.rootNode);
                             end
                         end
@@ -232,10 +248,6 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
                 end
             end
 
-            -- todo Kein Fahrzeug mehr im trigger, schranke schließen
-            if #spec.vehiclesInTrigger == 0 then
-                self:TriggerAnimation("LastVehicleLeftTrigger");
-            end
         end
     end
 end
@@ -245,6 +257,7 @@ function AutomaticCarWash:TriggerAnimation(animationType)
     AutomaticCarWash.DebugText("TriggerAnimation type: %s", animationType);
     for _,dependedAnimatedObject in pairs(spec.dependedAnimatedObjects) do
         if dependedAnimatedObject.animationType == animationType then
+            AutomaticCarWash.DebugText("Trigger index: %s in direction %s", dependedAnimatedObject.animatedObjectIndex, dependedAnimatedObject.direction);
             self.spec_animatedObjects.animatedObjects[dependedAnimatedObject.animatedObjectIndex]:setDirection(dependedAnimatedObject.direction);
         end
     end
@@ -278,7 +291,7 @@ function AutomaticCarWash:CleanOneVehicle(vehicle)
         return true;
     end
 
-    if vehicle.getDirtAmount ~= nil and vehicle:getDirtAmount() >= 0.005 and spec.dirtAmount ~= 0 then
+    if vehicle.getDirtAmount ~= nil and vehicle:getDirtAmount() >= 0.02 and spec.dirtAmount ~= 0 then
         -- set amount of wash per interval here. It is in percentage where 1 is 100%
         vehicle:cleanVehicle(spec.dirtAmount * -1);
         AutomaticCarWash.DebugText("cleanVehicle(%s)", spec.dirtAmount * -1)

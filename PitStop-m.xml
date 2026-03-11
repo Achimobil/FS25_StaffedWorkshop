@@ -21,7 +21,7 @@
     </storeData>
 
     <base>
-        <filename>models/pitStop.i3d</filename>
+        <filename>models/pitStop-m.i3d</filename>
         <canBeRenamed>true</canBeRenamed>
         <boughtWithFarmland>true</boughtWithFarmland>
     </base>
@@ -105,16 +105,16 @@
                     <keyFrame time="1.0" visibility="false"/>
                 </part>
                 <part node="blockFront">
-                    <keyFrame time="0.0" translation="0 1.5 0" rotation="0 0 0"/>
-                    <keyFrame time="1.0" translation="0 -1.5 0" rotation="0 0 0"/>
+                    <keyFrame time="0.0" translation="12 1.5 0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" translation="12 -1.5 0" rotation="0 0 0"/>
                 </part>
             </animation>
         </animatedObject>
         <animatedObject saveId="barrier2" >
             <animation duration="0.5">
                 <part node="blockBack">
-                    <keyFrame time="0.0" translation="12 -1.5 0" rotation="0 0 0"/>
-                    <keyFrame time="1.0" translation="12 1.5 0" rotation="0 0 0"/>
+                    <keyFrame time="0.0" translation="0 -1.5 0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" translation="0 1.5 0" rotation="0 0 0"/>
                 </part>
             </animation>
         </animatedObject>

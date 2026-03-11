@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
-<i3D name="pitStop.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+<i3D name="pitStop-m.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
   <Asset>
     <Export program="GIANTS Editor 64bit" version="10.0.11"/>
   </Asset>
@@ -44,7 +44,7 @@
   </Materials>
 
 
-  <Shapes externalShapesFile="pitStop.i3d.shapes">
+  <Shapes externalShapesFile="pitStop-m.i3d.shapes">
   </Shapes>
 
   <Scene>
@@ -79,10 +79,10 @@
       </TransformGroup>
       <TransformGroup name="workshop" nodeId="41">
         <Shape name="warningStripes" translation="0.75229 0 0" shapeId="1" clipDistance="100" nodeId="42" castsShadows="false" receiveShadows="true" terrainDecal="true" materialIds="10"/>
-        <Shape name="vehicleTrigger" translation="1.98876 0 0" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" clipDistance="300" nodeId="43" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="6"/>
+        <Shape name="vehicleTrigger" translation="4.7159 0 0" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" clipDistance="300" nodeId="43" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="6"/>
       </TransformGroup>
       <TransformGroup name="visuals" nodeId="44">
-        <TransformGroup name="railroadCrossing" lockedgroup="true" translation="-5.55241 0 0" clipDistance="300" nodeId="45">
+        <TransformGroup name="railroadCrossing" lockedgroup="true" translation="7.17025 0 -5.27294e-07" clipDistance="300" nodeId="45">
           <TransformGroup name="railroadCrossing" lodDistance="0 30" clipDistance="300" nodeId="46">
             <Shape name="LOD0" shapeId="3" nodeId="47" castsShadows="true" receiveShadows="true" materialIds="7"/>
             <Shape name="LOD1" shapeId="4" nodeId="48" castsShadows="true" receiveShadows="true" materialIds="7"/>
@@ -91,7 +91,7 @@
           <Shape name="barrier" translation="0 1.025 0" shapeId="6" kinematic="true" collisionFilterGroup="0x26" collisionFilterMask="0xfffffbff" nodeId="50" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5">
             <Shape name="barrier_vis" shapeId="7" nodeId="51" castsShadows="true" receiveShadows="true" materialIds="7"/>
           </Shape>
-          <TransformGroup name="trafficBlockingPosition" translation="0.98 -0.1 5.4" rotation="0 -90 0" nodeId="52"/>
+          <TransformGroup name="trafficBlockingPosition" translation="0.98 -0.1 5.4" nodeId="52"/>
           <TransformGroup name="signals" nodeId="53">
             <TransformGroup name="signal" nodeId="54">
               <TransformGroup name="railroadCrossingLight01" translation="1.10816 2.0668 -0.26285" nodeId="55">
@@ -105,8 +105,8 @@
           </TransformGroup>
         </TransformGroup>
         <TransformGroup name="blocks" translation="-5.55241 -0.3 3" nodeId="60">
-          <Shape name="blockFront" translation="0 -1.5 0" shapeId="10" kinematic="true" collisionFilterGroup="0x1000000" collisionFilterMask="0xfffffbff" nodeId="61" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="9"/>
-          <Shape name="blockBack" translation="12 -1.5 0" shapeId="10" kinematic="true" collisionFilterGroup="0x1000000" collisionFilterMask="0xfffffbff" nodeId="62" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="9"/>
+          <Shape name="blockFront" translation="12 -1.5 0" shapeId="10" kinematic="true" collisionFilterGroup="0x1000000" collisionFilterMask="0xfffffbff" nodeId="61" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="9"/>
+          <Shape name="blockBack" translation="0 -1.5 0" shapeId="10" kinematic="true" collisionFilterGroup="0x1000000" collisionFilterMask="0xfffffbff" nodeId="62" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="9"/>
         </TransformGroup>
       </TransformGroup>
     </TransformGroup>

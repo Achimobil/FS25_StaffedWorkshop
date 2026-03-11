@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="106">
     <author>Achimobil</author>
-    <version>1.1.0.7</version>
+    <version>1.1.0.8</version>
 
     <title>
         <en>Staffed Workshop</en>
@@ -37,6 +37,7 @@ Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_Staff
 Changelog
 
 1.1.0.5 - Kollisionen der Rampen korrigiert und Triggermarker entfernt
+1.1.0.8 - Animationen vom Skript ansteuerbar und als PitStop für beide Richtungen hinzugefügt. Trigger an standard Werkstatt vergrößert
 
 1.1.0.4
 - Schreibfehler korrigiert und Beschreibung verbessert
@@ -88,6 +89,7 @@ Changelog
         <storeItem xmlFilename="Workshop-s.xml"/>
         <storeItem xmlFilename="Ravaglioli.xml"/>
         <storeItem xmlFilename="PitStop.xml"/>
+        <storeItem xmlFilename="PitStop-m.xml"/>
     </storeItems>
 
     <brands>
