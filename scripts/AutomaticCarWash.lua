@@ -1,11 +1,60 @@
 --[[
-Copyright (C) Achimobil 2023-2026
+Copyright (C) 2023–2026 Achimobil
 
 Author: Achimobil
-Date: 11.03.2026
+Mod: FS25_StaffedWorkshop
+Script: AutomaticCarWash.lua
 Version: 2.1.0.0
+Date: 11.03.2026
 
-Contact: https://github.com/Achimobil/FS25_StaffedWorkshop
+Contact:
+https://github.com/Achimobil/FS25_StaffedWorkshop
+
+License (EN):
+
+Permission is hereby granted to use this script in other mods and maps,
+including for public release, subject to the following conditions:
+
+1. Attribution:
+   The original author (Achimobil) must be clearly credited.
+
+2. No Modification:
+   This script must not be modified, edited, or partially reused without
+   explicit prior permission from the author.
+
+3. No Standalone Distribution:
+   Redistribution of this script as a standalone download is not allowed.
+
+4. Modpacks:
+   Distribution within modpacks is permitted, provided the script remains
+   unchanged and is only included as part of the original mod.
+
+This license is granted free of charge and without warranty.
+
+---
+
+Lizenz (DE):
+
+Die Nutzung dieses Skripts in anderen Mods und Maps ist erlaubt,
+auch für veröffentlichte Projekte, unter folgenden Bedingungen:
+
+1. Namensnennung:
+   Der ursprüngliche Autor (Achimobil) muss klar genannt werden.
+
+2. Keine Änderungen:
+   Dieses Skript darf ohne ausdrückliche Genehmigung nicht verändert,
+   bearbeitet oder teilweise wiederverwendet werden.
+
+3. Keine Einzelveröffentlichung:
+   Das Skript darf nicht als eigenständiger Download verbreitet werden.
+
+4. Modpacks:
+   Die Weitergabe in Modpacks ist erlaubt, sofern das Skript unverändert bleibt
+   und nur als Teil des ursprünglichen Mods enthalten ist.
+
+Die Nutzung erfolgt kostenlos und ohne Gewähr.
+
+---
 
 History:
 V 1.0.0.0 @ 29.04.2022 - Release Version.
@@ -18,13 +67,6 @@ V 2.0.1.0 @ 13.02.2025 - Cleanup and fix some reported lua errors
 V 2.0.2.0 @ 15.02.2025 - No Action when Vehicle is in movement
 V 2.0.2.1 @ 17.02.2025 - Special case for hard attached implements added
 V 2.1.0.0 @ 11.03.2026 - Added Animations with 3 trigger types
-
-Important:
-Free for use in other mods - no permission needed, only provide my name.
-No changes are to be made to this script without permission from Achimobil.
-
-Frei verwendbar - keine erlaubnis nötig, Namensnennung im Mod erforderlich.
-An diesem Skript dürfen ohne Genehmigung von Achimobil keine Änderungen vorgenommen werden.
 ]]
 
 AutomaticCarWash = {};
