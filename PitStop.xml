@@ -68,7 +68,7 @@
         <hotspot type="SHOP" linkNode="vehicleTrigger" />
     </hotspots>
 
-    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.1"  damageAmount="-0.05"  wearAmount="-0.02" >
+    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.15"  damageAmount="-0.1"  wearAmount="0" >
         <animatedObjects>
             <animatedObject type="LastVehicleLeftTrigger" index="1" direction="0" />
             <animatedObject type="AllVehiclesInTriggerDone" index="1" direction="1" />

@@ -4,8 +4,8 @@ Copyright (C) 2023–2026 Achimobil
 Author: Achimobil
 Mod: FS25_StaffedWorkshop
 Script: AutomaticCarWash.lua
-Version: 2.1.0.0
-Date: 11.03.2026
+Version: 2.1.0.1
+Date: 05.04.2026
 
 Contact:
 https://github.com/Achimobil/FS25_StaffedWorkshop
@@ -67,6 +67,7 @@ V 2.0.1.0 @ 13.02.2025 - Cleanup and fix some reported lua errors
 V 2.0.2.0 @ 15.02.2025 - No Action when Vehicle is in movement
 V 2.0.2.1 @ 17.02.2025 - Special case for hard attached implements added
 V 2.1.0.0 @ 11.03.2026 - Added Animations with 3 trigger types
+V 2.1.0.1 @ 05.04.2026 - Fixed rain and endless drying problem.
 ]]
 
 AutomaticCarWash = {};
@@ -333,12 +334,22 @@ function AutomaticCarWash:CleanOneVehicle(vehicle)
         return true;
     end
 
+    -- Check if vehicle can be dried
+    local canBeDried = false;
+    if vehicle.getIsWet ~= nil and vehicle:getIsWet() and vehicle.addWetnessAmount ~= nil then
+        canBeDried = true;
+    end
+    -- disable drying when it is raining
+    if g_currentMission ~= nil and g_currentMission.environment ~= nil and g_currentMission.environment.weather ~= nil and g_currentMission.environment.weather:getIsRaining() then
+        canBeDried = false;
+    end
+
     if vehicle.getDirtAmount ~= nil and vehicle:getDirtAmount() >= 0.02 and spec.dirtAmount ~= 0 then
         -- set amount of wash per interval here. It is in percentage where 1 is 100%
         vehicle:cleanVehicle(spec.dirtAmount * -1);
         AutomaticCarWash.DebugText("cleanVehicle(%s)", spec.dirtAmount * -1)
         actionDone = true;
-    elseif vehicle.getIsWet ~= nil and vehicle:getIsWet() and vehicle.addWetnessAmount ~= nil then
+    elseif canBeDried then
         -- when not dirt anymore, dry with double wash speed with next timer run until dry
         vehicle:addWetnessAmount(spec.dirtAmount * 2);
         actionDone = true;
