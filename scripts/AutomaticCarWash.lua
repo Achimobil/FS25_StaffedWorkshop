@@ -4,7 +4,7 @@ Copyright (C) 2023–2026 Achimobil
 Author: Achimobil
 Mod: FS25_StaffedWorkshop
 Script: AutomaticCarWash.lua
-Version: 2.1.0.1
+Version: 2.1.0.2
 Date: 05.04.2026
 
 Contact:
@@ -68,6 +68,7 @@ V 2.0.2.0 @ 15.02.2025 - No Action when Vehicle is in movement
 V 2.0.2.1 @ 17.02.2025 - Special case for hard attached implements added
 V 2.1.0.0 @ 11.03.2026 - Added Animations with 3 trigger types
 V 2.1.0.1 @ 05.04.2026 - Fixed rain and endless drying problem.
+V 2.1.0.2 @ 05.04.2026 - Changed LastVehicleLeftTrigger to trigger when the last edge of the trailer leaves the trigger
 ]]
 
 AutomaticCarWash = {};
@@ -95,6 +96,9 @@ function AutomaticCarWash.DebugText(text, ...)
     Logging.info("AutomaticCarWashDebug: " .. string.format(text, ...));
 end
 
+---Checks if all prerequisite specializations are loaded
+-- @param table specializations specializations
+-- @return boolean hasPrerequisite true if all prerequisite specializations are loaded
 function AutomaticCarWash.prerequisitesPresent(specializations)
     return true
 end
@@ -119,6 +123,8 @@ function AutomaticCarWash.initSpecialization()
     schema:setXMLSpecializationType()
 end
 
+---Registers all script functions of this specialization
+-- @param table placeableType
 function AutomaticCarWash.registerFunctions(placeableType)
     SpecializationUtil.registerFunction(placeableType, "onTriggerCallback", AutomaticCarWash.onTriggerCallback)
     SpecializationUtil.registerFunction(placeableType, "CleanCar", AutomaticCarWash.CleanCar)
@@ -126,6 +132,8 @@ function AutomaticCarWash.registerFunctions(placeableType)
     SpecializationUtil.registerFunction(placeableType, "TriggerAnimation", AutomaticCarWash.TriggerAnimation)
 end
 
+---Registers all event listeners of this specialization
+-- @param table placeableType
 function AutomaticCarWash.registerEventListeners(placeableType)
     SpecializationUtil.registerEventListener(placeableType, "onLoad", AutomaticCarWash)
     SpecializationUtil.registerEventListener(placeableType, "onFinalizePlacement", AutomaticCarWash)
@@ -142,6 +150,7 @@ function AutomaticCarWash:onLoad(savegame)
     local spec = self.spec_automaticCarWash
     spec.available = false;
     spec.vehiclesInTrigger = {};
+    spec.vehiclesCounterInTrigger = 0;
     spec.activated = false;
 
     spec.triggerNode = self.xmlFile:getValue(baseXmlPath.."#triggerNode", nil, self.components, self.i3dMappings);
@@ -202,6 +211,9 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
     if vehicle ~= nil and vehicle.rootNode ~= nil then
 --         AutomaticCarWash.DebugTable("vehicle", vehicle);
         if onEnter then
+            -- general counter for closing barrier
+            spec.vehiclesCounterInTrigger = spec.vehiclesCounterInTrigger + 1;
+
             local foundInTable = false;
 
             for _,vehicleInTrigger in pairs(spec.vehiclesInTrigger) do
@@ -256,14 +268,23 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
 
         end
         if onLeave then
+            -- general counter for closing barrier
+            spec.vehiclesCounterInTrigger = spec.vehiclesCounterInTrigger - 1;
+
+            -- Kein Fahrzeug mehr im trigger, schranke schließen
+            if spec.vehiclesCounterInTrigger == 0 then
+                self:TriggerAnimation("LastVehicleLeftTrigger");
+            end
+
+            -- Fallback to prevent negavive counter
+            if spec.vehiclesCounterInTrigger < 0 then
+                spec.vehiclesCounterInTrigger = 0;
+            end
+
             for i = #spec.vehiclesInTrigger, 1, -1 do
                 local vehicleInTrigger = spec.vehiclesInTrigger[i];
                 if vehicleInTrigger ~= nil and vehicleInTrigger == vehicle.rootNode then
                     table.remove(spec.vehiclesInTrigger, i);
-                    -- todo Kein Fahrzeug mehr im trigger, schranke schließen
-                    if #spec.vehiclesInTrigger == 0 then
-                        self:TriggerAnimation("LastVehicleLeftTrigger");
-                    end
                     AutomaticCarWash.DebugText("Removed rootNode: %s)", vehicle.rootNode);
                 end
             end
@@ -279,10 +300,6 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
                             local vehicleInTrigger = spec.vehiclesInTrigger[i];
                             if vehicleInTrigger ~= nil and vehicleInTrigger == attachedImplement.object.rootNode then
                                 table.remove(spec.vehiclesInTrigger, i);
-                                -- todo Kein Fahrzeug mehr im trigger, schranke schließen
-                                if #spec.vehiclesInTrigger == 0 then
-                                    self:TriggerAnimation("LastVehicleLeftTrigger");
-                                end
                                 AutomaticCarWash.DebugText("Removed hard attached rootNode: %s)", attachedImplement.object.rootNode);
                             end
                         end
@@ -295,6 +312,8 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
     end
 end
 
+---Triggers all configured animated objects matching the given trigger type
+-- @param string animationType trigger type defined in the XML configuration
 function AutomaticCarWash:TriggerAnimation(animationType)
     local spec = self.spec_automaticCarWash;
     AutomaticCarWash.DebugText("TriggerAnimation type: %s", animationType);
@@ -413,7 +432,7 @@ function AutomaticCarWash:CleanCar()
         if actionDone then
             -- nix machen
         else
-            -- todo Alle fahrzeuge im trigger fertig, schlagbau hoch
+            -- Alle fahrzeuge im trigger fertig, schlagbau hoch
             self:TriggerAnimation("AllVehiclesInTriggerDone");
         end
 
