@@ -105,8 +105,8 @@
           </TransformGroup>
         </TransformGroup>
         <TransformGroup name="blocks" translation="-5.55241 -0.3 3" nodeId="60">
-          <Shape name="blockFront" translation="0 -1.5 0" shapeId="10" kinematic="true" collisionFilterGroup="0x1000000" collisionFilterMask="0xfffffbff" nodeId="61" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="9"/>
-          <Shape name="blockBack" translation="12 -1.5 0" shapeId="10" kinematic="true" collisionFilterGroup="0x1000000" collisionFilterMask="0xfffffbff" nodeId="62" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="9"/>
+          <Shape name="blockFront" translation="0 -1.5 0" shapeId="10" kinematic="true" collisionFilterGroup="0x1000000" collisionFilterMask="0x1000000" nodeId="61" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="9"/>
+          <Shape name="blockBack" translation="12 -1.5 0" shapeId="10" kinematic="true" collisionFilterGroup="0x1000000" collisionFilterMask="0x1000000" nodeId="62" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="9"/>
         </TransformGroup>
       </TransformGroup>
     </TransformGroup>
