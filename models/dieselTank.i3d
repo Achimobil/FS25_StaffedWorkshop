@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<i3D name="dieselTank.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+    <Asset>
+        <Export program="GIANTS Editor 64bit" version="10.0.12"/>
+    </Asset>
+    <Files>
+        <File fileId="1" filename="$data/placeables/brandless/dieselTanks/level02/dieselTanksLevel02_diffuse.png"/>
+        <File fileId="2" filename="$data/placeables/brandless/dieselTanks/level02/dieselTanksLevel02_normal.png"/>
+        <File fileId="3" filename="$data/placeables/brandless/dieselTanks/level02/dieselTanksLevel02_specular.png"/>
+        <File fileId="10" filename="$data/placeables/brandless/dieselTanks/shared/dieselTanksDecals_diffuse.png"/>
+        <File fileId="4" filename="$data/shaders/placeableShader.xml"/>
+        <File fileId="8" filename="$data/shared/default_normal.png"/>
+        <File fileId="9" filename="$data/shared/default_specular.png"/>
+        <File fileId="7" filename="$data/shared/window_diffuse.png"/>
+    </Files>
+    <Materials>
+        <Material name="dieselTanksDecals_mat" materialId="8" alphaBlending="true">
+            <Texture fileId="10"/>
+            <Normalmap fileId="8"/>
+        </Material>
+        <Material name="dieselTanksLevel02_mat" materialId="7" customShaderId="4">
+            <Texture fileId="1"/>
+            <Normalmap fileId="2"/>
+            <Glossmap fileId="3"/>
+        </Material>
+        <Material name="lambert1" materialId="5" diffuseColor="0.501961 0.501961 0.501961 1"/>
+        <Material name="window_mat" materialId="6" alphaBlending="true">
+            <Texture fileId="7"/>
+            <Normalmap fileId="8"/>
+            <Glossmap fileId="9"/>
+        </Material>
+    </Materials>
+    <Shapes externalShapesFile="dieselTank.i3d.shapes"/>
+    <Scene>
+        <TransformGroup name="dieselTanks02" clipDistance="300" nodeId="19">
+            <TransformGroup name="visuals" nodeId="46">
+                <Shape name="dieselTanksLevel02Vis" shapeId="1" clipDistance="200" nodeId="47" castsShadows="true" receiveShadows="true" materialIds="7"/>
+                <Shape name="glass" translation="-0.314409 1.10866 2.34435" shapeId="2" clipDistance="15" nodeId="48" castsShadows="true" receiveShadows="true" materialIds="6"/>
+                <Shape name="decals" translation="-0.256364 1.0443 2.18888" shapeId="3" clipDistance="20" nodeId="49" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="8"/>
+            </TransformGroup>
+            <TransformGroup name="collisions" nodeId="50">
+                <Shape name="collision" shapeId="4" static="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="51" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+                <Shape name="tipCollision" translation="0 0 0.545893" shapeId="5" static="true" collisionFilterGroup="0x8" collisionFilterMask="0x1" nodeId="52" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+            </TransformGroup>
+        </TransformGroup>
+    </Scene>
+</i3D>
