@@ -69,6 +69,7 @@ V 2.0.2.1 @ 17.02.2025 - Special case for hard attached implements added
 V 2.1.0.0 @ 11.03.2026 - Added Animations with 3 trigger types
 V 2.1.0.1 @ 05.04.2026 - Fixed rain and endless drying problem.
 V 2.1.0.2 @ 05.04.2026 - Changed LastVehicleLeftTrigger to trigger when the last edge of the trailer leaves the trigger
+V 2.1.0.3 @ 30.06.2026 - When Silo with load trigger is available, loading is activated (Used for automatic fill up with diesel)
 ]]
 
 AutomaticCarWash = {};
@@ -176,6 +177,7 @@ end
 ---
 function AutomaticCarWash:onFinalizePlacement()
     local spec = self.spec_automaticCarWash;
+    local specSilo = self.spec_silo;
 
     if self.isServer then
         if spec.triggerNode ~= nil then
@@ -207,6 +209,7 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
     AutomaticCarWash.DebugText("onTriggerCallback(%s, %s, %s, %s, %s)", triggerId, otherId, onEnter, onLeave, onStay)
 
     local spec = self.spec_automaticCarWash;
+    local specSilo = self.spec_silo;
     local vehicle = g_currentMission:getNodeObject(otherId);
     if vehicle ~= nil and vehicle.rootNode ~= nil then
 --         AutomaticCarWash.DebugTable("vehicle", vehicle);
@@ -231,6 +234,18 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
                     self:CleanCar();
                 else
                     self:CleanOneVehicle(vehicle);
+                end
+            end
+
+            --  when there is a Loadingtrigger in a silo, activate automaticFilling
+            if specSilo ~= nil and specSilo.loadingStation ~= nil and specSilo.loadingStation.loadTriggers ~= nil then
+                for _,loadTrigger in pairs(specSilo.loadingStation.loadTriggers) do
+                    local oldRequiresActiveVehicle = loadTrigger.requiresActiveVehicle;
+                    loadTrigger.requiresActiveVehicle = false;
+                    if not loadTrigger.isLoading and loadTrigger:getIsFillableObjectAvailable() then
+                        loadTrigger:toggleLoading();
+                    end
+                    loadTrigger.requiresActiveVehicle = oldRequiresActiveVehicle;
                 end
             end
 

@@ -94,21 +94,24 @@
                 <!-- </part> -->
                 <!-- green light -->
                 <part node="0>6|0|3|0|2">
-                    <keyFrame time="0.0" visibility="false"/>
-                    <keyFrame time="1.0" visibility="true"/>
+                    <keyFrame time="0.99" visibility="false"/>
+                    <keyFrame time="1.00" visibility="true"/>
                 </part>
+
                 <part node="0>6|0|3|0|3">
-                    <keyFrame time="0.0" visibility="false"/>
-                    <keyFrame time="1.0" visibility="true"/>
+                    <keyFrame time="0.99" visibility="false"/>
+                    <keyFrame time="1.00" visibility="true"/>
                 </part>
+
                 <!-- red light -->
                 <part node="0>6|0|3|0|0">
-                    <keyFrame time="0.0" visibility="true"/>
-                    <keyFrame time="1.0" visibility="false"/>
+                    <keyFrame time="0.99" visibility="true"/>
+                    <keyFrame time="1.00" visibility="false"/>
                 </part>
+
                 <part node="0>6|0|3|0|1">
-                    <keyFrame time="0.0" visibility="true"/>
-                    <keyFrame time="1.0" visibility="false"/>
+                    <keyFrame time="0.99" visibility="true"/>
+                    <keyFrame time="1.00" visibility="false"/>
                 </part>
                 <part node="blockFront">
                     <keyFrame time="0.0" translation="0 1.5 0" rotation="0 0 0"/>
@@ -128,7 +131,7 @@
 
     <silo playerActionTrigger="refillPlayerTrigger" sellWarningText="$l10n_info_tankNotEmpty">
         <loadingStation node="loadingTrigger" supportsExtension="false">
-            <loadTrigger triggerNode="loadingTrigger" fillTypes="DIESEL" fillLitersPerSecond="20" dischargeNode="dischargeNode" startFillText="$l10n_action_refuel" stopFillText="$l10n_action_stopRefuel"/>
+            <loadTrigger triggerNode="loadingTrigger" fillTypes="DIESEL" fillLitersPerSecond="20" dischargeNode="dischargeNode" startFillText="$l10n_action_refuel" stopFillText="$l10n_action_stopRefuel" autoStart="true"/>
         </loadingStation>
 
         <unloadingStation supportsExtension="false">
