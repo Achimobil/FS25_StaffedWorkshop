@@ -2,7 +2,7 @@
 
 <i3D name="pitStop.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
   <Asset>
-    <Export program="GIANTS Editor 64bit" version="10.0.12"/>
+    <Export program="GIANTS Editor 64bit" version="10.0.13"/>
   </Asset>
 
   <Files>
@@ -25,25 +25,25 @@
 
 
   <Materials>
-    <Material name="dieselTanksDecals_mat" materialId="84" alphaBlending="true">
+    <Material name="dieselTanksDecals_mat" materialId="5" alphaBlending="true">
       <Texture fileId="20"/>
       <Normalmap fileId="18"/>
     </Material>
-    <Material name="dieselTanksLevel02_mat" materialId="85" customShaderId="8">
+    <Material name="dieselTanksLevel02_mat" materialId="6" customShaderId="8">
       <Texture fileId="14"/>
       <Normalmap fileId="15"/>
       <Glossmap fileId="16"/>
     </Material>
-    <Material name="lambert1" materialId="5" diffuseColor="0.494118 0.494118 0.494118 1">
+    <Material name="lambert1" materialId="7" diffuseColor="0.494118 0.494118 0.494118 1">
     </Material>
-    <Material name="lambert1" materialId="6" diffuseColor="0.501961 0.501961 0.501961 1">
+    <Material name="lambert1" materialId="8" diffuseColor="0.501961 0.501961 0.501961 1">
     </Material>
-    <Material name="railroadProps_mat" materialId="7" customShaderId="8">
+    <Material name="railroadProps_mat" materialId="9" customShaderId="8">
       <Texture fileId="5"/>
       <Normalmap fileId="6"/>
       <Glossmap fileId="7"/>
     </Material>
-    <Material name="railRoadSignalsEmissive01_mat" materialId="139" customShaderId="12" customShaderVariation="baseMap_colorScale_blink">
+    <Material name="railRoadSignalsEmissive01_mat" materialId="10" customShaderId="12" customShaderVariation="baseMap_colorScale_blink">
       <Texture fileId="5"/>
       <Normalmap fileId="6"/>
       <Glossmap fileId="7"/>
@@ -51,7 +51,7 @@
       <CustomParameter name="colorScale" value="0 1 0"/>
       <CustomParameter name="blinkSimple" value="0 0"/>
     </Material>
-    <Material name="railRoadSignalsEmissive01_mat" materialId="116" customShaderId="12" customShaderVariation="baseMap_colorScale_blink">
+    <Material name="railRoadSignalsEmissive01_mat" materialId="11" customShaderId="12" customShaderVariation="baseMap_colorScale_blink">
       <Texture fileId="5"/>
       <Normalmap fileId="6"/>
       <Glossmap fileId="7"/>
@@ -59,14 +59,14 @@
       <CustomParameter name="colorScale" value="1 0 0"/>
       <CustomParameter name="blinkSimple" value="0 0"/>
     </Material>
-    <Material name="UnnamedMaterial" materialId="9" diffuseColor="1 1 1 1">
+    <Material name="UnnamedMaterial" materialId="12" diffuseColor="1 1 1 1">
     </Material>
-    <Material name="warningStripes_mat" materialId="10">
+    <Material name="warningStripes_mat" materialId="13">
       <Texture fileId="1"/>
       <Normalmap fileId="2"/>
       <Glossmap fileId="3"/>
     </Material>
-    <Material name="window_mat" materialId="86" alphaBlending="true">
+    <Material name="window_mat" materialId="14" alphaBlending="true">
       <Texture fileId="17"/>
       <Normalmap fileId="18"/>
       <Glossmap fileId="19"/>
@@ -78,72 +78,88 @@
   </Shapes>
 
   <Scene>
-    <TransformGroup name="workshop" nodeId="22">
-      <TransformGroup name="clearAreas" nodeId="23">
-        <TransformGroup name="clearAreaStart01" translation="-7.5 0 -1" nodeId="24">
-          <TransformGroup name="clearAreaWidth01" translation="0 0 7.5" nodeId="25"/>
-          <TransformGroup name="clearAreaHeight01" translation="15 0 0" nodeId="26"/>
+    <TransformGroup name="workshop" nodeId="29">
+      <TransformGroup name="clearAreas" nodeId="30">
+        <TransformGroup name="clearAreaStart01" translation="-7.5 0 -1" nodeId="31">
+          <TransformGroup name="clearAreaWidth01" translation="0 0 7.5" nodeId="32"/>
+          <TransformGroup name="clearAreaHeight01" translation="15 0 0" nodeId="33"/>
         </TransformGroup>
       </TransformGroup>
-      <TransformGroup name="levelAreas" nodeId="27">
-        <TransformGroup name="levelAreaStart01" translation="-7.5 0 -1" nodeId="28">
-          <TransformGroup name="levelAreaWidth01" translation="0 0 7.5" nodeId="29"/>
-          <TransformGroup name="levelAreaHeight01" translation="15 0 0" nodeId="30"/>
+      <TransformGroup name="levelAreas" nodeId="34">
+        <TransformGroup name="levelAreaStart01" translation="-7.5 0 -1" nodeId="35">
+          <TransformGroup name="levelAreaWidth01" translation="0 0 7.5" nodeId="36"/>
+          <TransformGroup name="levelAreaHeight01" translation="15 0 0" nodeId="37"/>
         </TransformGroup>
       </TransformGroup>
-      <TransformGroup name="indoorAreas" nodeId="31">
-        <TransformGroup name="indoorAreaStart01" translation="-8 0 -5" nodeId="32">
-          <TransformGroup name="indoorAreaWidth01" translation="0 0 12" nodeId="33"/>
-          <TransformGroup name="indoorAreaHeight01" translation="16 0 0" nodeId="34"/>
+      <TransformGroup name="indoorAreas" nodeId="38">
+        <TransformGroup name="indoorAreaStart01" translation="-8 0 -5" nodeId="39">
+          <TransformGroup name="indoorAreaWidth01" translation="0 0 12" nodeId="40"/>
+          <TransformGroup name="indoorAreaHeight01" translation="16 0 0" nodeId="41"/>
         </TransformGroup>
       </TransformGroup>
-      <TransformGroup name="testAreas" nodeId="35">
-        <TransformGroup name="testAreaStart01" translation="-7.5 0 -1" nodeId="36">
-          <TransformGroup name="testAreaEnd01" translation="15 8 7" nodeId="37"/>
+      <TransformGroup name="testAreas" nodeId="42">
+        <TransformGroup name="testAreaStart01" translation="-7.5 0 -1" nodeId="43">
+          <TransformGroup name="testAreaEnd01" translation="15 8 7" nodeId="44"/>
         </TransformGroup>
       </TransformGroup>
-      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="38">
-        <TransformGroup name="tipOcclusionUpdateAreaStart01" translation="-7.5 0 -1" nodeId="39">
-          <TransformGroup name="tipOcclusionUpdateAreaEnd01" translation="15 0 7.5" nodeId="40"/>
+      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="45">
+        <TransformGroup name="tipOcclusionUpdateAreaStart01" translation="-7.5 0 -1" nodeId="46">
+          <TransformGroup name="tipOcclusionUpdateAreaEnd01" translation="15 0 7.5" nodeId="47"/>
         </TransformGroup>
       </TransformGroup>
-      <TransformGroup name="workshop" nodeId="41">
-        <Shape name="warningStripes" translation="0.75229 0 0" shapeId="1" clipDistance="100" nodeId="42" castsShadows="false" receiveShadows="true" terrainDecal="true" materialIds="10"/>
-        <Shape name="vehicleTrigger" translation="1.98876 0 0" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" clipDistance="300" nodeId="43" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="6"/>
+      <TransformGroup name="workshop" nodeId="48">
+        <Shape name="warningStripes" translation="0.75229 0 0" shapeId="1" clipDistance="100" nodeId="49" castsShadows="false" receiveShadows="true" terrainDecal="true" materialIds="13"/>
+        <Shape name="vehicleTrigger" translation="1.98876 0 0" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" clipDistance="300" nodeId="50" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="8"/>
       </TransformGroup>
-      <TransformGroup name="visuals" nodeId="44">
-        <TransformGroup name="railroadCrossing" lockedgroup="true" translation="-5.48559 0.9 0" clipDistance="300" nodeId="45">
-          <TransformGroup name="railroadCrossing" lodDistance="0 30" clipDistance="300" nodeId="46">
-            <Shape name="LOD0" shapeId="3" nodeId="47" castsShadows="true" receiveShadows="true" materialIds="7"/>
-            <Shape name="LOD1" shapeId="4" nodeId="48" castsShadows="true" receiveShadows="true" materialIds="7"/>
-            <Shape name="col" shapeId="5" static="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" nodeId="49" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+      <TransformGroup name="visuals" nodeId="51">
+        <TransformGroup name="railroadCrossing" lockedgroup="true" translation="-5.48559 0.9 0" clipDistance="300" nodeId="52">
+          <TransformGroup name="railroadCrossing" lodDistance="0 30" clipDistance="300" nodeId="53">
+            <Shape name="LOD0" shapeId="3" nodeId="54" castsShadows="true" receiveShadows="true" materialIds="9"/>
+            <Shape name="LOD1" shapeId="4" nodeId="55" castsShadows="true" receiveShadows="true" materialIds="9"/>
+            <Shape name="col" shapeId="5" static="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" nodeId="56" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="7"/>
           </TransformGroup>
-          <TransformGroup name="barrier" nodeId="101"/>
-          <TransformGroup name="trafficBlockingPosition" translation="0.98 -0.1 5.4" rotation="0 -90 0" nodeId="52"/>
-          <TransformGroup name="signals" nodeId="53">
-            <TransformGroup name="signal" nodeId="54">
-              <Shape name="railroadCrossingLight01" translation="1.10357 2.0668 -0.26285" shapeId="6" clipDistance="300" nodeId="59" castsShadows="true" receiveShadows="true" materialIds="116"/>
-              <Light name="pointLight" translation="1.28154 2.0668 -0.26285" nodeId="56" type="point" color="1 0 0" emitDiffuse="true" emitSpecular="true" range="3"/>
-              <Shape name="railroadCrossingLight02" translation="1.10357 2.0668 0.267493" shapeId="7" clipDistance="300" nodeId="57" castsShadows="true" receiveShadows="true" materialIds="139"/>
-              <Light name="pointLight" translation="1.28153 2.0668 0.267493" nodeId="58" type="point" color="0 1 0" emitDiffuse="true" emitSpecular="true" range="3"/>
+          <TransformGroup name="barrier" nodeId="57"/>
+          <TransformGroup name="trafficBlockingPosition" translation="0.98 -0.1 5.4" rotation="0 -90 0" nodeId="58"/>
+          <TransformGroup name="signals" nodeId="59">
+            <TransformGroup name="signal" nodeId="60">
+              <Shape name="railroadCrossingLight01" translation="1.10357 2.0668 -0.26285" shapeId="6" clipDistance="300" nodeId="61" castsShadows="true" receiveShadows="true" materialIds="11"/>
+              <Light name="pointLight" translation="1.28154 2.0668 -0.26285" nodeId="62" type="point" color="1 0 0" emitDiffuse="true" emitSpecular="true" range="3"/>
+              <Shape name="railroadCrossingLight02" translation="1.10357 2.0668 0.267493" shapeId="7" clipDistance="300" nodeId="63" castsShadows="true" receiveShadows="true" materialIds="10"/>
+              <Light name="pointLight" translation="1.28153 2.0668 0.267493" nodeId="64" type="point" color="0 1 0" emitDiffuse="true" emitSpecular="true" range="3"/>
             </TransformGroup>
           </TransformGroup>
         </TransformGroup>
-        <TransformGroup name="blocks" translation="-5.55241 -0.3 3" nodeId="60">
-          <Shape name="blockFront" translation="0 -1.5 0" shapeId="8" kinematic="true" collisionFilterGroup="0x1000000" collisionFilterMask="0x1000000" nodeId="61" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="9"/>
-          <Shape name="blockBack" translation="12 -1.5 0" shapeId="8" kinematic="true" collisionFilterGroup="0x1000000" collisionFilterMask="0x1000000" nodeId="62" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="9"/>
+        <TransformGroup name="blocks" translation="-5.55241 -0.3 3" nodeId="65">
+          <Shape name="blockFront" translation="0 -1.5 0" shapeId="8" kinematic="true" collisionFilterGroup="0x1000000" collisionFilterMask="0x1000000" nodeId="66" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="12"/>
+          <Shape name="blockBack" translation="12 -1.5 0" shapeId="8" kinematic="true" collisionFilterGroup="0x1000000" collisionFilterMask="0x1000000" nodeId="67" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="12"/>
         </TransformGroup>
-        <TransformGroup name="dieselTanks02" translation="-4.49456 0 3.92927e-07" rotation="-0 90 0" clipDistance="300" nodeId="93">
-          <TransformGroup name="visuals" nodeId="94">
-            <Shape name="dieselTanksLevel02Vis" shapeId="9" clipDistance="200" nodeId="95" castsShadows="true" receiveShadows="true" materialIds="85"/>
-            <Shape name="glass" translation="-0.314409 1.10866 2.34435" shapeId="10" clipDistance="15" nodeId="96" castsShadows="true" receiveShadows="true" materialIds="86"/>
-            <Shape name="decals" translation="-0.256364 1.0443 2.18888" shapeId="11" clipDistance="20" nodeId="97" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="84"/>
+        <TransformGroup name="dieselTanks02" translation="-4.49456 0 3.92927e-07" rotation="-0 90 0" clipDistance="300" nodeId="68">
+          <TransformGroup name="visuals" nodeId="69">
+            <Shape name="dieselTanksLevel02Vis" shapeId="9" clipDistance="200" nodeId="70" castsShadows="true" receiveShadows="true" materialIds="6"/>
+            <Shape name="glass" translation="-0.314409 1.10866 2.34435" shapeId="10" clipDistance="15" nodeId="71" castsShadows="true" receiveShadows="true" materialIds="14"/>
+            <Shape name="decals" translation="-0.256364 1.0443 2.18888" shapeId="11" clipDistance="20" nodeId="72" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="5"/>
           </TransformGroup>
-          <TransformGroup name="collisions" nodeId="98">
-            <Shape name="collision" shapeId="12" static="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="99" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
-            <Shape name="tipCollision" translation="0 0 0.545893" shapeId="13" static="true" collisionFilterGroup="0x8" collisionFilterMask="0x1" nodeId="100" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+          <TransformGroup name="collisions" nodeId="73">
+            <Shape name="collision" shapeId="12" static="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="74" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+            <Shape name="tipCollision" translation="0 0 0.545893" shapeId="13" static="true" collisionFilterGroup="0x8" collisionFilterMask="0x1" nodeId="75" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
           </TransformGroup>
         </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="silo" nodeId="81">
+        <TransformGroup name="unloadingStation" nodeId="82">
+          <Shape name="exactFillRootNode" translation="0 -0.45 0" shapeId="14" static="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="83" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+        </TransformGroup>
+        <TransformGroup name="loadingStation" nodeId="84">
+          <Shape name="loadingTrigger" translation="0 5 0" shapeId="15" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x40000000" nodeId="85" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+          <TransformGroup name="dischargeNode" nodeId="86"/>
+          <TransformGroup name="loadingMarker" translation="0 0 3.20804" nodeId="87"/>
+        </TransformGroup>
+        <Shape name="refillPlayerTrigger" translation="-2.27926 0 -0.945558" shapeId="16" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="88" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8">
+          <TransformGroup name="refillMarker" nodeId="89"/>
+        </Shape>
+        <TransformGroup name="storage" nodeId="90"/>
+        <TransformGroup name="hotspotNode" nodeId="91"/>
+        <Shape name="infoTrigger" translation="0 5 0" shapeId="15" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="92" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
       </TransformGroup>
     </TransformGroup>
   </Scene>

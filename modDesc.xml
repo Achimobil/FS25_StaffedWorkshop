@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="109">
+<modDesc descVersion="110">
     <author>Achimobil</author>
-    <version>1.1.0.12</version>
+    <version>1.1.0.13</version>
 
     <title>
         <en>Staffed Workshop</en>
@@ -38,6 +38,7 @@ Changelog
 
 1.1.0.5 - Kollisionen der Rampen korrigiert und Triggermarker entfernt
 1.1.0.8 - Animationen vom Skript ansteuerbar und als PitStop für beide Richtungen hinzugefügt. Trigger an standard Werkstatt vergrößert
+1.1.0.13 - Dieseltank jetzt so verbaut dass man davorstehend auch direkt Tanken kann in PitStop.xml
 
 1.1.0.4
 - Schreibfehler korrigiert und Beschreibung verbessert
@@ -109,6 +110,11 @@ Changelog
         </type>
         <type name="MyAutomaticCarWash" parent="simplePlaceable" filename="$dataS/scripts/placeables/Placeable.lua">
             <specialization name="AutomaticCarWash"/>
+        </type>
+        <type name="MyAutomaticCarWashWithDiesel" parent="simplePlaceable" filename="$dataS/scripts/placeables/Placeable.lua">
+            <specialization name="AutomaticCarWash"/>
+            <specialization name="silo" />
+            <specialization name="infoTrigger" />
         </type>
     </placeableTypes>
 

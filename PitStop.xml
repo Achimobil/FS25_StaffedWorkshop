@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<placeable type="MyAutomaticCarWash" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/placeable.xsd">
+<placeable type="MyAutomaticCarWashWithDiesel" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/placeable.xsd">
     <storeData>
         <name>$l10n_staffedWorkshop</name>
         <functions>
@@ -62,11 +62,15 @@
 
     <triggerMarkers>
         <triggerMarker node="warningStripes"/>
+        <triggerMarker node="loadingMarker" filename="$data/shared/assets/marker/markerIconLoad.i3d" />
+        <triggerMarker node="refillMarker"  filename="$data/shared/assets/marker/markerIconWrench.i3d" />
     </triggerMarkers>
 
     <hotspots>
-        <hotspot type="SHOP" linkNode="vehicleTrigger" />
+        <hotspot type="SHOP" linkNode="vehicleTrigger" teleportNode="refillMarker"/>
     </hotspots>
+
+    <infoTrigger triggerNode="infoTrigger"/>
 
     <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.15"  damageAmount="-0.1"  wearAmount="0" >
         <animatedObjects>
@@ -122,6 +126,22 @@
         </animatedObject>
     </animatedObjects>
 
+    <silo playerActionTrigger="refillPlayerTrigger" sellWarningText="$l10n_info_tankNotEmpty">
+        <loadingStation node="loadingTrigger" supportsExtension="false">
+            <loadTrigger triggerNode="loadingTrigger" fillTypes="DIESEL" fillLitersPerSecond="20" dischargeNode="dischargeNode" startFillText="$l10n_action_refuel" stopFillText="$l10n_action_stopRefuel"/>
+        </loadingStation>
+
+        <unloadingStation supportsExtension="false">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="DIESEL"/>
+        </unloadingStation>
+
+        <storages>
+            <storage node="storage" fillTypes="DIESEL" capacity="10000" isExtension="false">
+                <startFillLevel fillType="DIESEL" fillLevel="0" />
+            </storage>
+        </storages>
+    </silo>
+
     <i3dMappings>
         <i3dMapping id="clearAreaStart01" node="0>0|0" />
         <i3dMapping id="clearAreaWidth01" node="0>0|0|0" />
@@ -140,5 +160,14 @@
         <i3dMapping id="vehicleTrigger" node="0>5|1" />
         <i3dMapping id="blockFront" node="0>6|1|0" />
         <i3dMapping id="blockBack" node="0>6|1|1" />
+
+        <i3dMapping id="exactFillRootNode" node="0>7|0|0" />
+        <i3dMapping id="loadingTrigger" node="0>7|1|0" />
+        <i3dMapping id="dischargeNode" node="0>7|1|1" />
+        <i3dMapping id="loadingMarker" node="0>7|1|2" />
+        <i3dMapping id="refillPlayerTrigger" node="0>7|2" />
+        <i3dMapping id="refillMarker" node="0>7|2|0" />
+        <i3dMapping id="storage" node="0>7|3" />
+        <i3dMapping id="infoTrigger" node="0>7|5" />
     </i3dMappings>
 </placeable>
