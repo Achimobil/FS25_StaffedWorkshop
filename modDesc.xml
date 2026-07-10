@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="110">
     <author>Achimobil</author>
-    <version>1.1.0.14</version>
+    <version>1.1.0.15</version>
 
     <title>
         <en>Staffed Workshop</en>
@@ -40,6 +40,7 @@ Changelog
 1.1.0.8 - Animationen vom Skript ansteuerbar und als PitStop für beide Richtungen hinzugefügt. Trigger an standard Werkstatt vergrößert
 1.1.0.13 - Dieseltank jetzt so verbaut dass man davorstehend auch direkt Tanken kann in PitStop.xml
 1.1.0.14 - Autoamtisch tanken starten in skript eingefügt und funktioniert mit PitStop.xml
+1.1.0.15 - Automatisches Tanken funktioniert jetzt auch auf Dedicated Servern
 
 1.1.0.4
 - Schreibfehler korrigiert und Beschreibung verbessert
