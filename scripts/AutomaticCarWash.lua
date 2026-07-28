@@ -71,6 +71,7 @@ V 2.1.0.1 @ 05.04.2026 - Fixed rain and endless drying problem.
 V 2.1.0.2 @ 05.04.2026 - Changed LastVehicleLeftTrigger to trigger when the last edge of the trailer leaves the trigger
 V 2.1.0.3 @ 30.06.2026 - When Silo with load trigger is available, loading is activated (Used for automatic fill up with diesel)
 V 2.1.0.4 @ 11.07.2026 - Fixed automatic refueling on dedicated servers by using the vehicle owner's farm to determine the available fill type
+V 2.1.0.5 @ 28.07.2026 - Automatic refueling is now limited to enterable vehicles to prevent attached fuel trailers from being refueled
 ]]
 
 AutomaticCarWash = {};
@@ -228,7 +229,7 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
                     self:TriggerAnimation("VehicleEnterTrigger");
                 end
                 table.insert(spec.vehiclesInTrigger, vehicle.rootNode);
-                AutomaticCarWash.DebugText("Added rootNode: %s)", vehicle.rootNode);
+                AutomaticCarWash.DebugText("Added rootNode: %s", vehicle.rootNode);
                 if spec.timerId == nil then
                     self:CleanCar();
                 else
@@ -493,11 +494,23 @@ function AutomaticCarWash.StartLoading(loadTrigger)
     AutomaticCarWash.DebugText("StartLoading start");
     if not loadTrigger.isLoading then
 
+        if loadTrigger.validFillableObject == nil then
+            AutomaticCarWash.DebugText("Automatic loading skipped: no valid fillable object");
+            return;
+        end
+
+        AutomaticCarWash.DebugText("validFillableObject: %s", loadTrigger.validFillableObject:getName())
+
+        if loadTrigger.validFillableObject.spec_enterable == nil then
+            AutomaticCarWash.DebugText("Automatic loading skipped: object is not enterable");
+            return;
+        end
+
         -- check the farmId of the validFillableObject
         local vehicleFarmId = loadTrigger.validFillableObject:getOwnerFarmId();
         AutomaticCarWash.DebugText("vehicleFarmId=%s", vehicleFarmId);
         local fillLevels = loadTrigger.source:getAllFillLevels(vehicleFarmId);
-        AutomaticCarWash.DebugTable("fillLevels", fillLevels);
+--         AutomaticCarWash.DebugTable("fillLevels", fillLevels);
         local firstFillType = nil;
         for fillTypeIndex, fillLevel in pairs(fillLevels) do
             if (loadTrigger.fillTypes == nil or loadTrigger.fillTypes[fillTypeIndex]) and loadTrigger.validFillableObject:getFillUnitAllowsFillType(loadTrigger.validFillableFillUnitIndex, fillTypeIndex) then
