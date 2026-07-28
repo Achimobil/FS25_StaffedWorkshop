@@ -84,14 +84,6 @@
     <animatedObjects>
         <animatedObject saveId="barrier1" >
             <animation duration="3">
-                <!-- <part node="0>6|0|1"> -->
-                    <!-- <keyFrame time="0.0" translation="0 1.025 0" rotation="90 0 0"/> -->
-                    <!-- <keyFrame time="1.0" translation="0 1.025 0" rotation="0 0 0"/> -->
-                <!-- </part> -->
-                <!-- <part node="0>6|0|3|0"> -->
-                    <!-- <keyFrame time="0.0" visibility="true"/> -->
-                    <!-- <keyFrame time="1.0" visibility="false"/> -->
-                <!-- </part> -->
                 <!-- green light -->
                 <part node="0>6|0|3|0|2">
                     <keyFrame time="0.99" visibility="false"/>
@@ -152,9 +144,6 @@
         <i3dMapping id="levelAreaStart01" node="0>1|0" />
         <i3dMapping id="levelAreaWidth01" node="0>1|0|0" />
         <i3dMapping id="levelAreaHeight01" node="0>1|0|1" />
-        <!-- <i3dMapping id="indoorAreaStart01" node="0>2|0" /> -->
-        <!-- <i3dMapping id="indoorAreaWidth01" node="0>2|0|0" /> -->
-        <!-- <i3dMapping id="indoorAreaHeight01" node="0>2|0|1" /> -->
         <i3dMapping id="testAreaStart01" node="0>3|0" />
         <i3dMapping id="testAreaEnd01" node="0>3|0|0" />
         <i3dMapping id="tipOcclusionUpdateAreaStart01" node="0>4|0" />

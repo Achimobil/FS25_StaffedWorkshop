@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="111">
     <author>Achimobil</author>
-    <version>1.1.0.16</version>
+    <version>1.1.0.17</version>
 
     <title>
         <en>Staffed Workshop</en>
@@ -42,6 +42,7 @@ Changelog
 1.1.0.14 - Autoamtisch tanken starten in skript eingefügt und funktioniert mit PitStop.xml
 1.1.0.15 - Automatisches Tanken funktioniert jetzt auch auf Dedicated Servern
 1.1.0.16 - Automatisches Tanken auf Zugfahrzeuge beschränkt, damit angehängte Tankfässer nicht mehr automatisch betankt werden
+1.1.0.17 - Zweite PitStop-Variante überarbeitet und die enthaltenen Elemente angepasst
 
 1.1.0.4
 - Schreibfehler korrigiert und Beschreibung verbessert

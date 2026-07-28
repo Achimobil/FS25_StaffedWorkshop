@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<placeable type="MyAutomaticCarWash" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/placeable.xsd">
+<placeable type="MyAutomaticCarWashWithDiesel" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/placeable.xsd">
     <storeData>
         <name>$l10n_staffedWorkshop</name>
         <functions>
@@ -62,11 +62,15 @@
 
     <triggerMarkers>
         <triggerMarker node="warningStripes"/>
+        <triggerMarker node="loadingMarker" filename="$data/shared/assets/marker/markerIconLoad.i3d" />
+        <triggerMarker node="refillMarker"  filename="$data/shared/assets/marker/markerIconWrench.i3d" />
     </triggerMarkers>
 
     <hotspots>
-        <hotspot type="SHOP" linkNode="vehicleTrigger" />
+        <hotspot type="SHOP" linkNode="vehicleTrigger" teleportNode="refillMarker"/>
     </hotspots>
+
+    <infoTrigger triggerNode="infoTrigger"/>
 
     <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.15"  damageAmount="-0.1"  wearAmount="0" >
         <animatedObjects>
@@ -80,45 +84,58 @@
     <animatedObjects>
         <animatedObject saveId="barrier1" >
             <animation duration="3">
-                <part node="0>6|0|1">
-                    <keyFrame time="0.0" translation="0 1.025 0" rotation="90 0 0"/>
-                    <keyFrame time="1.0" translation="0 1.025 0" rotation="0 0 0"/>
+                <!-- green light -->
+                <part node="0>6|0|3|0|2">
+                    <keyFrame time="0.99" visibility="false"/>
+                    <keyFrame time="1.00" visibility="true"/>
                 </part>
-                <part node="0>6|0|3|0">
-                    <keyFrame time="0.0" visibility="true"/>
-                    <keyFrame time="1.0" visibility="false"/>
+
+                <part node="0>6|0|3|0|3">
+                    <keyFrame time="0.99" visibility="false"/>
+                    <keyFrame time="1.00" visibility="true"/>
                 </part>
+
+                <!-- red light -->
+                <part node="0>6|0|3|0|0">
+                    <keyFrame time="0.99" visibility="true"/>
+                    <keyFrame time="1.00" visibility="false"/>
+                </part>
+
                 <part node="0>6|0|3|0|1">
-                    <keyFrame time="0.0" visibility="true"/>
-                    <keyFrame time="1.0" visibility="false"/>
-                </part>
-                <part node="0>6|0|3|0|1|1">
-                    <keyFrame time="0.0" visibility="true"/>
-                    <keyFrame time="1.0" visibility="false"/>
-                </part>
-                <part node="0>6|0|3|0|0|0">
-                    <keyFrame time="0.0" visibility="true"/>
-                    <keyFrame time="1.0" visibility="false"/>
-                </part>
-                <part node="0>6|0|3|0|1|0">
-                    <keyFrame time="0.0" visibility="true"/>
-                    <keyFrame time="1.0" visibility="false"/>
+                    <keyFrame time="0.99" visibility="true"/>
+                    <keyFrame time="1.00" visibility="false"/>
                 </part>
                 <part node="blockFront">
-                    <keyFrame time="0.0" translation="12 1.5 0" rotation="0 0 0"/>
-                    <keyFrame time="1.0" translation="12 -1.5 0" rotation="0 0 0"/>
+                    <keyFrame time="0.0" translation="0 1.5 0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" translation="0 -1.5 0" rotation="0 0 0"/>
                 </part>
             </animation>
         </animatedObject>
         <animatedObject saveId="barrier2" >
             <animation duration="0.5">
                 <part node="blockBack">
-                    <keyFrame time="0.0" translation="0 -1.5 0" rotation="0 0 0"/>
-                    <keyFrame time="1.0" translation="0 1.5 0" rotation="0 0 0"/>
+                    <keyFrame time="0.0" translation="12 -1.5 0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" translation="12 1.5 0" rotation="0 0 0"/>
                 </part>
             </animation>
         </animatedObject>
     </animatedObjects>
+
+    <silo playerActionTrigger="refillPlayerTrigger" sellWarningText="$l10n_info_tankNotEmpty">
+        <loadingStation node="loadingTrigger" supportsExtension="false">
+            <loadTrigger triggerNode="loadingTrigger" fillTypes="DIESEL" fillLitersPerSecond="20" dischargeNode="dischargeNode" startFillText="$l10n_action_refuel" stopFillText="$l10n_action_stopRefuel" autoStart="true"/>
+        </loadingStation>
+
+        <unloadingStation supportsExtension="false">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="DIESEL"/>
+        </unloadingStation>
+
+        <storages>
+            <storage node="storage" fillTypes="DIESEL" capacity="10000" isExtension="false">
+                <startFillLevel fillType="DIESEL" fillLevel="0" />
+            </storage>
+        </storages>
+    </silo>
 
     <i3dMappings>
         <i3dMapping id="clearAreaStart01" node="0>0|0" />
@@ -127,9 +144,6 @@
         <i3dMapping id="levelAreaStart01" node="0>1|0" />
         <i3dMapping id="levelAreaWidth01" node="0>1|0|0" />
         <i3dMapping id="levelAreaHeight01" node="0>1|0|1" />
-        <!-- <i3dMapping id="indoorAreaStart01" node="0>2|0" /> -->
-        <!-- <i3dMapping id="indoorAreaWidth01" node="0>2|0|0" /> -->
-        <!-- <i3dMapping id="indoorAreaHeight01" node="0>2|0|1" /> -->
         <i3dMapping id="testAreaStart01" node="0>3|0" />
         <i3dMapping id="testAreaEnd01" node="0>3|0|0" />
         <i3dMapping id="tipOcclusionUpdateAreaStart01" node="0>4|0" />
@@ -138,5 +152,14 @@
         <i3dMapping id="vehicleTrigger" node="0>5|1" />
         <i3dMapping id="blockFront" node="0>6|1|0" />
         <i3dMapping id="blockBack" node="0>6|1|1" />
+
+        <i3dMapping id="exactFillRootNode" node="0>7|0|0" />
+        <i3dMapping id="loadingTrigger" node="0>7|1|0" />
+        <i3dMapping id="dischargeNode" node="0>7|1|1" />
+        <i3dMapping id="loadingMarker" node="0>7|1|2" />
+        <i3dMapping id="refillPlayerTrigger" node="0>7|2" />
+        <i3dMapping id="refillMarker" node="0>7|2|0" />
+        <i3dMapping id="storage" node="0>7|3" />
+        <i3dMapping id="infoTrigger" node="0>7|5" />
     </i3dMappings>
 </placeable>
