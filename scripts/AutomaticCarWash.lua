@@ -80,7 +80,7 @@ AutomaticCarWash.Debug = false;
 --- Print the given Table to the log
 -- @param string text parameter Text before the table
 -- @param table myTable The table to print
--- @param number maxDepth depth of print, default 2
+-- @param number? maxDepth depth of print, default 2
 function AutomaticCarWash.DebugTable(text, myTable, maxDepth)
     if not AutomaticCarWash.Debug then return end
     if myTable == nil then
@@ -110,6 +110,10 @@ end
 function AutomaticCarWash.initSpecialization()
     AutomaticCarWash.DebugText("initSpecialization")
     local schema = Placeable.xmlSchema
+    if schema == nil then
+        Logging.error("Placeable Schema not loadable");
+        return;
+    end
     schema:setXMLSpecializationType("AutomaticCarWash")
 
     local baseXmlPath = "placeable.automaticCarWash"
@@ -163,7 +167,7 @@ function AutomaticCarWash:onLoad(savegame)
     spec.timerLength = self.xmlFile:getValue(baseXmlPath .. "#timerLength", 3000);
 
     spec.dependedAnimatedObjects = {}
-    self.xmlFile:iterate("placeable.automaticCarWash.animatedObjects.animatedObject", function(index, animationObjectKey)
+    self.xmlFile:iterate("placeable.automaticCarWash.animatedObjects.animatedObject", function(_, animationObjectKey)
         local animatedObjectIndex = self.xmlFile:getInt(animationObjectKey.."#index");
         local direction = self.xmlFile:getInt(animationObjectKey.."#direction", 1);
         local animationType = self.xmlFile:getString(animationObjectKey.."#type", nil);
@@ -173,7 +177,7 @@ function AutomaticCarWash:onLoad(savegame)
 
     spec.initialized = true;
 
-    AutomaticCarWash.DebugTable("onLoad", spec)
+    AutomaticCarWash.DebugTable("onLoad", spec);
 end
 
 ---
@@ -211,7 +215,8 @@ function AutomaticCarWash:onTriggerCallback(triggerId, otherId, onEnter, onLeave
 
     local spec = self.spec_automaticCarWash;
     local vehicle = g_currentMission:getNodeObject(otherId);
-    if vehicle ~= nil and vehicle.rootNode ~= nil then
+    if vehicle ~= nil and vehicle.rootNode ~= nil and vehicle:isa(Vehicle) then
+        ---@cast vehicle Vehicle
 --         AutomaticCarWash.DebugTable("vehicle", vehicle);
         if onEnter then
             -- general counter for closing barrier
@@ -395,7 +400,7 @@ function AutomaticCarWash:CleanOneVehicle(vehicle)
 end
 
 --- Method called by the timer. Removes Timer when nothing has be done or start one when there is no timer
--- @return boolean timerResult true when timer should be called again
+-- @return boolean? timerResult true when timer should be called again
 function AutomaticCarWash:CleanCar()
     AutomaticCarWash.DebugText("CleanCar()")
 
@@ -512,7 +517,7 @@ function AutomaticCarWash.StartLoading(loadTrigger)
         local fillLevels = loadTrigger.source:getAllFillLevels(vehicleFarmId);
 --         AutomaticCarWash.DebugTable("fillLevels", fillLevels);
         local firstFillType = nil;
-        for fillTypeIndex, fillLevel in pairs(fillLevels) do
+        for fillTypeIndex, _ in pairs(fillLevels) do
             if (loadTrigger.fillTypes == nil or loadTrigger.fillTypes[fillTypeIndex]) and loadTrigger.validFillableObject:getFillUnitAllowsFillType(loadTrigger.validFillableFillUnitIndex, fillTypeIndex) then
                 if firstFillType == nil then
                     firstFillType = fillTypeIndex
