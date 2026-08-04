@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="111">
     <author>Achimobil</author>
-    <version>1.1.0.18</version>
+    <version>1.1.0.19</version>
 
     <title>
         <en>Staffed Workshop</en>
@@ -44,6 +44,7 @@ Changelog
 1.1.0.16 - Automatisches Tanken auf Zugfahrzeuge beschränkt, damit angehängte Tankfässer nicht mehr automatisch betankt werden
 1.1.0.17 - Zweite PitStop-Variante überarbeitet und die enthaltenen Elemente angepasst
 1.1.0.18 - Anpassung wegen neuer VS Code Version von Giants
+1.1.0.19 - Automatisches Tanken für Zugfahrzeuge mit Tankanhänger verbessert und Ampelschaltzeiten angepasst
 
 1.1.0.4
 - Schreibfehler korrigiert und Beschreibung verbessert
@@ -118,8 +119,8 @@ Changelog
         </type>
         <type name="MyAutomaticCarWashWithDiesel" parent="simplePlaceable" filename="$dataS/scripts/placeables/Placeable.lua">
             <specialization name="AutomaticCarWash"/>
-            <specialization name="silo" />
-            <specialization name="infoTrigger" />
+            <specialization name="silo"/>
+            <specialization name="infoTrigger"/>
         </type>
     </placeableTypes>
 

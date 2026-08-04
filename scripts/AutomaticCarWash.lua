@@ -72,6 +72,7 @@ V 2.1.0.2 @ 05.04.2026 - Changed LastVehicleLeftTrigger to trigger when the last
 V 2.1.0.3 @ 30.06.2026 - When Silo with load trigger is available, loading is activated (Used for automatic fill up with diesel)
 V 2.1.0.4 @ 11.07.2026 - Fixed automatic refueling on dedicated servers by using the vehicle owner's farm to determine the available fill type
 V 2.1.0.5 @ 28.07.2026 - Automatic refueling is now limited to enterable vehicles to prevent attached fuel trailers from being refueled
+V 2.1.0.6 @ 04.08.2026 - Automatic refueling is now started while vehicles are still moving to ensure the towing vehicle is selected before attached trailers
 ]]
 
 AutomaticCarWash = {};
@@ -133,10 +134,11 @@ end
 ---Registers all script functions of this specialization
 -- @param table placeableType
 function AutomaticCarWash.registerFunctions(placeableType)
-    SpecializationUtil.registerFunction(placeableType, "onTriggerCallback", AutomaticCarWash.onTriggerCallback)
-    SpecializationUtil.registerFunction(placeableType, "CleanCar", AutomaticCarWash.CleanCar)
-    SpecializationUtil.registerFunction(placeableType, "CleanOneVehicle", AutomaticCarWash.CleanOneVehicle)
-    SpecializationUtil.registerFunction(placeableType, "TriggerAnimation", AutomaticCarWash.TriggerAnimation)
+    SpecializationUtil.registerFunction(placeableType, "onTriggerCallback", AutomaticCarWash.onTriggerCallback);
+    SpecializationUtil.registerFunction(placeableType, "CleanCar", AutomaticCarWash.CleanCar);
+    SpecializationUtil.registerFunction(placeableType, "CleanOneVehicle", AutomaticCarWash.CleanOneVehicle);
+    SpecializationUtil.registerFunction(placeableType, "TriggerAnimation", AutomaticCarWash.TriggerAnimation);
+    SpecializationUtil.registerFunction(placeableType, "StartAutomaticLoading", AutomaticCarWash.StartAutomaticLoading);
 end
 
 ---Registers all event listeners of this specialization
@@ -345,6 +347,7 @@ function AutomaticCarWash:CleanOneVehicle(vehicle)
         return false;
     end
 
+    self:StartAutomaticLoading();
 
     -- timer soll weiter laufen wenn sich das fahzeug bewegt, aber keine Aktion durchgeführt werden
     local lastSpeed = 0;
@@ -405,7 +408,6 @@ function AutomaticCarWash:CleanCar()
     AutomaticCarWash.DebugText("CleanCar()")
 
     local spec = self.spec_automaticCarWash;
-    local specSilo = self.spec_silo;
 
     if #spec.vehiclesInTrigger > 0 then
 
@@ -447,31 +449,7 @@ function AutomaticCarWash:CleanCar()
             self:TriggerAnimation("AllVehiclesInTriggerDone");
         end
 
-        -- when there is a Loadingtrigger in a silo, activate automaticFilling
-        if specSilo ~= nil and specSilo.loadingStation ~= nil and specSilo.loadingStation.loadTriggers ~= nil then
-            for _,loadTrigger in pairs(specSilo.loadingStation.loadTriggers) do
-                local oldRequiresActiveVehicle = loadTrigger.requiresActiveVehicle;
-                loadTrigger.requiresActiveVehicle = false;
-
-                if not loadTrigger.isLoading then
-                    local available = loadTrigger:getIsFillableObjectAvailable();
-
-                    if available then
-                        AutomaticCarWash.DebugText("Automatic loading started");
---                         loadTrigger:toggleLoading();
-                        AutomaticCarWash.StartLoading(loadTrigger);
-                    else
-                        AutomaticCarWash.DebugText("Automatic loading not started: isLoading=%s, getIsFillableObjectAvailable=%s", loadTrigger.isLoading, available);
-                    end
-                else
-                    AutomaticCarWash.DebugText("Automatic loading not started: isLoading=%s", loadTrigger.isLoading);
-                end
-
-                loadTrigger.requiresActiveVehicle = oldRequiresActiveVehicle;
-            end
-        else
-            AutomaticCarWash.DebugText("Automatic loading unavailable: specSilo=%s, loadingStation=%s, loadTriggers=%s", specSilo ~= nil, specSilo ~= nil and specSilo.loadingStation ~= nil, specSilo ~= nil and specSilo.loadingStation ~= nil and specSilo.loadingStation.loadTriggers ~= nil);
-        end
+        self:StartAutomaticLoading();
 
         -- trigger not empty
         if spec.timerId ~= nil then
@@ -491,6 +469,36 @@ function AutomaticCarWash:CleanCar()
     end
 
     return;
+end
+
+---Starts automatic loading on all available load triggers.
+function AutomaticCarWash:StartAutomaticLoading()
+    -- when there is a Loadingtrigger in a silo, activate automaticFilling
+    local specSilo = self.spec_silo;
+    if specSilo ~= nil and specSilo.loadingStation ~= nil and specSilo.loadingStation.loadTriggers ~= nil then
+        for _,loadTrigger in pairs(specSilo.loadingStation.loadTriggers) do
+            local oldRequiresActiveVehicle = loadTrigger.requiresActiveVehicle;
+            loadTrigger.requiresActiveVehicle = false;
+
+            if not loadTrigger.isLoading then
+                local available = loadTrigger:getIsFillableObjectAvailable();
+
+                if available then
+                    AutomaticCarWash.DebugText("Automatic loading started");
+--                         loadTrigger:toggleLoading();
+                    AutomaticCarWash.StartLoading(loadTrigger);
+                else
+                    AutomaticCarWash.DebugText("Automatic loading not started: isLoading=%s, getIsFillableObjectAvailable=%s", loadTrigger.isLoading, available);
+                end
+            else
+                AutomaticCarWash.DebugText("Automatic loading not started: isLoading=%s", loadTrigger.isLoading);
+            end
+
+            loadTrigger.requiresActiveVehicle = oldRequiresActiveVehicle;
+        end
+    else
+        AutomaticCarWash.DebugText("Automatic loading unavailable: specSilo=%s, loadingStation=%s, loadTriggers=%s", specSilo ~= nil, specSilo ~= nil and specSilo.loadingStation ~= nil, specSilo ~= nil and specSilo.loadingStation ~= nil and specSilo.loadingStation.loadTriggers ~= nil);
+    end
 end
 
 ---Start loading of the vehicle which is in the loading trigger

@@ -5,7 +5,7 @@
         <functions>
             <function>$l10n_staffedWorkshopFunction-s</function>
         </functions>
-        <image>store/store_pitStop.dds</image>
+        <image>store/store_pitStop.png</image>
         <price>30000</price>
         <dailyUpkeep>4000</dailyUpkeep>
         <lifetime>1000</lifetime>
@@ -26,9 +26,9 @@
         <boughtWithFarmland>true</boughtWithFarmland>
     </base>
 
-    <placement useRandomYRotation="false" useManualYRotation="true" >
+    <placement useRandomYRotation="false" useManualYRotation="true">
         <testAreas>
-            <testArea startNode="testAreaStart01" endNode="testAreaEnd01" />
+            <testArea startNode="testAreaStart01" endNode="testAreaEnd01"/>
         </testAreas>
 
         <sounds>
@@ -51,19 +51,19 @@
     </indoorAreas>
 
     <tipOcclusionUpdateAreas>
-        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01"/>
     </tipOcclusionUpdateAreas>
 
     <ai>
         <updateAreas>
-            <updateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+            <updateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01"/>
         </updateAreas>
     </ai>
 
     <triggerMarkers>
         <triggerMarker node="warningStripes"/>
-        <triggerMarker node="loadingMarker" filename="$data/shared/assets/marker/markerIconLoad.i3d" />
-        <triggerMarker node="refillMarker"  filename="$data/shared/assets/marker/markerIconWrench.i3d" />
+        <triggerMarker node="loadingMarker" filename="$data/shared/assets/marker/markerIconLoad.i3d"/>
+        <triggerMarker node="refillMarker"  filename="$data/shared/assets/marker/markerIconWrench.i3d"/>
     </triggerMarkers>
 
     <hotspots>
@@ -72,50 +72,51 @@
 
     <infoTrigger triggerNode="infoTrigger"/>
 
-    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.15"  damageAmount="-0.1"  wearAmount="0" >
+    <automaticCarWash triggerNode="vehicleTrigger" dirtAmount="-0.15" damageAmount="-0.1" wearAmount="0">
         <animatedObjects>
-            <animatedObject type="LastVehicleLeftTrigger" index="1" direction="0" />
-            <animatedObject type="AllVehiclesInTriggerDone" index="1" direction="1" />
-            <animatedObject type="VehicleEnterTrigger" index="2" direction="1" />
-            <animatedObject type="LastVehicleLeftTrigger" index="2" direction="0" />
+            <animatedObject type="LastVehicleLeftTrigger"   index="1" direction="0"/>
+            <animatedObject type="AllVehiclesInTriggerDone" index="1" direction="1"/>
+            <animatedObject type="VehicleEnterTrigger"      index="2" direction="1"/>
+            <animatedObject type="LastVehicleLeftTrigger"   index="2" direction="0"/>
         </animatedObjects>
     </automaticCarWash>
 
     <animatedObjects>
-        <animatedObject saveId="barrier1" >
-            <animation duration="3">
+        <animatedObject saveId="barrier1">
+            <animation duration="0.5">
                 <!-- green light -->
-                <part node="0>6|0|3|0|2">
-                    <keyFrame time="0.99" visibility="false"/>
-                    <keyFrame time="1.00" visibility="true"/>
+                <part node="greenMesh">
+                    <keyFrame time="0.49" visibility="false"/>
+                    <keyFrame time="0.50" visibility="true"/>
                 </part>
 
-                <part node="0>6|0|3|0|3">
-                    <keyFrame time="0.99" visibility="false"/>
-                    <keyFrame time="1.00" visibility="true"/>
+                <part node="greenPointLight">
+                    <keyFrame time="0.49" visibility="false"/>
+                    <keyFrame time="0.50" visibility="true"/>
                 </part>
 
                 <!-- red light -->
-                <part node="0>6|0|3|0|0">
-                    <keyFrame time="0.99" visibility="true"/>
-                    <keyFrame time="1.00" visibility="false"/>
+                <part node="redMesh">
+                    <keyFrame time="0.49" visibility="true"/>
+                    <keyFrame time="0.50" visibility="false"/>
                 </part>
 
-                <part node="0>6|0|3|0|1">
-                    <keyFrame time="0.99" visibility="true"/>
-                    <keyFrame time="1.00" visibility="false"/>
+                <part node="redPointLight">
+                    <keyFrame time="0.49" visibility="true"/>
+                    <keyFrame time="0.50" visibility="false"/>
                 </part>
+
                 <part node="blockFront">
-                    <keyFrame time="0.0" translation="0 1.5 0" rotation="0 0 0"/>
+                    <keyFrame time="0.0" translation="0 1.5 0"  rotation="0 0 0"/>
                     <keyFrame time="1.0" translation="0 -1.5 0" rotation="0 0 0"/>
                 </part>
             </animation>
         </animatedObject>
-        <animatedObject saveId="barrier2" >
+        <animatedObject saveId="barrier2">
             <animation duration="0.5">
                 <part node="blockBack">
                     <keyFrame time="0.0" translation="12 -1.5 0" rotation="0 0 0"/>
-                    <keyFrame time="1.0" translation="12 1.5 0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" translation="12 1.5 0"  rotation="0 0 0"/>
                 </part>
             </animation>
         </animatedObject>
@@ -132,7 +133,7 @@
 
         <storages>
             <storage node="storage" fillTypes="DIESEL" capacity="10000" isExtension="false">
-                <startFillLevel fillType="DIESEL" fillLevel="0" />
+                <startFillLevel fillType="DIESEL" fillLevel="0"/>
             </storage>
         </storages>
     </silo>
@@ -152,6 +153,11 @@
         <i3dMapping id="vehicleTrigger" node="0>5|1" />
         <i3dMapping id="blockFront" node="0>6|1|0" />
         <i3dMapping id="blockBack" node="0>6|1|1" />
+
+        <i3dMapping id="redMesh" node="0>6|0|3|0|0" />
+        <i3dMapping id="redPointLight" node="0>6|0|3|0|1" />
+        <i3dMapping id="greenMesh" node="0>6|0|3|0|2" />
+        <i3dMapping id="greenPointLight" node="0>6|0|3|0|3" />
 
         <i3dMapping id="exactFillRootNode" node="0>7|0|0" />
         <i3dMapping id="loadingTrigger" node="0>7|1|0" />
