@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="111">
     <author>Achimobil</author>
-    <version>1.1.0.19</version>
+    <version>1.2.0.0</version>
 
     <title>
         <en>Staffed Workshop</en>
@@ -29,6 +29,11 @@ Gebrauchte Hebebühnenversion (ohne Lackierer)
 Baukosten: 20.000€
 Monatliche Kosten 4.000€
 
+PitStop mit Ampel und Dieseltank (ohne Lackierer, in normaler und gespiegelter Ausführung erhältlich)
+Baukosten: 30.000€
+Monatliche Kosten 4.000€
+Der Dieseltank tankt haltende Zugfahrzeuge automatisch, muss aber selbst mit Diesel befüllt werden.
+
 Upload auf anderen Seiten außer dem ModHub ist verboten und somit illegal, Verlinkung nur mit Original-Downloadlink. KEIN Ersatzlink!
 Das Verändern oder erneutes Hochladen, ob ganz oder in Teilen, ist nicht gestattet!
 
@@ -36,15 +41,9 @@ Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_Staff
 
 Changelog
 
-1.1.0.5 - Kollisionen der Rampen korrigiert und Triggermarker entfernt
-1.1.0.8 - Animationen vom Skript ansteuerbar und als PitStop für beide Richtungen hinzugefügt. Trigger an standard Werkstatt vergrößert
-1.1.0.13 - Dieseltank jetzt so verbaut dass man davorstehend auch direkt Tanken kann in PitStop.xml
-1.1.0.14 - Autoamtisch tanken starten in skript eingefügt und funktioniert mit PitStop.xml
-1.1.0.15 - Automatisches Tanken funktioniert jetzt auch auf Dedicated Servern
-1.1.0.16 - Automatisches Tanken auf Zugfahrzeuge beschränkt, damit angehängte Tankfässer nicht mehr automatisch betankt werden
-1.1.0.17 - Zweite PitStop-Variante überarbeitet und die enthaltenen Elemente angepasst
-1.1.0.18 - Anpassung wegen neuer VS Code Version von Giants
-1.1.0.19 - Automatisches Tanken für Zugfahrzeuge mit Tankanhänger verbessert und Ampelschaltzeiten angepasst
+1.2.0.0
+- Neue PitStop-Variante mit Ampel und Dieseltank hinzugefügt, der haltende Zugfahrzeuge automatisch betankt
+- Skript unterstützt jetzt automatisches Tanken, nutzbar auch von anderen Moddern, die das Skript legal in ihren eigenen Mods einsetzen
 
 1.1.0.4
 - Schreibfehler korrigiert und Beschreibung verbessert
@@ -69,8 +68,13 @@ Construction costs: $10,000
 Monthly costs $4,000
 
 Used lift version (without coater)
-Construction costs: $10,000
+Construction costs: $20,000
 Monthly costs $4,000
+
+PitStop with traffic light and diesel tank (without paint sprayer, available in a normal and a mirrored version)
+Construction costs: $30,000
+Monthly costs $4,000
+The diesel tank automatically refuels stopped towing vehicles, but must be filled with diesel yourself.
 
 Uploading to sites other than ModHub is prohibited and therefore illegal, linking only with original download link. NO substitute link!
 Modifying and re-uploading in whole or in part is not allowed!
@@ -78,6 +82,11 @@ Modifying and re-uploading in whole or in part is not allowed!
 Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_StaffedWorkshop">GitHub</a>.
 
 Changelog
+
+1.2.0.0
+- Added new PitStop variant with traffic light and diesel tank that automatically refuels stopped towing vehicles
+- The script now supports automatic refueling, also usable by other modders who legally include the script in their own mods
+
 1.1.0.0
 - Spelling errors corrected and description improved
 - New script version with fixes for reported bugs. Additional XML parameter for timer. Drying after washing.

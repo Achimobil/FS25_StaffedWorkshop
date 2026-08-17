@@ -2,6 +2,9 @@
 *.txt
 *.md
 .git*
+.vscode*
+.claude*
+*.code-workspace
 *.png
 store\*.png
 images
