@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="111">
     <author>Achimobil</author>
-    <version>1.2.0.0</version>
+    <version>1.2.0.1</version>
 
     <title>
         <en>Staffed Workshop</en>
@@ -37,9 +37,11 @@ Der Dieseltank tankt haltende Zugfahrzeuge automatisch, muss aber selbst mit Die
 Upload auf anderen Seiten außer dem ModHub ist verboten und somit illegal, Verlinkung nur mit Original-Downloadlink. KEIN Ersatzlink!
 Das Verändern oder erneutes Hochladen, ob ganz oder in Teilen, ist nicht gestattet!
 
-Fehler und Anregungen gerne auf <a href="https://github.com/Achimobil/FS25_StaffedWorkshop">GitHub</a>.
+Fehler und Anregungen gerne auf GitHub: https://github.com/Achimobil/FS25_StaffedWorkshop
 
 Changelog
+
+1.2.0.1 - Verlinkung zu GitHub in der Beschreibung angepasst, da ModHub HTML-Links nicht mehr darstellt
 
 1.2.0.0
 - Neue PitStop-Variante mit Ampel und Dieseltank hinzugefügt, der haltende Zugfahrzeuge automatisch betankt
@@ -79,7 +81,7 @@ The diesel tank automatically refuels stopped towing vehicles, but must be fille
 Uploading to sites other than ModHub is prohibited and therefore illegal, linking only with original download link. NO substitute link!
 Modifying and re-uploading in whole or in part is not allowed!
 
-Bugs and suggestions welcome on <a href="https://github.com/Achimobil/FS25_StaffedWorkshop">GitHub</a>.
+Bugs and suggestions welcome on GitHub: https://github.com/Achimobil/FS25_StaffedWorkshop
 
 Changelog
 
