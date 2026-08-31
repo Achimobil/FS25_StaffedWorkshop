@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="111">
     <author>Achimobil</author>
-    <version>1.2.0.1</version>
+    <version>1.2.0.2</version>
 
     <title>
         <en>Staffed Workshop</en>
@@ -41,11 +41,10 @@ Fehler und Anregungen gerne auf GitHub: https://github.com/Achimobil/FS25_Staffe
 
 Changelog
 
-1.2.0.1 - Verlinkung zu GitHub in der Beschreibung angepasst, da ModHub HTML-Links nicht mehr darstellt
-
-1.2.0.0
+1.2.0.2
 - Neue PitStop-Variante mit Ampel und Dieseltank hinzugefügt, der haltende Zugfahrzeuge automatisch betankt
 - Skript unterstützt jetzt automatisches Tanken, nutzbar auch von anderen Moddern, die das Skript legal in ihren eigenen Mods einsetzen
+- Warnstreifen-Bodenmarkierung an Werkstatt und PitStop technisch korrigiert
 
 1.1.0.4
 - Schreibfehler korrigiert und Beschreibung verbessert
@@ -85,9 +84,10 @@ Bugs and suggestions welcome on GitHub: https://github.com/Achimobil/FS25_Staffe
 
 Changelog
 
-1.2.0.0
+1.2.0.2
 - Added new PitStop variant with traffic light and diesel tank that automatically refuels stopped towing vehicles
 - The script now supports automatic refueling, also usable by other modders who legally include the script in their own mods
+- Fixed a technical issue with the warning stripe ground markings at the workshop and PitStop
 
 1.1.0.0
 - Spelling errors corrected and description improved
@@ -98,7 +98,7 @@ Changelog
 ]]></en>
     </description>
 
-    <iconFilename>icon_StaffedWorkshop.dds</iconFilename>
+    <iconFilename>icon_StaffedWorkshop.png</iconFilename>
 
     <multiplayer supported="true"/>
 

@@ -108,7 +108,7 @@
         </TransformGroup>
       </TransformGroup>
       <TransformGroup name="workshop" nodeId="51">
-        <Shape name="warningStripes" translation="0.75229 0 0" shapeId="1" clipDistance="100" nodeId="52" castsShadows="false" receiveShadows="true" terrainDecal="true" materialIds="13"/>
+        <Shape name="warningStripes" translation="0.75229 0 0" shapeId="1" clipDistance="100" nodeId="52" castsShadows="false" receiveShadows="true" nonRenderable="true" terrainDecal="true" materialIds="13"/>
         <Shape name="vehicleTrigger" translation="1.98876 0 -5.34409" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" clipDistance="300" nodeId="53" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="8"/>
       </TransformGroup>
       <TransformGroup name="visuals" nodeId="54">

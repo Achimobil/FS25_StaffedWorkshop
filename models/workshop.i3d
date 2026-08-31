@@ -131,7 +131,7 @@
       </TransformGroup>
       <TransformGroup name="workshop" nodeId="49">
         <TransformGroup name="markerWrench" translation="-5.52093 0 6.05486" nodeId="50"/>
-        <Shape name="warningStripes" translation="1.8848 0.03 5.86444" shapeId="1" clipDistance="100" nodeId="51" castsShadows="false" receiveShadows="true" terrainDecal="true" materialIds="10"/>
+        <Shape name="warningStripes" translation="1.8848 0.03 5.86444" shapeId="1" clipDistance="100" nodeId="51" castsShadows="false" receiveShadows="true" nonRenderable="true" terrainDecal="true" materialIds="10"/>
         <Shape name="vehicleTrigger" translation="-2.74236 0 2.59961" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" clipDistance="300" nodeId="52" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7"/>
         <Shape name="playerTrigger" translation="-5.57539 0 5.9471" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x110000" clipDistance="300" nodeId="53" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="7"/>
         <Shape name="vehicleTrigger2" translation="0 0 3.46444" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" clipDistance="300" nodeId="54" castsShadows="false" receiveShadows="false" nonRenderable="true" distanceBlending="false" materialIds="7"/>
